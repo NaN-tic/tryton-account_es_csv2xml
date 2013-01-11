@@ -186,7 +186,8 @@ def create_tax_rules(xml_data, file_name):
 def create_tax_rule_lines(tax_xml_data, file_name):
     reader = get_csv_reader(file_name)
     for row in reader:
-        if reader.line_num == 1 or row[1] not in ['fp_intra', 'fp_extra']:
+        if reader.line_num == 1 or row[1] not in ['fp_intra', 'fp_extra'] and \
+                row[1] not in ['fp_pymes_intra', 'fp_pymes_extra']:
             continue
         record = {
             'model': 'account.tax.rule.line.template',
@@ -237,11 +238,12 @@ def read_tax_file(file_name):
     return records
 
 
-def create_tax_accounts(account_xml_data):
-    records = read_tax_file('tax_re.csv')
-    records.extend(read_tax_file('tax_iva.csv'))
-    records.extend(read_tax_file('tax_irpf.csv'))
-    records.extend(read_tax_file('tax.csv'))
+def create_tax_accounts(account_xml_data, file_names):
+    records = []
+    for file_name in file_names:
+        records.extend(read_tax_file(file_name))
+    # Maybe this mapping dictionary must go in the tax_....csv files in order
+    # to reduce the code hard coded.
     map_2_type = {
         'pgc_4700': 'es_balance_normal_12360',
         'pgc_4700_child': 'es_balance_normal_12360',
@@ -252,6 +254,16 @@ def create_tax_accounts(account_xml_data):
         'pgc_4751': 'es_balance_normal_32560',
         'pgc_4770': 'es_balance_normal_32560',
         'pgc_4771': 'es_balance_normal_32560',
+
+        'pgc_pymes_4700': 'es_balance_pymes_12390',
+#        'pgc_pymes_4700_child': 'es_balance_pymes_12360',
+        'pgc_pymes_472': 'es_balance_pymes_12390',
+        'pgc_pymes_473': 'es_balance_pymes_12390',
+        'pgc_pymes_4750': 'es_balance_pymes_32590',
+#        'pgc_pymes_4750_child': 'es_balance_pymes_32560',
+        'pgc_pymes_4751': 'es_balance_pymes_32590',
+        'pg_pymesc_4770': 'es_balance_pymes_32590',
+        'pgc_pymes_4771': 'es_balance_pymes_32590',
     }
     for re_record in records:
         record = {
@@ -270,9 +282,9 @@ def create_tax_accounts(account_xml_data):
                 ])
                 if parent in map_2_type and parent:
                     account_type = map_2_type[parent]
-                if parent == 'pgc_4750':
+                if parent == 'pgc_4750' or  parent == 'pgc_pymes_4750':
                     kind = 'payable'
-                elif parent == 'pgc_4700':
+                elif parent == 'pgc_4700' or parent == 'pgc_pymes_4700':
                     kind = 'receivable'
                 else:
                     kind = 'other'
@@ -291,7 +303,8 @@ def create_tax_accounts(account_xml_data):
             account_ids.append(record['id'])
 
 
-def create_irpf_tax_rules(tax_xml_data, account_xml_data):
+def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
+                          irpf_file):
 
     def create_substitution_tax(tax_xml_data, group, record_id, name,
                                 ref):
@@ -321,14 +334,15 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data):
         set_record(tax_xml_data, record)
 
     def create_tax_rule_lines(tax_xml_data, iva_record, irpf_record):
-        reader = get_csv_reader('tax_rule.csv')
+        reader = get_csv_reader(rule_file)
         percentage_irpf = irpf_record['id'].split('_')[-1:][0]
         for row in reader:
-            if reader.line_num == 1 or not row[0].startswith('fp_irpf'):
+            if reader.line_num == 1 or not row[0].startswith('fp_irpf') and \
+                    not row[0].startswith('fp_pymes_irpf'):
                 continue
-            if percentage_irpf != row[0].replace('fp_irpf', ''):
+            if percentage_irpf != row[0].replace('fp_irpf', '') and \
+                   percentage_irpf != row[0].replace('fp_pymes_irpf', '') :
                 continue
-
             group = [f['ref'] for f in iva_record['fields'] if
                      f['name'] == 'group'][0]
             record = {
@@ -346,8 +360,8 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data):
             break
 
 #    create_tax_accounts(account_xml_data)
-    iva_records = read_tax_file('tax_iva.csv')
-    irpf_records = read_tax_file('tax_irpf.csv')
+    iva_records = read_tax_file(iva_file)
+    irpf_records = read_tax_file(irpf_file)
 
     for irpf_record in irpf_records:
         c = 0
@@ -381,7 +395,8 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data):
                 create_tax_rule_lines(tax_xml_data, iva_record, irpf_record)
 
 
-def create_re_tax_rules(tax_xml_data, account_xml_data):
+def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
+                        rule_line_file):
 
     def create_substitution_tax(tax_xml_data, iva_id, re_id, iva_fields,
                                 re_fields):
@@ -441,17 +456,16 @@ def create_re_tax_rules(tax_xml_data, account_xml_data):
             ],
         }
         set_record(tax_xml_data, record)
-#
-#    create_tax_accounts(account_xml_data)
 
-    iva_records = read_tax_file('tax_iva.csv')
-    re_records = read_tax_file('tax_re.csv')
-    re_reader = get_csv_reader('tax_rule_line.csv')
+    iva_records = read_tax_file(iva_file)
+    re_records = read_tax_file(re_file)
+    re_reader = get_csv_reader(rule_line_file)
 
     old_source_tax = ''
     old_target_tax = ''
     for re_row in re_reader:
-        if re_reader.line_num == 1 or re_row[1] != 'fp_recargo':
+        if re_reader.line_num == 1 or re_row[1] != 'fp_recargo' \
+                and re_row[1] != 'fp_pymes_recargo':
             continue
         new_source_tax = re_row[2]
         new_target_tax = re_row[3]
@@ -488,6 +502,7 @@ def create_re_tax_rules(tax_xml_data, account_xml_data):
 
 
 if __name__ == '__main__':
+    # Create xml standard files 
     # Initialize xml etree.Elements for each file
     account_xml, account_xml_data = init_xml()
     tax_xml, tax_xml_data = init_xml()
@@ -496,20 +511,52 @@ if __name__ == '__main__':
     # First to account_xml etree.Element
     create_account_types(account_xml_data, 'account_type.csv')
     create_accounts(account_xml_data, 'account.csv')
-    create_tax_accounts(account_xml_data)
+    create_tax_accounts(account_xml_data, ['tax_re.csv', 'tax_iva.csv',
+                                        'tax_irpf.csv', 'tax.csv'])
     # And then to tax_xml etree.Element
     create_tax_groups(tax_xml_data, 'tax_group.csv')
     create_tax_codes(tax_xml_data, 'tax_code.csv')
     create_taxes(tax_xml_data, [
         'tax.csv',
         'tax_iva.csv',
-#        'tax_irpf.csv', # I believe that it is not necessary
-#        'tax_re.csv', # I believe that it is not necessary
     ])
     create_tax_rules(tax_xml_data, 'tax_rule.csv')
     create_tax_rule_lines(tax_xml_data, 'tax_rule_line.csv')
-    create_irpf_tax_rules(tax_xml_data, account_xml_data)
-    create_re_tax_rules(tax_xml_data, account_xml_data)
+    create_irpf_tax_rules(tax_xml_data, account_xml_data, 'tax_rule.csv',
+            'tax_iva.csv', 'tax_irpf.csv')
+
+    create_re_tax_rules(tax_xml_data, account_xml_data, 'tax_iva.csv',
+            'tax_re.csv', 'tax_rule_line.csv')
     # Finally save each xml etree.Element to a file
     write_xml_file(account_xml, account_xml_data, 'account_es.xml')
     write_xml_file(tax_xml, tax_xml_data, 'tax_es.xml')
+
+
+    # Create xml files for PYMES 
+    # Initialize xml etree.Elements for each file
+    account_xml_pymes, account_xml_pymes_data = init_xml()
+    tax_xml_pymes, tax_xml_pymes_data = init_xml()
+
+    # Next add data to each xml etree.Element
+    # First to account_xml_pymes etree.Element
+    create_account_types(account_xml_pymes_data, 'account_type_pymes.csv')
+    create_accounts(account_xml_pymes_data, 'account_pymes.csv')
+    create_tax_accounts(account_xml_pymes_data, ['tax_re_pymes.csv',
+            'tax_iva_pymes.csv', 'tax_irpf_pymes.csv', 'tax_pymes.csv'])
+    # And then to tax_xml_pymes etree.Element
+    create_tax_groups(tax_xml_pymes_data, 'tax_group_pymes.csv')
+    create_tax_codes(tax_xml_pymes_data, 'tax_code_pymes.csv')
+    create_taxes(tax_xml_pymes_data, [
+            'tax_pymes.csv',
+            'tax_iva_pymes.csv',
+    ])
+    create_tax_rules(tax_xml_pymes_data, 'tax_rule_pymes.csv')
+    create_tax_rule_lines(tax_xml_pymes_data, 'tax_rule_line_pymes.csv')
+    create_irpf_tax_rules(tax_xml_pymes_data, account_xml_pymes_data,
+            'tax_rule_pymes.csv', 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
+    create_re_tax_rules(tax_xml_pymes_data, account_xml_pymes_data,
+            'tax_iva_pymes.csv', 'tax_re_pymes.csv', 'tax_rule_line_pymes.csv')
+    # Finally save each xml etree.Element to a file
+    write_xml_file(account_xml_pymes, account_xml_pymes_data,
+           'account_es_pymes.xml')
+    write_xml_file(tax_xml_pymes, tax_xml_pymes_data, 'tax_es_pymes.xml')

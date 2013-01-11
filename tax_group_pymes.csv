@@ -1,0 +1,4 @@
+"id","name","code","kind"
+"tax_group_sale_pymes","Ventas","Ventas","sale"
+"tax_group_purchase_pymes","Compras","Compras","purchase"
+"tax_group_both_pymes","Ambos","Ambos","both"
