@@ -7,7 +7,10 @@ account_ids = []
 
 
 def compute_code(account_id):
-    return account_id.replace('pgc_', '')
+    if 'pymes' in account_id:
+        return account_id.replace('pgc_pymes_', '')
+    else:
+        return account_id.replace('pgc_', '')
 
 
 def compute_parent(account_id):

@@ -12476,7 +12476,7 @@
       <field name="deferral" eval="False"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477104">
-      <field name="code">pymes_477104</field>
+      <field name="code">477104</field>
       <field ref="pgc_pymes_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 0.5%</field>
       <field name="reconcile" eval="True"/>
@@ -12485,7 +12485,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477108">
-      <field name="code">pymes_477108</field>
+      <field name="code">477108</field>
       <field ref="pgc_pymes_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 1%</field>
       <field name="reconcile" eval="True"/>
@@ -12494,7 +12494,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477110">
-      <field name="code">pymes_477110</field>
+      <field name="code">477110</field>
       <field ref="pgc_pymes_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 1.4%</field>
       <field name="reconcile" eval="True"/>
@@ -12503,7 +12503,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477118">
-      <field name="code">pymes_477118</field>
+      <field name="code">477118</field>
       <field ref="pgc_pymes_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 4%</field>
       <field name="reconcile" eval="True"/>
@@ -12512,7 +12512,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477121">
-      <field name="code">pymes_477121</field>
+      <field name="code">477121</field>
       <field ref="pgc_pymes_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 5.2%</field>
       <field name="reconcile" eval="True"/>
@@ -12521,7 +12521,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472104">
-      <field name="code">pymes_472104</field>
+      <field name="code">472104</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 0.5%</field>
       <field name="reconcile" eval="True"/>
@@ -12530,7 +12530,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472108">
-      <field name="code">pymes_472108</field>
+      <field name="code">472108</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 1%</field>
       <field name="reconcile" eval="True"/>
@@ -12539,7 +12539,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472110">
-      <field name="code">pymes_472110</field>
+      <field name="code">472110</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 1.4%</field>
       <field name="reconcile" eval="True"/>
@@ -12548,7 +12548,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472118">
-      <field name="code">pymes_472118</field>
+      <field name="code">472118</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 4%</field>
       <field name="reconcile" eval="True"/>
@@ -12557,7 +12557,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472121">
-      <field name="code">pymes_472121</field>
+      <field name="code">472121</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 5.2%</field>
       <field name="reconcile" eval="True"/>
@@ -12566,7 +12566,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472004">
-      <field name="code">pymes_472004</field>
+      <field name="code">472004</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 4%</field>
       <field name="reconcile" eval="True"/>
@@ -12575,7 +12575,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472007">
-      <field name="code">pymes_472007</field>
+      <field name="code">472007</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 7%</field>
       <field name="reconcile" eval="True"/>
@@ -12584,7 +12584,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472008">
-      <field name="code">pymes_472008</field>
+      <field name="code">472008</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 8%</field>
       <field name="reconcile" eval="True"/>
@@ -12593,7 +12593,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472010">
-      <field name="code">pymes_472010</field>
+      <field name="code">472010</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 10%</field>
       <field name="reconcile" eval="True"/>
@@ -12602,7 +12602,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472016">
-      <field name="code">pymes_472016</field>
+      <field name="code">472016</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 16%</field>
       <field name="reconcile" eval="True"/>
@@ -12611,7 +12611,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472018">
-      <field name="code">pymes_472018</field>
+      <field name="code">472018</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 18%</field>
       <field name="reconcile" eval="True"/>
@@ -12620,7 +12620,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_472021">
-      <field name="code">pymes_472021</field>
+      <field name="code">472021</field>
       <field ref="pgc_pymes_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 21%</field>
       <field name="reconcile" eval="True"/>
@@ -12629,7 +12629,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477004">
-      <field name="code">pymes_477004</field>
+      <field name="code">477004</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 4%</field>
       <field name="reconcile" eval="True"/>
@@ -12638,7 +12638,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477007">
-      <field name="code">pymes_477007</field>
+      <field name="code">477007</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 7%</field>
       <field name="reconcile" eval="True"/>
@@ -12647,7 +12647,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477008">
-      <field name="code">pymes_477008</field>
+      <field name="code">477008</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 8%</field>
       <field name="reconcile" eval="True"/>
@@ -12656,7 +12656,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477010">
-      <field name="code">pymes_477010</field>
+      <field name="code">477010</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 10%</field>
       <field name="reconcile" eval="True"/>
@@ -12665,7 +12665,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477016">
-      <field name="code">pymes_477016</field>
+      <field name="code">477016</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 16%</field>
       <field name="reconcile" eval="True"/>
@@ -12674,7 +12674,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477018">
-      <field name="code">pymes_477018</field>
+      <field name="code">477018</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 18%</field>
       <field name="reconcile" eval="True"/>
@@ -12683,7 +12683,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_477021">
-      <field name="code">pymes_477021</field>
+      <field name="code">477021</field>
       <field ref="pgc_pymes_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 21%</field>
       <field name="reconcile" eval="True"/>
@@ -12692,7 +12692,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475101">
-      <field name="code">pymes_475101</field>
+      <field name="code">475101</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones empresarios módulos 1%</field>
       <field name="reconcile" eval="True"/>
@@ -12701,7 +12701,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475102">
-      <field name="code">pymes_475102</field>
+      <field name="code">475102</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. agrícolas, ganaderas, forestales 2%</field>
       <field name="reconcile" eval="True"/>
@@ -12710,7 +12710,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475107">
-      <field name="code">pymes_475107</field>
+      <field name="code">475107</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 7%</field>
       <field name="reconcile" eval="True"/>
@@ -12719,7 +12719,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475109">
-      <field name="code">pymes_475109</field>
+      <field name="code">475109</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 9%</field>
       <field name="reconcile" eval="True"/>
@@ -12728,7 +12728,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475115">
-      <field name="code">pymes_475115</field>
+      <field name="code">475115</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 15%</field>
       <field name="reconcile" eval="True"/>
@@ -12737,7 +12737,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475118">
-      <field name="code">pymes_475118</field>
+      <field name="code">475118</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 18%</field>
       <field name="reconcile" eval="True"/>
@@ -12746,7 +12746,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475119">
-      <field name="code">pymes_475119</field>
+      <field name="code">475119</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 19%</field>
       <field name="reconcile" eval="True"/>
@@ -12755,7 +12755,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475120">
-      <field name="code">pymes_475120</field>
+      <field name="code">475120</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 20%</field>
       <field name="reconcile" eval="True"/>
@@ -12764,7 +12764,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_475121">
-      <field name="code">pymes_475121</field>
+      <field name="code">475121</field>
       <field ref="pgc_pymes_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 21%</field>
       <field name="reconcile" eval="True"/>
@@ -12773,7 +12773,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473001">
-      <field name="code">pymes_473001</field>
+      <field name="code">473001</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta empresarios módulos 1%</field>
       <field name="reconcile" eval="True"/>
@@ -12782,7 +12782,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473002">
-      <field name="code">pymes_473002</field>
+      <field name="code">473002</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. agrícolas, ganaderas, forestales 2%</field>
       <field name="reconcile" eval="True"/>
@@ -12791,7 +12791,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473007">
-      <field name="code">pymes_473007</field>
+      <field name="code">473007</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 7%</field>
       <field name="reconcile" eval="True"/>
@@ -12800,7 +12800,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473009">
-      <field name="code">pymes_473009</field>
+      <field name="code">473009</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 9%</field>
       <field name="reconcile" eval="True"/>
@@ -12809,7 +12809,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473015">
-      <field name="code">pymes_473015</field>
+      <field name="code">473015</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 15%</field>
       <field name="reconcile" eval="True"/>
@@ -12818,7 +12818,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473018">
-      <field name="code">pymes_473018</field>
+      <field name="code">473018</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 18%</field>
       <field name="reconcile" eval="True"/>
@@ -12827,7 +12827,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473019">
-      <field name="code">pymes_473019</field>
+      <field name="code">473019</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 19%</field>
       <field name="reconcile" eval="True"/>
@@ -12836,7 +12836,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473020">
-      <field name="code">pymes_473020</field>
+      <field name="code">473020</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 20%</field>
       <field name="reconcile" eval="True"/>
@@ -12845,7 +12845,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_pymes_473021">
-      <field name="code">pymes_473021</field>
+      <field name="code">473021</field>
       <field ref="pgc_pymes_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 21%</field>
       <field name="reconcile" eval="True"/>
