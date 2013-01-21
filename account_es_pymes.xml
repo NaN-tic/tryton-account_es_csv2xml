@@ -353,7 +353,7 @@
       <field name="sequence" eval="40600"/>
     </record>
     <record model="account.account.type.template" id="es_pyg_pymes_40700">
-      <field name="name">7. Otros gastos de explotación </field>
+      <field name="name">7. Otros gastos de explotación</field>
       <field ref="es_pyg_pymes" name="parent"/>
       <field name="sequence" eval="40700"/>
     </record>

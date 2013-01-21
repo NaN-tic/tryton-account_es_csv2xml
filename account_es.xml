@@ -402,7 +402,7 @@
       <field name="sequence" eval="21110"/>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_21120">
-      <field name="name">2. (Capital no exigido) </field>
+      <field name="name">2. (Capital no exigido)</field>
       <field ref="es_balance_normal_21100" name="parent"/>
       <field name="sequence" eval="21120"/>
     </record>
@@ -467,7 +467,7 @@
       <field name="sequence" eval="21900"/>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_22000">
-      <field name="name">A-2) Ajustes por cambios de valor </field>
+      <field name="name">A-2) Ajustes por cambios de valor</field>
       <field ref="es_balance_normal_20000" name="parent"/>
       <field name="sequence" eval="22000"/>
     </record>
@@ -512,7 +512,7 @@
       <field name="sequence" eval="31100"/>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_31110">
-      <field name="name">1. Obligaciones por prestaciones a largo plazo al personal </field>
+      <field name="name">1. Obligaciones por prestaciones a largo plazo al personal</field>
       <field ref="es_balance_normal_31100" name="parent"/>
       <field name="sequence" eval="31110"/>
     </record>
@@ -637,7 +637,7 @@
       <field name="sequence" eval="32400"/>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_32500">
-      <field name="name">V. Acreedores comerciales y otras cuentas a pagar </field>
+      <field name="name">V. Acreedores comerciales y otras cuentas a pagar</field>
       <field ref="es_balance_normal_32000" name="parent"/>
       <field name="sequence" eval="32500"/>
     </record>
@@ -662,7 +662,7 @@
       <field name="sequence" eval="32520"/>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_32530">
-      <field name="name">3. Acreedores varios </field>
+      <field name="name">3. Acreedores varios</field>
       <field ref="es_balance_normal_32500" name="parent"/>
       <field name="sequence" eval="32530"/>
     </record>
@@ -817,7 +817,7 @@
       <field name="sequence" eval="40730"/>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal_40740">
-      <field name="name">d) Otros gastos de gestión corriente </field>
+      <field name="name">d) Otros gastos de gestión corriente</field>
       <field ref="es_pyg_normal_40700" name="parent"/>
       <field name="sequence" eval="40740"/>
     </record>
@@ -832,7 +832,7 @@
       <field name="sequence" eval="40900"/>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal_41000">
-      <field name="name">10. Excesos de provisiones </field>
+      <field name="name">10. Excesos de provisiones</field>
       <field ref="es_pyg_normal_a" name="parent"/>
       <field name="sequence" eval="41000"/>
     </record>
@@ -932,7 +932,7 @@
       <field name="sequence" eval="41600"/>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal_41610">
-      <field name="name">a) Cartera de negociación y otros </field>
+      <field name="name">a) Cartera de negociación y otros</field>
       <field ref="es_pyg_normal_41600" name="parent"/>
       <field name="sequence" eval="41610"/>
     </record>
@@ -976,7 +976,7 @@
       <field ref="es_pyg_normal_a" name="parent"/>
       <field name="sequence" eval="41900"/>
     </record>
-    <record model="account.account.type.template" id="es_pyg_normal_49400 ">
+    <record model="account.account.type.template" id="es_pyg_normal_49400">
       <field name="name">A.4) RESULTADO DEL EJERCICIO PROCEDENTE DE OPERACIONES CONTINUADAS (A.3 + 19)</field>
       <field ref="es_pyg_normal" name="parent"/>
       <field name="sequence" eval="49400"/>
