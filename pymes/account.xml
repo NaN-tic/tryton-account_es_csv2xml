@@ -17,7 +17,7 @@
       <field name="sequence" eval="11000"/>
     </record>
     <record model="account.account.type.template" id="es_balance_pymes_11100">
-      <field name="name">I. Inmovilizado intangible.</field>
+      <field name="name">I. Inmovilizado intangible</field>
       <field ref="es_balance_pymes_11000" name="parent"/>
       <field name="sequence" eval="11100"/>
     </record>

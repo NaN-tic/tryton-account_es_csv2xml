@@ -902,7 +902,7 @@
       <field name="sequence" eval="41422"/>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal_41430">
-      <field name="name">c) Imputación de subvenciones, donaciones y legados de carácter inanciero</field>
+      <field name="name">c) Imputación de subvenciones, donaciones y legados de carácter financiero</field>
       <field ref="es_pyg_normal_41400" name="parent"/>
       <field name="sequence" eval="41430"/>
     </record>

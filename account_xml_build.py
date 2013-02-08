@@ -531,8 +531,8 @@ if __name__ == '__main__':
     create_re_tax_rules(tax_xml_data, account_xml_data, 'tax_iva.csv',
             'tax_re.csv', 'tax_rule_line.csv')
     # Finally save each xml etree.Element to a file
-    write_xml_file(account_xml, account_xml_data, 'account_es.xml')
-    write_xml_file(tax_xml, tax_xml_data, 'tax_es.xml')
+    write_xml_file(account_xml, account_xml_data, 'ordinario/account.xml')
+    write_xml_file(tax_xml, tax_xml_data, 'ordinario/tax.xml')
 
 
     # Create xml files for PYMES 
@@ -561,5 +561,5 @@ if __name__ == '__main__':
             'tax_iva_pymes.csv', 'tax_re_pymes.csv', 'tax_rule_line_pymes.csv')
     # Finally save each xml etree.Element to a file
     write_xml_file(account_xml_pymes, account_xml_pymes_data,
-           'account_es_pymes.xml')
-    write_xml_file(tax_xml_pymes, tax_xml_pymes_data, 'tax_es_pymes.xml')
+           'pymes/account.xml')
+    write_xml_file(tax_xml_pymes, tax_xml_pymes_data, 'pymes/tax.xml')
