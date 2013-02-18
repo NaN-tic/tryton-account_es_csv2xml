@@ -1,0 +1,14 @@
+Tryton Spanish Account CSV to XML
+=================================
+
+This project convert CSV data to XML data (account and tax files)
+
+How to
+======
+
+* Remove content in ordinario and pyme folder.
+* Modify CSV files.
+* Exceute python account_xml_build.py
+* In ordinario and pyme folder, you have new XML about new data from CSV.
+* Copy XML from ordinario to account_es module
+* Copy XML from pyme to account_es_pyme module
