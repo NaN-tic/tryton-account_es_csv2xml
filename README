@@ -10,5 +10,10 @@ How to
 * Modify CSV files.
 * Exceute python account_xml_build.py
 * In ordinario and pyme folder, you have new XML about new data from CSV.
+* Edit XML files:
+  * Remove <?xml version='1.0' encoding='UTF-8' standalone='no'?> to <?xml version="1.0"?>
+  * Add comment about copyright:
+    <!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+    this repository contains the full copyright notices and license terms. -->
 * Copy XML from ordinario to account_es module
 * Copy XML from pyme to account_es_pyme module
