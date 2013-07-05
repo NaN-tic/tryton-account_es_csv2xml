@@ -4,1107 +4,1328 @@
     <record model="account.account.type.template" id="es">
       <field name="name">Plan General Contable Español 2008</field>
       <field name="sequence" eval="1"/>
+      <field name="display_balance">debit-credit</field>
     </record>
     <record model="account.account.type.template" id="es_balance_normal">
       <field name="name">BALANCE NORMAL (PGCE 2008)</field>
       <field ref="es" name="parent"/>
       <field name="sequence" eval="2"/>
       <field name="balance_sheet" eval="True"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11000">
-      <field name="name">A) ACTIVO NO CORRIENTE</field>
-      <field ref="es_balance_normal" name="parent"/>
-      <field name="sequence" eval="11000"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11100">
-      <field name="name">I. Inmovilizado intangible</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11100"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11110">
-      <field name="name">1. Desarrollo</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11110"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11120">
-      <field name="name">2. Concesiones</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11120"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11130">
-      <field name="name">3. Patentes, licencias, marcas y similares</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11130"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11140">
-      <field name="name">4. Fondo de comercio</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11140"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11150">
-      <field name="name">5. Aplicaciones informáticas</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11150"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11160">
-      <field name="name">6. Investigación</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11160"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11170">
-      <field name="name">7. Otro inmovilizado intangible</field>
-      <field ref="es_balance_normal_11100" name="parent"/>
-      <field name="sequence" eval="11170"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11200">
-      <field name="name">II. Inmovilizado material</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11200"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11210">
-      <field name="name">1. Terrenos y construcciones</field>
-      <field ref="es_balance_normal_11200" name="parent"/>
-      <field name="sequence" eval="11210"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11220">
-      <field name="name">2. Instalaciones técnicas y otro inmovilizado material</field>
-      <field ref="es_balance_normal_11200" name="parent"/>
-      <field name="sequence" eval="11220"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11230">
-      <field name="name">3. Inmovilizado en curso y anticipos</field>
-      <field ref="es_balance_normal_11200" name="parent"/>
-      <field name="sequence" eval="11230"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11300">
-      <field name="name">III. Inversiones inmobiliarias</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11300"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11310">
-      <field name="name">1. Terrenos</field>
-      <field ref="es_balance_normal_11300" name="parent"/>
-      <field name="sequence" eval="11310"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11320">
-      <field name="name">2. Construcciones</field>
-      <field ref="es_balance_normal_11300" name="parent"/>
-      <field name="sequence" eval="11320"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11400">
-      <field name="name">IV. Inversiones en empresas del grupo y asociadas a largo plazo</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11400"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11410">
-      <field name="name">1. Instrumentos de patrimonio</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11410"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11420">
-      <field name="name">2. Créditos a empresas</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11420"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11430">
-      <field name="name">3. Valores representativos de deuda</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11430"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11440">
-      <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11440"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11450">
-      <field name="name">5. Otros activos financieros</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11450"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11460">
-      <field name="name">6. Otras inversiones</field>
-      <field ref="es_balance_normal_11400" name="parent"/>
-      <field name="sequence" eval="11460"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11500">
-      <field name="name">V. Inversiones financieras a largo plazo</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11500"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11510">
-      <field name="name">1. Instrumentos de patrimonio</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11510"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11520">
-      <field name="name">2. Créditos a terceros</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11520"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11530">
-      <field name="name">3. Valores representativos de deuda</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11530"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11540">
-      <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11540"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11550">
-      <field name="name">5. Otros activos financieros</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11550"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11560">
-      <field name="name">6. Otras inversiones</field>
-      <field ref="es_balance_normal_11500" name="parent"/>
-      <field name="sequence" eval="11560"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11600">
-      <field name="name">VI. Activos por impuesto diferido</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11600"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_11700">
-      <field name="name">VII. Deudas comerciales no corrientes</field>
-      <field ref="es_balance_normal_11000" name="parent"/>
-      <field name="sequence" eval="11700"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12000">
-      <field name="name">B) ACTIVO CORRIENTE</field>
-      <field ref="es_balance_normal" name="parent"/>
-      <field name="sequence" eval="12000"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12100">
-      <field name="name">I. Activos no corrientes mantenidos para la venta</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12100"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12200">
-      <field name="name">II. Existencias</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12200"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12210">
-      <field name="name">1. Comerciales</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12210"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12220">
-      <field name="name">2. Materias primas y otros aprovisionamientos</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12220"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12230">
-      <field name="name">3. Productos en curso</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12230"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12231">
-      <field name="name">a) De ciclo largo de produccción</field>
-      <field ref="es_balance_normal_12230" name="parent"/>
-      <field name="sequence" eval="12231"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12232">
-      <field name="name">b) De ciclo corto de producción</field>
-      <field ref="es_balance_normal_12230" name="parent"/>
-      <field name="sequence" eval="12232"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12240">
-      <field name="name">4. Productos terminados</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12240"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12241">
-      <field name="name">a) De ciclo largo de produccción</field>
-      <field ref="es_balance_normal_12240" name="parent"/>
-      <field name="sequence" eval="12241"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12242">
-      <field name="name">b) De ciclo corto de producción</field>
-      <field ref="es_balance_normal_12240" name="parent"/>
-      <field name="sequence" eval="12242"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12250">
-      <field name="name">5. Subproductos, residuos y materiales recuperados</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12250"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12260">
-      <field name="name">6. Anticipos a proveedores</field>
-      <field ref="es_balance_normal_12200" name="parent"/>
-      <field name="sequence" eval="12260"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12300">
-      <field name="name">III. Deudores comerciales y otras cuentas a cobrar</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12300"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12310">
-      <field name="name">1. Clientes por ventas y prestaciones de servicios</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12310"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12311">
-      <field name="name">a) Clientes por ventas y prestaciones de servicios a largo plazo</field>
-      <field ref="es_balance_normal_12310" name="parent"/>
-      <field name="sequence" eval="12311"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12312">
-      <field name="name">b) Clientes por ventas y prestaciones de servicios a corto plazo</field>
-      <field ref="es_balance_normal_12310" name="parent"/>
-      <field name="sequence" eval="12312"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12320">
-      <field name="name">2. Clientes empresas del grupo y asociadas</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12320"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12330">
-      <field name="name">3. Deudores varios</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12330"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12340">
-      <field name="name">4. Personal</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12340"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12350">
-      <field name="name">5. Activos por impuesto corriente</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12350"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12360">
-      <field name="name">6. Otros créditos con las Administraciones Públicas</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12360"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12370">
-      <field name="name">7. Accionistas (socios) por desembolsos exigidos</field>
-      <field ref="es_balance_normal_12300" name="parent"/>
-      <field name="sequence" eval="12370"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12400">
-      <field name="name">IV. Inversiones en empresas del grupo y asociadas a corto plazo</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12400"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12410">
-      <field name="name">1. Instrumentos de patrimonio</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12410"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12420">
-      <field name="name">2. Créditos a empresas</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12420"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12430">
-      <field name="name">3. Valores representativos de deuda</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12430"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12440">
-      <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12440"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12450">
-      <field name="name">5. Otros activos financieros</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12450"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12460">
-      <field name="name">6. Otras inversiones</field>
-      <field ref="es_balance_normal_12400" name="parent"/>
-      <field name="sequence" eval="12460"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12500">
-      <field name="name">V. Inversiones financieras a corto plazo</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12500"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12510">
-      <field name="name">1. Instrumentos de patrimonio</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12510"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12520">
-      <field name="name">2. Créditos a empresas</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12520"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12530">
-      <field name="name">3. Valores representativos de deuda</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12530"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12540">
-      <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12540"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12550">
-      <field name="name">5. Otros activos financieros</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12550"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12560">
-      <field name="name">6. Otras inversiones</field>
-      <field ref="es_balance_normal_12500" name="parent"/>
-      <field name="sequence" eval="12560"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12600">
-      <field name="name">VI. Periodificaciones a corto plazo</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12600"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12700">
-      <field name="name">VII. Efectivo y otros activos líquidos equivalentes</field>
-      <field ref="es_balance_normal_12000" name="parent"/>
-      <field name="sequence" eval="12700"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12710">
-      <field name="name">1. Tesorería</field>
-      <field ref="es_balance_normal_12700" name="parent"/>
-      <field name="sequence" eval="12710"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_12720">
-      <field name="name">2. Otros activos líquidos equivalentes</field>
-      <field ref="es_balance_normal_12700" name="parent"/>
-      <field name="sequence" eval="12720"/>
+      <field name="display_balance">debit-credit</field>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_10000">
       <field name="name">TOTAL ACTIVO (A + B)</field>
       <field ref="es_balance_normal" name="parent"/>
       <field name="sequence" eval="10000"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_20000">
-      <field name="name">A) PATRIMONIO NETO</field>
-      <field ref="es_balance_normal" name="parent"/>
-      <field name="sequence" eval="20000"/>
+    <record model="account.account.type.template" id="es_balance_normal_11000">
+      <field name="name">A) ACTIVO NO CORRIENTE</field>
+      <field ref="es_balance_normal_10000" name="parent"/>
+      <field name="sequence" eval="11000"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21000">
-      <field name="name">A-1) Fondos propios</field>
-      <field ref="es_balance_normal_20000" name="parent"/>
-      <field name="sequence" eval="21000"/>
+    <record model="account.account.type.template" id="es_balance_normal_11100">
+      <field name="name">I. Inmovilizado intangible</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11100"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21100">
-      <field name="name">I. Capital</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21100"/>
+    <record model="account.account.type.template" id="es_balance_normal_11110">
+      <field name="name">1. Desarrollo</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11110"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21110">
-      <field name="name">1. Capital escriturado</field>
-      <field ref="es_balance_normal_21100" name="parent"/>
-      <field name="sequence" eval="21110"/>
+    <record model="account.account.type.template" id="es_balance_normal_11120">
+      <field name="name">2. Concesiones</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11120"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21120">
-      <field name="name">2. (Capital no exigido)</field>
-      <field ref="es_balance_normal_21100" name="parent"/>
-      <field name="sequence" eval="21120"/>
+    <record model="account.account.type.template" id="es_balance_normal_11130">
+      <field name="name">3. Patentes, licencias, marcas y similares</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11130"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21200">
-      <field name="name">II. Prima de emisión</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21200"/>
+    <record model="account.account.type.template" id="es_balance_normal_11140">
+      <field name="name">4. Fondo de comercio</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11140"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21300">
-      <field name="name">III. Reservas</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21300"/>
+    <record model="account.account.type.template" id="es_balance_normal_11150">
+      <field name="name">5. Aplicaciones informáticas</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11150"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21310">
-      <field name="name">1. Legal y estatutarias</field>
-      <field ref="es_balance_normal_21300" name="parent"/>
-      <field name="sequence" eval="21310"/>
+    <record model="account.account.type.template" id="es_balance_normal_11160">
+      <field name="name">6. Investigación</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11160"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21320">
-      <field name="name">2. Otras reservas</field>
-      <field ref="es_balance_normal_21300" name="parent"/>
-      <field name="sequence" eval="21320"/>
+    <record model="account.account.type.template" id="es_balance_normal_11170">
+      <field name="name">7. Otro inmovilizado intangible</field>
+      <field ref="es_balance_normal_11100" name="parent"/>
+      <field name="sequence" eval="11170"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21400">
-      <field name="name">IV. (Acciones y participaciones en patrimonio propias)</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21400"/>
+    <record model="account.account.type.template" id="es_balance_normal_11200">
+      <field name="name">II. Inmovilizado material</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11200"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21500">
-      <field name="name">V. Resultados de ejercicios anteriores</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21500"/>
+    <record model="account.account.type.template" id="es_balance_normal_11210">
+      <field name="name">1. Terrenos y construcciones</field>
+      <field ref="es_balance_normal_11200" name="parent"/>
+      <field name="sequence" eval="11210"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21510">
-      <field name="name">1. Remanente</field>
-      <field ref="es_balance_normal_21500" name="parent"/>
-      <field name="sequence" eval="21510"/>
+    <record model="account.account.type.template" id="es_balance_normal_11220">
+      <field name="name">2. Instalaciones técnicas y otro inmovilizado material</field>
+      <field ref="es_balance_normal_11200" name="parent"/>
+      <field name="sequence" eval="11220"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21520">
-      <field name="name">2. (Resultados negativos de ejercicios anteriores)</field>
-      <field ref="es_balance_normal_21500" name="parent"/>
-      <field name="sequence" eval="21520"/>
+    <record model="account.account.type.template" id="es_balance_normal_11230">
+      <field name="name">3. Inmovilizado en curso y anticipos</field>
+      <field ref="es_balance_normal_11200" name="parent"/>
+      <field name="sequence" eval="11230"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21600">
-      <field name="name">VI. Otras aportaciones de socios</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21600"/>
+    <record model="account.account.type.template" id="es_balance_normal_11300">
+      <field name="name">III. Inversiones inmobiliarias</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11300"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21700">
-      <field name="name">VII. Resultado del ejercicio</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21700"/>
+    <record model="account.account.type.template" id="es_balance_normal_11310">
+      <field name="name">1. Terrenos</field>
+      <field ref="es_balance_normal_11300" name="parent"/>
+      <field name="sequence" eval="11310"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21800">
-      <field name="name">VIII. (Dividendo a cuenta)</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21800"/>
+    <record model="account.account.type.template" id="es_balance_normal_11320">
+      <field name="name">2. Construcciones</field>
+      <field ref="es_balance_normal_11300" name="parent"/>
+      <field name="sequence" eval="11320"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_21900">
-      <field name="name">IX. Otros instrumentos de patrimonio neto</field>
-      <field ref="es_balance_normal_21000" name="parent"/>
-      <field name="sequence" eval="21900"/>
+    <record model="account.account.type.template" id="es_balance_normal_11400">
+      <field name="name">IV. Inversiones en empresas del grupo y asociadas a largo plazo</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11400"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_22000">
-      <field name="name">A-2) Ajustes por cambios de valor</field>
-      <field ref="es_balance_normal_20000" name="parent"/>
-      <field name="sequence" eval="22000"/>
+    <record model="account.account.type.template" id="es_balance_normal_11410">
+      <field name="name">1. Instrumentos de patrimonio</field>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11410"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_22100">
-      <field name="name">I. Activos financieros disponibles para la venta</field>
-      <field ref="es_balance_normal_22000" name="parent"/>
-      <field name="sequence" eval="22100"/>
+    <record model="account.account.type.template" id="es_balance_normal_11420">
+      <field name="name">2. Créditos a empresas</field>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11420"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_22200">
-      <field name="name">II. Operaciones de cobertura</field>
-      <field ref="es_balance_normal_22000" name="parent"/>
-      <field name="sequence" eval="22200"/>
+    <record model="account.account.type.template" id="es_balance_normal_11430">
+      <field name="name">3. Valores representativos de deuda</field>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11430"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_22300">
-      <field name="name">III. Activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
-      <field ref="es_balance_normal_22000" name="parent"/>
-      <field name="sequence" eval="22300"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_22400">
-      <field name="name">IV. Diferencia de conversión</field>
-      <field ref="es_balance_normal_22000" name="parent"/>
-      <field name="sequence" eval="22400"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_22500">
-      <field name="name">V. Otros</field>
-      <field ref="es_balance_normal_22000" name="parent"/>
-      <field name="sequence" eval="22500"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_23000">
-      <field name="name">A-3) Subvenciones, donaciones y legados recibidos</field>
-      <field ref="es_balance_normal_20000" name="parent"/>
-      <field name="sequence" eval="23000"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31000">
-      <field name="name">B) PASIVO NO CORRIENTE</field>
-      <field ref="es_balance_normal" name="parent"/>
-      <field name="sequence" eval="31000"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31100">
-      <field name="name">I. Provisiones a largo plazo</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31100"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31110">
-      <field name="name">1. Obligaciones por prestaciones a largo plazo al personal</field>
-      <field ref="es_balance_normal_31100" name="parent"/>
-      <field name="sequence" eval="31110"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31120">
-      <field name="name">2. Actuaciones medioambientales</field>
-      <field ref="es_balance_normal_31100" name="parent"/>
-      <field name="sequence" eval="31120"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31130">
-      <field name="name">3. Provisiones por reestructuración</field>
-      <field ref="es_balance_normal_31100" name="parent"/>
-      <field name="sequence" eval="31130"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31140">
-      <field name="name">4. Otras provisiones</field>
-      <field ref="es_balance_normal_31100" name="parent"/>
-      <field name="sequence" eval="31140"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31200">
-      <field name="name">II. Deudas a largo plazo</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31200"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31210">
-      <field name="name">1. Obligaciones y otros valores negociables</field>
-      <field ref="es_balance_normal_31200" name="parent"/>
-      <field name="sequence" eval="31210"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31220">
-      <field name="name">2. Deudas con entidades de crédito</field>
-      <field ref="es_balance_normal_31200" name="parent"/>
-      <field name="sequence" eval="31220"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31230">
-      <field name="name">3. Acreedores por arrendamiento financiero</field>
-      <field ref="es_balance_normal_31200" name="parent"/>
-      <field name="sequence" eval="31230"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_31240">
+    <record model="account.account.type.template" id="es_balance_normal_11440">
       <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_31200" name="parent"/>
-      <field name="sequence" eval="31240"/>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11440"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31250">
-      <field name="name">5. Otros pasivos financieros</field>
-      <field ref="es_balance_normal_31200" name="parent"/>
-      <field name="sequence" eval="31250"/>
+    <record model="account.account.type.template" id="es_balance_normal_11450">
+      <field name="name">5. Otros activos financieros</field>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11450"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31300">
-      <field name="name">III. Deudas con empresas del grupo y asociadas a largo plazo</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31300"/>
+    <record model="account.account.type.template" id="es_balance_normal_11460">
+      <field name="name">6. Otras inversiones</field>
+      <field ref="es_balance_normal_11400" name="parent"/>
+      <field name="sequence" eval="11460"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31400">
-      <field name="name">IV. Pasivos por impuesto diferido</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31400"/>
+    <record model="account.account.type.template" id="es_balance_normal_11500">
+      <field name="name">V. Inversiones financieras a largo plazo</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11500"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31500">
-      <field name="name">V. Periodificaciones a largo plazo</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31500"/>
+    <record model="account.account.type.template" id="es_balance_normal_11510">
+      <field name="name">1. Instrumentos de patrimonio</field>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11510"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31600">
-      <field name="name">VI. Acreedores comerciales no corrientes</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31600"/>
+    <record model="account.account.type.template" id="es_balance_normal_11520">
+      <field name="name">2. Créditos a terceros</field>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11520"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_31700">
-      <field name="name">VII. Deuda con características especiales a largo plazo</field>
-      <field ref="es_balance_normal_31000" name="parent"/>
-      <field name="sequence" eval="31700"/>
+    <record model="account.account.type.template" id="es_balance_normal_11530">
+      <field name="name">3. Valores representativos de deuda</field>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11530"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32000">
-      <field name="name">C) PASIVO CORRIENTE</field>
-      <field ref="es_balance_normal" name="parent"/>
-      <field name="sequence" eval="32000"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32100">
-      <field name="name">I. Pasivos vinculados con activos no corrientes mantenidos para la venta</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32100"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32200">
-      <field name="name">II. Provisiones a corto plazo</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32200"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32300">
-      <field name="name">III. Deudas a corto plazo</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32300"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32310">
-      <field name="name">1. Obligaciones y otros valores negociables</field>
-      <field ref="es_balance_normal_32300" name="parent"/>
-      <field name="sequence" eval="32310"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32320">
-      <field name="name">2. Deudas con entidades de crédito</field>
-      <field ref="es_balance_normal_32300" name="parent"/>
-      <field name="sequence" eval="32320"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32330">
-      <field name="name">3. Acreedores por arrendamiento financiero</field>
-      <field ref="es_balance_normal_32300" name="parent"/>
-      <field name="sequence" eval="32330"/>
-    </record>
-    <record model="account.account.type.template" id="es_balance_normal_32340">
+    <record model="account.account.type.template" id="es_balance_normal_11540">
       <field name="name">4. Derivados</field>
-      <field ref="es_balance_normal_32300" name="parent"/>
-      <field name="sequence" eval="32340"/>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11540"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32350">
-      <field name="name">5. Otros pasivos financieros</field>
-      <field ref="es_balance_normal_32300" name="parent"/>
-      <field name="sequence" eval="32350"/>
+    <record model="account.account.type.template" id="es_balance_normal_11550">
+      <field name="name">5. Otros activos financieros</field>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11550"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32400">
-      <field name="name">IV. Deudas con empresas del grupo y asociadas a corto plazo</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32400"/>
+    <record model="account.account.type.template" id="es_balance_normal_11560">
+      <field name="name">6. Otras inversiones</field>
+      <field ref="es_balance_normal_11500" name="parent"/>
+      <field name="sequence" eval="11560"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32500">
-      <field name="name">V. Acreedores comerciales y otras cuentas a pagar</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32500"/>
+    <record model="account.account.type.template" id="es_balance_normal_11600">
+      <field name="name">VI. Activos por impuesto diferido</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11600"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32510">
-      <field name="name">1. Proveedores</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32510"/>
+    <record model="account.account.type.template" id="es_balance_normal_11700">
+      <field name="name">VII. Deudas comerciales no corrientes</field>
+      <field ref="es_balance_normal_11000" name="parent"/>
+      <field name="sequence" eval="11700"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32511">
-      <field name="name">a) Proveedores a largo plazo</field>
-      <field ref="es_balance_normal_32510" name="parent"/>
-      <field name="sequence" eval="32511"/>
+    <record model="account.account.type.template" id="es_balance_normal_12000">
+      <field name="name">B) ACTIVO CORRIENTE</field>
+      <field ref="es_balance_normal_10000" name="parent"/>
+      <field name="sequence" eval="12000"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32512">
-      <field name="name">b) Proveedores a corto plazo</field>
-      <field ref="es_balance_normal_32510" name="parent"/>
-      <field name="sequence" eval="32512"/>
+    <record model="account.account.type.template" id="es_balance_normal_12100">
+      <field name="name">I. Activos no corrientes mantenidos para la venta</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12100"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32520">
-      <field name="name">2. Proveedores, empresas del grupo y asociadas</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32520"/>
+    <record model="account.account.type.template" id="es_balance_normal_12200">
+      <field name="name">II. Existencias</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12200"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32530">
-      <field name="name">3. Acreedores varios</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32530"/>
+    <record model="account.account.type.template" id="es_balance_normal_12210">
+      <field name="name">1. Comerciales</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12210"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32540">
-      <field name="name">4. Personal (remuneraciones pendientes de pago)</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32540"/>
+    <record model="account.account.type.template" id="es_balance_normal_12220">
+      <field name="name">2. Materias primas y otros aprovisionamientos</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12220"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32550">
-      <field name="name">5. Pasivos por impuesto corriente</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32550"/>
+    <record model="account.account.type.template" id="es_balance_normal_12230">
+      <field name="name">3. Productos en curso</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12230"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32560">
-      <field name="name">6. Otras deudas con las Administraciones Públicas</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32560"/>
+    <record model="account.account.type.template" id="es_balance_normal_12231">
+      <field name="name">a) De ciclo largo de produccción</field>
+      <field ref="es_balance_normal_12230" name="parent"/>
+      <field name="sequence" eval="12231"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32570">
-      <field name="name">7. Anticipos de clientes</field>
-      <field ref="es_balance_normal_32500" name="parent"/>
-      <field name="sequence" eval="32570"/>
+    <record model="account.account.type.template" id="es_balance_normal_12232">
+      <field name="name">b) De ciclo corto de producción</field>
+      <field ref="es_balance_normal_12230" name="parent"/>
+      <field name="sequence" eval="12232"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32600">
+    <record model="account.account.type.template" id="es_balance_normal_12240">
+      <field name="name">4. Productos terminados</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12240"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12241">
+      <field name="name">a) De ciclo largo de produccción</field>
+      <field ref="es_balance_normal_12240" name="parent"/>
+      <field name="sequence" eval="12241"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12242">
+      <field name="name">b) De ciclo corto de producción</field>
+      <field ref="es_balance_normal_12240" name="parent"/>
+      <field name="sequence" eval="12242"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12250">
+      <field name="name">5. Subproductos, residuos y materiales recuperados</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12250"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12260">
+      <field name="name">6. Anticipos a proveedores</field>
+      <field ref="es_balance_normal_12200" name="parent"/>
+      <field name="sequence" eval="12260"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12300">
+      <field name="name">III. Deudores comerciales y otras cuentas a cobrar</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12300"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12310">
+      <field name="name">1. Clientes por ventas y prestaciones de servicios</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12310"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12311">
+      <field name="name">a) Clientes por ventas y prestaciones de servicios a largo plazo</field>
+      <field ref="es_balance_normal_12310" name="parent"/>
+      <field name="sequence" eval="12311"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12312">
+      <field name="name">b) Clientes por ventas y prestaciones de servicios a corto plazo</field>
+      <field ref="es_balance_normal_12310" name="parent"/>
+      <field name="sequence" eval="12312"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12320">
+      <field name="name">2. Clientes empresas del grupo y asociadas</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12320"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12330">
+      <field name="name">3. Deudores varios</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12330"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12340">
+      <field name="name">4. Personal</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12340"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12350">
+      <field name="name">5. Activos por impuesto corriente</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12350"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12360">
+      <field name="name">6. Otros créditos con las Administraciones Públicas</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12360"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12370">
+      <field name="name">7. Accionistas (socios) por desembolsos exigidos</field>
+      <field ref="es_balance_normal_12300" name="parent"/>
+      <field name="sequence" eval="12370"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12400">
+      <field name="name">IV. Inversiones en empresas del grupo y asociadas a corto plazo</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12400"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12410">
+      <field name="name">1. Instrumentos de patrimonio</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12410"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12420">
+      <field name="name">2. Créditos a empresas</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12420"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12430">
+      <field name="name">3. Valores representativos de deuda</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12430"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12440">
+      <field name="name">4. Derivados</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12440"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12450">
+      <field name="name">5. Otros activos financieros</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12450"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12460">
+      <field name="name">6. Otras inversiones</field>
+      <field ref="es_balance_normal_12400" name="parent"/>
+      <field name="sequence" eval="12460"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12500">
+      <field name="name">V. Inversiones financieras a corto plazo</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12500"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12510">
+      <field name="name">1. Instrumentos de patrimonio</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12510"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12520">
+      <field name="name">2. Créditos a empresas</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12520"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12530">
+      <field name="name">3. Valores representativos de deuda</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12530"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12540">
+      <field name="name">4. Derivados</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12540"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12550">
+      <field name="name">5. Otros activos financieros</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12550"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12560">
+      <field name="name">6. Otras inversiones</field>
+      <field ref="es_balance_normal_12500" name="parent"/>
+      <field name="sequence" eval="12560"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12600">
       <field name="name">VI. Periodificaciones a corto plazo</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32600"/>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12600"/>
+      <field name="display_balance">debit-credit</field>
     </record>
-    <record model="account.account.type.template" id="es_balance_normal_32700">
-      <field name="name">VII. Deuda con características especiales a corto plazo</field>
-      <field ref="es_balance_normal_32000" name="parent"/>
-      <field name="sequence" eval="32700"/>
+    <record model="account.account.type.template" id="es_balance_normal_12700">
+      <field name="name">VII. Efectivo y otros activos líquidos equivalentes</field>
+      <field ref="es_balance_normal_12000" name="parent"/>
+      <field name="sequence" eval="12700"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12710">
+      <field name="name">1. Tesorería</field>
+      <field ref="es_balance_normal_12700" name="parent"/>
+      <field name="sequence" eval="12710"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_12720">
+      <field name="name">2. Otros activos líquidos equivalentes</field>
+      <field ref="es_balance_normal_12700" name="parent"/>
+      <field name="sequence" eval="12720"/>
+      <field name="display_balance">debit-credit</field>
     </record>
     <record model="account.account.type.template" id="es_balance_normal_30000">
       <field name="name">TOTAL PATRIMONIO NETO Y PASIVO (A + B + C)</field>
       <field ref="es_balance_normal" name="parent"/>
       <field name="sequence" eval="30000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_20000">
+      <field name="name">A) PATRIMONIO NETO</field>
+      <field ref="es_balance_normal_30000" name="parent"/>
+      <field name="sequence" eval="20000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21000">
+      <field name="name">A-1) Fondos propios</field>
+      <field ref="es_balance_normal_20000" name="parent"/>
+      <field name="sequence" eval="21000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21100">
+      <field name="name">I. Capital</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21100"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21110">
+      <field name="name">1. Capital escriturado</field>
+      <field ref="es_balance_normal_21100" name="parent"/>
+      <field name="sequence" eval="21110"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21120">
+      <field name="name">2. (Capital no exigido)</field>
+      <field ref="es_balance_normal_21100" name="parent"/>
+      <field name="sequence" eval="21120"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21200">
+      <field name="name">II. Prima de emisión</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21200"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21300">
+      <field name="name">III. Reservas</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21300"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21310">
+      <field name="name">1. Legal y estatutarias</field>
+      <field ref="es_balance_normal_21300" name="parent"/>
+      <field name="sequence" eval="21310"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21320">
+      <field name="name">2. Otras reservas</field>
+      <field ref="es_balance_normal_21300" name="parent"/>
+      <field name="sequence" eval="21320"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21400">
+      <field name="name">IV. (Acciones y participaciones en patrimonio propias)</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21400"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21500">
+      <field name="name">V. Resultados de ejercicios anteriores</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21500"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21510">
+      <field name="name">1. Remanente</field>
+      <field ref="es_balance_normal_21500" name="parent"/>
+      <field name="sequence" eval="21510"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21520">
+      <field name="name">2. (Resultados negativos de ejercicios anteriores)</field>
+      <field ref="es_balance_normal_21500" name="parent"/>
+      <field name="sequence" eval="21520"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21600">
+      <field name="name">VI. Otras aportaciones de socios</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21600"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21700">
+      <field name="name">VII. Resultado del ejercicio</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21700"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21800">
+      <field name="name">VIII. (Dividendo a cuenta)</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21800"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_21900">
+      <field name="name">IX. Otros instrumentos de patrimonio neto</field>
+      <field ref="es_balance_normal_21000" name="parent"/>
+      <field name="sequence" eval="21900"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22000">
+      <field name="name">A-2) Ajustes por cambios de valor</field>
+      <field ref="es_balance_normal_20000" name="parent"/>
+      <field name="sequence" eval="22000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22100">
+      <field name="name">I. Activos financieros disponibles para la venta</field>
+      <field ref="es_balance_normal_22000" name="parent"/>
+      <field name="sequence" eval="22100"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22200">
+      <field name="name">II. Operaciones de cobertura</field>
+      <field ref="es_balance_normal_22000" name="parent"/>
+      <field name="sequence" eval="22200"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22300">
+      <field name="name">III. Activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
+      <field ref="es_balance_normal_22000" name="parent"/>
+      <field name="sequence" eval="22300"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22400">
+      <field name="name">IV. Diferencia de conversión</field>
+      <field ref="es_balance_normal_22000" name="parent"/>
+      <field name="sequence" eval="22400"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_22500">
+      <field name="name">V. Otros</field>
+      <field ref="es_balance_normal_22000" name="parent"/>
+      <field name="sequence" eval="22500"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_23000">
+      <field name="name">A-3) Subvenciones, donaciones y legados recibidos</field>
+      <field ref="es_balance_normal_20000" name="parent"/>
+      <field name="sequence" eval="23000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31000">
+      <field name="name">B) PASIVO NO CORRIENTE</field>
+      <field ref="es_balance_normal_30000" name="parent"/>
+      <field name="sequence" eval="31000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31100">
+      <field name="name">I. Provisiones a largo plazo</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31100"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31110">
+      <field name="name">1. Obligaciones por prestaciones a largo plazo al personal</field>
+      <field ref="es_balance_normal_31100" name="parent"/>
+      <field name="sequence" eval="31110"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31120">
+      <field name="name">2. Actuaciones medioambientales</field>
+      <field ref="es_balance_normal_31100" name="parent"/>
+      <field name="sequence" eval="31120"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31130">
+      <field name="name">3. Provisiones por reestructuración</field>
+      <field ref="es_balance_normal_31100" name="parent"/>
+      <field name="sequence" eval="31130"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31140">
+      <field name="name">4. Otras provisiones</field>
+      <field ref="es_balance_normal_31100" name="parent"/>
+      <field name="sequence" eval="31140"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31200">
+      <field name="name">II. Deudas a largo plazo</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31200"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31210">
+      <field name="name">1. Obligaciones y otros valores negociables</field>
+      <field ref="es_balance_normal_31200" name="parent"/>
+      <field name="sequence" eval="31210"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31220">
+      <field name="name">2. Deudas con entidades de crédito</field>
+      <field ref="es_balance_normal_31200" name="parent"/>
+      <field name="sequence" eval="31220"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31230">
+      <field name="name">3. Acreedores por arrendamiento financiero</field>
+      <field ref="es_balance_normal_31200" name="parent"/>
+      <field name="sequence" eval="31230"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31240">
+      <field name="name">4. Derivados</field>
+      <field ref="es_balance_normal_31200" name="parent"/>
+      <field name="sequence" eval="31240"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31250">
+      <field name="name">5. Otros pasivos financieros</field>
+      <field ref="es_balance_normal_31200" name="parent"/>
+      <field name="sequence" eval="31250"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31300">
+      <field name="name">III. Deudas con empresas del grupo y asociadas a largo plazo</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31300"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31400">
+      <field name="name">IV. Pasivos por impuesto diferido</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31400"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31500">
+      <field name="name">V. Periodificaciones a largo plazo</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31500"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31600">
+      <field name="name">VI. Acreedores comerciales no corrientes</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31600"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_31700">
+      <field name="name">VII. Deuda con características especiales a largo plazo</field>
+      <field ref="es_balance_normal_31000" name="parent"/>
+      <field name="sequence" eval="31700"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32000">
+      <field name="name">C) PASIVO CORRIENTE</field>
+      <field ref="es_balance_normal_30000" name="parent"/>
+      <field name="sequence" eval="32000"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32100">
+      <field name="name">I. Pasivos vinculados con activos no corrientes mantenidos para la venta</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32100"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32200">
+      <field name="name">II. Provisiones a corto plazo</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32200"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32300">
+      <field name="name">III. Deudas a corto plazo</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32300"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32310">
+      <field name="name">1. Obligaciones y otros valores negociables</field>
+      <field ref="es_balance_normal_32300" name="parent"/>
+      <field name="sequence" eval="32310"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32320">
+      <field name="name">2. Deudas con entidades de crédito</field>
+      <field ref="es_balance_normal_32300" name="parent"/>
+      <field name="sequence" eval="32320"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32330">
+      <field name="name">3. Acreedores por arrendamiento financiero</field>
+      <field ref="es_balance_normal_32300" name="parent"/>
+      <field name="sequence" eval="32330"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32340">
+      <field name="name">4. Derivados</field>
+      <field ref="es_balance_normal_32300" name="parent"/>
+      <field name="sequence" eval="32340"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32350">
+      <field name="name">5. Otros pasivos financieros</field>
+      <field ref="es_balance_normal_32300" name="parent"/>
+      <field name="sequence" eval="32350"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32400">
+      <field name="name">IV. Deudas con empresas del grupo y asociadas a corto plazo</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32400"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32500">
+      <field name="name">V. Acreedores comerciales y otras cuentas a pagar</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32500"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32510">
+      <field name="name">1. Proveedores</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32510"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32511">
+      <field name="name">a) Proveedores a largo plazo</field>
+      <field ref="es_balance_normal_32510" name="parent"/>
+      <field name="sequence" eval="32511"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32512">
+      <field name="name">b) Proveedores a corto plazo</field>
+      <field ref="es_balance_normal_32510" name="parent"/>
+      <field name="sequence" eval="32512"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32520">
+      <field name="name">2. Proveedores, empresas del grupo y asociadas</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32520"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32530">
+      <field name="name">3. Acreedores varios</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32530"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32540">
+      <field name="name">4. Personal (remuneraciones pendientes de pago)</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32540"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32550">
+      <field name="name">5. Pasivos por impuesto corriente</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32550"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32560">
+      <field name="name">6. Otras deudas con las Administraciones Públicas</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32560"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32570">
+      <field name="name">7. Anticipos de clientes</field>
+      <field ref="es_balance_normal_32500" name="parent"/>
+      <field name="sequence" eval="32570"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32600">
+      <field name="name">VI. Periodificaciones a corto plazo</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32600"/>
+      <field name="display_balance">debit-credit</field>
+    </record>
+    <record model="account.account.type.template" id="es_balance_normal_32700">
+      <field name="name">VII. Deuda con características especiales a corto plazo</field>
+      <field ref="es_balance_normal_32000" name="parent"/>
+      <field name="sequence" eval="32700"/>
+      <field name="display_balance">debit-credit</field>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal">
       <field name="name">PÉRDIDAS Y GANANCIAS NORMAL (PGCE 2008)</field>
       <field ref="es" name="parent"/>
       <field name="sequence" eval="2"/>
       <field name="income_statement" eval="True"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_a">
-      <field name="name">A) OPERACIONES CONTINUADAS</field>
-      <field ref="es_pyg_normal" name="parent"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40100">
-      <field name="name">1. Importe neto de la cifra de negocios</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40100"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40110">
-      <field name="name">a) Ventas</field>
-      <field ref="es_pyg_normal_40100" name="parent"/>
-      <field name="sequence" eval="40110"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40120">
-      <field name="name">b) Prestaciones de servicios</field>
-      <field ref="es_pyg_normal_40100" name="parent"/>
-      <field name="sequence" eval="40120"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40200">
-      <field name="name">2. Variación de existencias de productos terminados y en curso de fabricación</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40200"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40300">
-      <field name="name">3. Trabajos realizados por la empresa para su activo</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40300"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40400">
-      <field name="name">4. Aprovisionamientos</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40400"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40410">
-      <field name="name">a) Consumo de mercaderías</field>
-      <field ref="es_pyg_normal_40400" name="parent"/>
-      <field name="sequence" eval="40410"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40420">
-      <field name="name">b) Consumo de materias primas y otras materias consumibles</field>
-      <field ref="es_pyg_normal_40400" name="parent"/>
-      <field name="sequence" eval="40420"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40430">
-      <field name="name">c) Trabajos realizados por otras empresas</field>
-      <field ref="es_pyg_normal_40400" name="parent"/>
-      <field name="sequence" eval="40430"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40440">
-      <field name="name">d) Deterioro de mercaderías, materias primas y otros aprovisionamientos</field>
-      <field ref="es_pyg_normal_40400" name="parent"/>
-      <field name="sequence" eval="40440"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40500">
-      <field name="name">5. Otros ingresos de explotación</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40500"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40510">
-      <field name="name">a) Ingresos accesorios y otros de gestión corriente</field>
-      <field ref="es_pyg_normal_40500" name="parent"/>
-      <field name="sequence" eval="40510"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40520">
-      <field name="name">b) Subvenciones de explotación incorporadas al resultado del ejercicio</field>
-      <field ref="es_pyg_normal_40500" name="parent"/>
-      <field name="sequence" eval="40520"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40600">
-      <field name="name">6. Gastos de personal</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40600"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40610">
-      <field name="name">a) Sueldos, salarios y asimilados</field>
-      <field ref="es_pyg_normal_40600" name="parent"/>
-      <field name="sequence" eval="40610"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40620">
-      <field name="name">b) Cargas sociales</field>
-      <field ref="es_pyg_normal_40600" name="parent"/>
-      <field name="sequence" eval="40620"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40630">
-      <field name="name">c) Provisiones</field>
-      <field ref="es_pyg_normal_40600" name="parent"/>
-      <field name="sequence" eval="40630"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40700">
-      <field name="name">7. Otros gastos de explotación</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40700"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40710">
-      <field name="name">a) Servicios exteriores</field>
-      <field ref="es_pyg_normal_40700" name="parent"/>
-      <field name="sequence" eval="40710"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40720">
-      <field name="name">b) Tributos</field>
-      <field ref="es_pyg_normal_40700" name="parent"/>
-      <field name="sequence" eval="40720"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40730">
-      <field name="name">c) Pérdidas, deterioro y variación de provisiones por operaciones comerciales</field>
-      <field ref="es_pyg_normal_40700" name="parent"/>
-      <field name="sequence" eval="40730"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40740">
-      <field name="name">d) Otros gastos de gestión corriente</field>
-      <field ref="es_pyg_normal_40700" name="parent"/>
-      <field name="sequence" eval="40740"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40800">
-      <field name="name">8. Amortización del inmovilizado</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40800"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_40900">
-      <field name="name">9. Imputación de subvenciones de inmovilizado no financiero y otras</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="40900"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41000">
-      <field name="name">10. Excesos de provisiones</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41000"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41100">
-      <field name="name">11. Deterioro y resultado por enajenaciones del inmovilizado</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41100"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41110">
-      <field name="name">a) Deterioro y pérdidas</field>
-      <field ref="es_pyg_normal_41100" name="parent"/>
-      <field name="sequence" eval="41110"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41120">
-      <field name="name">b) Resultados por enajenaciones y otras</field>
-      <field ref="es_pyg_normal_41100" name="parent"/>
-      <field name="sequence" eval="41120"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41200">
-      <field name="name">12. Diferencia negativa de combinaciones de negocio</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41200"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41300">
-      <field name="name">13. Otros resultados</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41300"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_49100">
-      <field name="name">A.1)  RESULTADO DE EXPLOTACIÓN (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13)</field>
-      <field ref="es_pyg_normal" name="parent"/>
-      <field name="sequence" eval="49100"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41400">
-      <field name="name">14. Ingresos financieros</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41400"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41410">
-      <field name="name">a) De participaciones en instrumentos de patrimonio</field>
-      <field ref="es_pyg_normal_41400" name="parent"/>
-      <field name="sequence" eval="41410"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41411">
-      <field name="name">a 1) En empresas del grupo y asociadas</field>
-      <field ref="es_pyg_normal_41410" name="parent"/>
-      <field name="sequence" eval="41411"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41412">
-      <field name="name">a 2) En terceros</field>
-      <field ref="es_pyg_normal_41410" name="parent"/>
-      <field name="sequence" eval="41412"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41420">
-      <field name="name">b) De valores negociables y otros instrumentos financieros</field>
-      <field ref="es_pyg_normal_41400" name="parent"/>
-      <field name="sequence" eval="41420"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41421">
-      <field name="name">b 1) De empresas del grupo y asociadas</field>
-      <field ref="es_pyg_normal_41420" name="parent"/>
-      <field name="sequence" eval="41421"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41422">
-      <field name="name">b 2) De terceros</field>
-      <field ref="es_pyg_normal_41420" name="parent"/>
-      <field name="sequence" eval="41422"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41430">
-      <field name="name">c) Imputación de subvenciones, donaciones y legados de carácter financiero</field>
-      <field ref="es_pyg_normal_41400" name="parent"/>
-      <field name="sequence" eval="41430"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41500">
-      <field name="name">15. Gastos financieros</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41500"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41510">
-      <field name="name">a) Por deudas con empresas del grupo y asociadas</field>
-      <field ref="es_pyg_normal_41500" name="parent"/>
-      <field name="sequence" eval="41510"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41520">
-      <field name="name">b) Por deudas con terceros</field>
-      <field ref="es_pyg_normal_41500" name="parent"/>
-      <field name="sequence" eval="41520"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41530">
-      <field name="name">c) Por actualización de provisiones</field>
-      <field ref="es_pyg_normal_41500" name="parent"/>
-      <field name="sequence" eval="41530"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41600">
-      <field name="name">16. Variación de valor razonable en instrumentos financieros</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41600"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41610">
-      <field name="name">a) Cartera de negociación y otros</field>
-      <field ref="es_pyg_normal_41600" name="parent"/>
-      <field name="sequence" eval="41610"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41620">
-      <field name="name">b) Imputación al resultado del ejercicio por activos financieros disponibles para la venta</field>
-      <field ref="es_pyg_normal_41600" name="parent"/>
-      <field name="sequence" eval="41620"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41700">
-      <field name="name">17. Diferencias de cambio</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41700"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41800">
-      <field name="name">18. Deterioro y resultado por enajenaciones de instrumentos financieros</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41800"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41810">
-      <field name="name">a) Deterioros y pérdidas</field>
-      <field ref="es_pyg_normal_41800" name="parent"/>
-      <field name="sequence" eval="41810"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41820">
-      <field name="name">b) Resultados por enajenaciones y otras</field>
-      <field ref="es_pyg_normal_41800" name="parent"/>
-      <field name="sequence" eval="41820"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_49200">
-      <field name="name">A.2) RESULTADO FINANCIERO (14 + 15 + 16 + 17 + 18)</field>
-      <field ref="es_pyg_normal" name="parent"/>
-      <field name="sequence" eval="49200"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_49300">
-      <field name="name">A.3) RESULTADO ANTES DE IMPUESTOS (A.1 + A.2)</field>
-      <field ref="es_pyg_normal" name="parent"/>
-      <field name="sequence" eval="49300"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_41900">
-      <field name="name">19. Impuestos sobre beneficios</field>
-      <field ref="es_pyg_normal_a" name="parent"/>
-      <field name="sequence" eval="41900"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_49400">
-      <field name="name">A.4) RESULTADO DEL EJERCICIO PROCEDENTE DE OPERACIONES CONTINUADAS (A.3 + 19)</field>
-      <field ref="es_pyg_normal" name="parent"/>
-      <field name="sequence" eval="49400"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_b">
-      <field name="name">B) OPERACIONES INTERRUMPIDAS</field>
-      <field ref="es_pyg_normal" name="parent"/>
-    </record>
-    <record model="account.account.type.template" id="es_pyg_normal_42000">
-      <field name="name">20. Resultado del ejercicio procedente de operaciones interrumpidas neto de impuestos</field>
-      <field ref="es_pyg_normal_b" name="parent"/>
-      <field name="sequence" eval="42000"/>
+      <field name="display_balance">credit-debit</field>
     </record>
     <record model="account.account.type.template" id="es_pyg_normal_49500">
       <field name="name">A.5) RESULTADO DEL EJERCICIO (A.4 + 20)</field>
       <field ref="es_pyg_normal" name="parent"/>
       <field name="sequence" eval="49500"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_a">
+      <field name="name">A) OPERACIONES CONTINUADAS</field>
+      <field ref="es_pyg_normal_49500" name="parent"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_49400">
+      <field name="name">A.4) RESULTADO DEL EJERCICIO PROCEDENTE DE OPERACIONES CONTINUADAS (A.3 + 19)</field>
+      <field ref="es_pyg_normal_a" name="parent"/>
+      <field name="sequence" eval="49400"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_49300">
+      <field name="name">A.3) RESULTADO ANTES DE IMPUESTOS (A.1 + A.2)</field>
+      <field ref="es_pyg_normal_49400" name="parent"/>
+      <field name="sequence" eval="49300"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_49100">
+      <field name="name">A.1)  RESULTADO DE EXPLOTACIÓN (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13)</field>
+      <field ref="es_pyg_normal_49300" name="parent"/>
+      <field name="sequence" eval="49100"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40100">
+      <field name="name">1. Importe neto de la cifra de negocios</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40100"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40110">
+      <field name="name">a) Ventas</field>
+      <field ref="es_pyg_normal_40100" name="parent"/>
+      <field name="sequence" eval="40110"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40120">
+      <field name="name">b) Prestaciones de servicios</field>
+      <field ref="es_pyg_normal_40100" name="parent"/>
+      <field name="sequence" eval="40120"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40200">
+      <field name="name">2. Variación de existencias de productos terminados y en curso de fabricación</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40200"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40300">
+      <field name="name">3. Trabajos realizados por la empresa para su activo</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40300"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40400">
+      <field name="name">4. Aprovisionamientos</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40400"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40410">
+      <field name="name">a) Consumo de mercaderías</field>
+      <field ref="es_pyg_normal_40400" name="parent"/>
+      <field name="sequence" eval="40410"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40420">
+      <field name="name">b) Consumo de materias primas y otras materias consumibles</field>
+      <field ref="es_pyg_normal_40400" name="parent"/>
+      <field name="sequence" eval="40420"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40430">
+      <field name="name">c) Trabajos realizados por otras empresas</field>
+      <field ref="es_pyg_normal_40400" name="parent"/>
+      <field name="sequence" eval="40430"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40440">
+      <field name="name">d) Deterioro de mercaderías, materias primas y otros aprovisionamientos</field>
+      <field ref="es_pyg_normal_40400" name="parent"/>
+      <field name="sequence" eval="40440"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40500">
+      <field name="name">5. Otros ingresos de explotación</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40500"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40510">
+      <field name="name">a) Ingresos accesorios y otros de gestión corriente</field>
+      <field ref="es_pyg_normal_40500" name="parent"/>
+      <field name="sequence" eval="40510"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40520">
+      <field name="name">b) Subvenciones de explotación incorporadas al resultado del ejercicio</field>
+      <field ref="es_pyg_normal_40500" name="parent"/>
+      <field name="sequence" eval="40520"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40600">
+      <field name="name">6. Gastos de personal</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40600"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40610">
+      <field name="name">a) Sueldos, salarios y asimilados</field>
+      <field ref="es_pyg_normal_40600" name="parent"/>
+      <field name="sequence" eval="40610"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40620">
+      <field name="name">b) Cargas sociales</field>
+      <field ref="es_pyg_normal_40600" name="parent"/>
+      <field name="sequence" eval="40620"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40630">
+      <field name="name">c) Provisiones</field>
+      <field ref="es_pyg_normal_40600" name="parent"/>
+      <field name="sequence" eval="40630"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40700">
+      <field name="name">7. Otros gastos de explotación</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40700"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40710">
+      <field name="name">a) Servicios exteriores</field>
+      <field ref="es_pyg_normal_40700" name="parent"/>
+      <field name="sequence" eval="40710"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40720">
+      <field name="name">b) Tributos</field>
+      <field ref="es_pyg_normal_40700" name="parent"/>
+      <field name="sequence" eval="40720"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40730">
+      <field name="name">c) Pérdidas, deterioro y variación de provisiones por operaciones comerciales</field>
+      <field ref="es_pyg_normal_40700" name="parent"/>
+      <field name="sequence" eval="40730"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40740">
+      <field name="name">d) Otros gastos de gestión corriente</field>
+      <field ref="es_pyg_normal_40700" name="parent"/>
+      <field name="sequence" eval="40740"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40800">
+      <field name="name">8. Amortización del inmovilizado</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40800"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_40900">
+      <field name="name">9. Imputación de subvenciones de inmovilizado no financiero y otras</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="40900"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41000">
+      <field name="name">10. Excesos de provisiones</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="41000"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41100">
+      <field name="name">11. Deterioro y resultado por enajenaciones del inmovilizado</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="41100"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41110">
+      <field name="name">a) Deterioro y pérdidas</field>
+      <field ref="es_pyg_normal_41100" name="parent"/>
+      <field name="sequence" eval="41110"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41120">
+      <field name="name">b) Resultados por enajenaciones y otras</field>
+      <field ref="es_pyg_normal_41100" name="parent"/>
+      <field name="sequence" eval="41120"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41200">
+      <field name="name">12. Diferencia negativa de combinaciones de negocio</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="41200"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41300">
+      <field name="name">13. Otros resultados</field>
+      <field ref="es_pyg_normal_49100" name="parent"/>
+      <field name="sequence" eval="41300"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_49200">
+      <field name="name">A.2) RESULTADO FINANCIERO (14 + 15 + 16 + 17 + 18)</field>
+      <field ref="es_pyg_normal_49300" name="parent"/>
+      <field name="sequence" eval="49200"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41400">
+      <field name="name">14. Ingresos financieros</field>
+      <field ref="es_pyg_normal_49200" name="parent"/>
+      <field name="sequence" eval="41400"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41410">
+      <field name="name">a) De participaciones en instrumentos de patrimonio</field>
+      <field ref="es_pyg_normal_41400" name="parent"/>
+      <field name="sequence" eval="41410"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41411">
+      <field name="name">a 1) En empresas del grupo y asociadas</field>
+      <field ref="es_pyg_normal_41410" name="parent"/>
+      <field name="sequence" eval="41411"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41412">
+      <field name="name">a 2) En terceros</field>
+      <field ref="es_pyg_normal_41410" name="parent"/>
+      <field name="sequence" eval="41412"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41420">
+      <field name="name">b) De valores negociables y otros instrumentos financieros</field>
+      <field ref="es_pyg_normal_41400" name="parent"/>
+      <field name="sequence" eval="41420"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41421">
+      <field name="name">b 1) De empresas del grupo y asociadas</field>
+      <field ref="es_pyg_normal_41420" name="parent"/>
+      <field name="sequence" eval="41421"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41422">
+      <field name="name">b 2) De terceros</field>
+      <field ref="es_pyg_normal_41420" name="parent"/>
+      <field name="sequence" eval="41422"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41430">
+      <field name="name">c) Imputación de subvenciones, donaciones y legados de carácter financiero</field>
+      <field ref="es_pyg_normal_41400" name="parent"/>
+      <field name="sequence" eval="41430"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41500">
+      <field name="name">15. Gastos financieros</field>
+      <field ref="es_pyg_normal_49200" name="parent"/>
+      <field name="sequence" eval="41500"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41510">
+      <field name="name">a) Por deudas con empresas del grupo y asociadas</field>
+      <field ref="es_pyg_normal_41500" name="parent"/>
+      <field name="sequence" eval="41510"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41520">
+      <field name="name">b) Por deudas con terceros</field>
+      <field ref="es_pyg_normal_41500" name="parent"/>
+      <field name="sequence" eval="41520"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41530">
+      <field name="name">c) Por actualización de provisiones</field>
+      <field ref="es_pyg_normal_41500" name="parent"/>
+      <field name="sequence" eval="41530"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41600">
+      <field name="name">16. Variación de valor razonable en instrumentos financieros</field>
+      <field ref="es_pyg_normal_49200" name="parent"/>
+      <field name="sequence" eval="41600"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41610">
+      <field name="name">a) Cartera de negociación y otros</field>
+      <field ref="es_pyg_normal_41600" name="parent"/>
+      <field name="sequence" eval="41610"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41620">
+      <field name="name">b) Imputación al resultado del ejercicio por activos financieros disponibles para la venta</field>
+      <field ref="es_pyg_normal_41600" name="parent"/>
+      <field name="sequence" eval="41620"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41700">
+      <field name="name">17. Diferencias de cambio</field>
+      <field ref="es_pyg_normal_49200" name="parent"/>
+      <field name="sequence" eval="41700"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41800">
+      <field name="name">18. Deterioro y resultado por enajenaciones de instrumentos financieros</field>
+      <field ref="es_pyg_normal_49200" name="parent"/>
+      <field name="sequence" eval="41800"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41810">
+      <field name="name">a) Deterioros y pérdidas</field>
+      <field ref="es_pyg_normal_41800" name="parent"/>
+      <field name="sequence" eval="41810"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41820">
+      <field name="name">b) Resultados por enajenaciones y otras</field>
+      <field ref="es_pyg_normal_41800" name="parent"/>
+      <field name="sequence" eval="41820"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_41900">
+      <field name="name">19. Impuestos sobre beneficios</field>
+      <field ref="es_pyg_normal_49400" name="parent"/>
+      <field name="sequence" eval="41900"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_b">
+      <field name="name">B) OPERACIONES INTERRUMPIDAS</field>
+      <field ref="es_pyg_normal_49500" name="parent"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_pyg_normal_42000">
+      <field name="name">20. Resultado del ejercicio procedente de operaciones interrumpidas neto de impuestos</field>
+      <field ref="es_pyg_normal_b" name="parent"/>
+      <field name="sequence" eval="42000"/>
+      <field name="display_balance">credit-debit</field>
     </record>
     <record model="account.account.type.template" id="es_eiyg_normal">
       <field name="name">ESTADO DE INGRESOS Y GASTOS RECONOCIDOS NORMAL (PGCE 2008)</field>
       <field ref="es" name="parent"/>
       <field name="sequence" eval="2"/>
       <field name="income_statement" eval="True"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_59100">
-      <field name="name">A) RESULTADO DE LA CUENTA DE PÉRDIDAS Y GANANCIAS</field>
-      <field ref="es_eiyg_normal" name="parent"/>
-      <field name="sequence" eval="59100"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_59200">
-      <field name="name">B) Total ingresos y gastos imputados directamente en el patrimonio neto (I + II + III + IV + V + VI + VII)</field>
-      <field ref="es_eiyg_normal" name="parent"/>
-      <field name="sequence" eval="59200"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50010">
-      <field name="name">I. Por valoración de instrumentos financieros</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50010"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50011">
-      <field name="name">1. Activos financieros disponibles para la venta</field>
-      <field ref="es_eiyg_normal_50010" name="parent"/>
-      <field name="sequence" eval="50011"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50012">
-      <field name="name">2. Otros ingresos/gastos</field>
-      <field ref="es_eiyg_normal_50010" name="parent"/>
-      <field name="sequence" eval="50012"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50020">
-      <field name="name">II. Por coberturas de flujos de efectivo</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50020"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50030">
-      <field name="name">III. Subvenciones, donaciones y legados recibidos</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50030"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50040">
-      <field name="name">IV. Por ganancias y pérdidas actuariales y otros ajustes</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50040"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50050">
-      <field name="name">V. Por activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50050"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50060">
-      <field name="name">VI. Diferencias de conversión</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50060"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50070">
-      <field name="name">VII. Efecto impositivo</field>
-      <field ref="es_eiyg_normal_59200" name="parent"/>
-      <field name="sequence" eval="50070"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_59300">
-      <field name="name">C) Total transferencias a la cuenta de pérdidas y ganancias (VIII + IX + X + XI + XII + XIII)</field>
-      <field ref="es_eiyg_normal" name="parent"/>
-      <field name="sequence" eval="59300"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50080">
-      <field name="name">VIII. Por valoración de instrumentos financieros</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50080"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50081">
-      <field name="name">1. Activos financieros disponibles para la venta</field>
-      <field ref="es_eiyg_normal_50080" name="parent"/>
-      <field name="sequence" eval="50081"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50082">
-      <field name="name">2. Otros ingresos/gastos</field>
-      <field ref="es_eiyg_normal_50080" name="parent"/>
-      <field name="sequence" eval="50082"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50090">
-      <field name="name">IX. Por coberturas de flujos de efectivo</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50090"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50100">
-      <field name="name">X. Subvenciones, donaciones y legados recibidos</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50100"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50110">
-      <field name="name">XI. Por activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50110"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50120">
-      <field name="name">XII. Diferencias de conversión</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50120"/>
-    </record>
-    <record model="account.account.type.template" id="es_eiyg_normal_50130">
-      <field name="name">XIII. Efecto impositivo</field>
-      <field ref="es_eiyg_normal_59300" name="parent"/>
-      <field name="sequence" eval="50130"/>
+      <field name="display_balance">credit-debit</field>
     </record>
     <record model="account.account.type.template" id="es_eiyg_normal_">
       <field name="name">TOTAL DE INGRESOS Y GASTOS RECONOCIDOS (A + B + C)</field>
       <field ref="es_eiyg_normal" name="parent"/>
       <field name="sequence" eval="59400"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_59100">
+      <field name="name">A) RESULTADO DE LA CUENTA DE PÉRDIDAS Y GANANCIAS</field>
+      <field ref="es_eiyg_normal_" name="parent"/>
+      <field name="sequence" eval="59100"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_59200">
+      <field name="name">B) Total ingresos y gastos imputados directamente en el patrimonio neto (I + II + III + IV + V + VI + VII)</field>
+      <field ref="es_eiyg_normal_" name="parent"/>
+      <field name="sequence" eval="59200"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50010">
+      <field name="name">I. Por valoración de instrumentos financieros</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50010"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50011">
+      <field name="name">1. Activos financieros disponibles para la venta</field>
+      <field ref="es_eiyg_normal_50010" name="parent"/>
+      <field name="sequence" eval="50011"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50012">
+      <field name="name">2. Otros ingresos/gastos</field>
+      <field ref="es_eiyg_normal_50010" name="parent"/>
+      <field name="sequence" eval="50012"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50020">
+      <field name="name">II. Por coberturas de flujos de efectivo</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50020"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50030">
+      <field name="name">III. Subvenciones, donaciones y legados recibidos</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50030"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50040">
+      <field name="name">IV. Por ganancias y pérdidas actuariales y otros ajustes</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50040"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50050">
+      <field name="name">V. Por activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50050"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50060">
+      <field name="name">VI. Diferencias de conversión</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50060"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50070">
+      <field name="name">VII. Efecto impositivo</field>
+      <field ref="es_eiyg_normal_59200" name="parent"/>
+      <field name="sequence" eval="50070"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_59300">
+      <field name="name">C) Total transferencias a la cuenta de pérdidas y ganancias (VIII + IX + X + XI + XII + XIII)</field>
+      <field ref="es_eiyg_normal_" name="parent"/>
+      <field name="sequence" eval="59300"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50080">
+      <field name="name">VIII. Por valoración de instrumentos financieros</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50080"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50081">
+      <field name="name">1. Activos financieros disponibles para la venta</field>
+      <field ref="es_eiyg_normal_50080" name="parent"/>
+      <field name="sequence" eval="50081"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50082">
+      <field name="name">2. Otros ingresos/gastos</field>
+      <field ref="es_eiyg_normal_50080" name="parent"/>
+      <field name="sequence" eval="50082"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50090">
+      <field name="name">IX. Por coberturas de flujos de efectivo</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50090"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50100">
+      <field name="name">X. Subvenciones, donaciones y legados recibidos</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50100"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50110">
+      <field name="name">XI. Por activos no corrientes y pasivos vinculados, mantenidos para la venta</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50110"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50120">
+      <field name="name">XII. Diferencias de conversión</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50120"/>
+      <field name="display_balance">credit-debit</field>
+    </record>
+    <record model="account.account.type.template" id="es_eiyg_normal_50130">
+      <field name="name">XIII. Efecto impositivo</field>
+      <field ref="es_eiyg_normal_59300" name="parent"/>
+      <field name="sequence" eval="50130"/>
+      <field name="display_balance">credit-debit</field>
     </record>
     <record model="account.account.template" id="pgc_0">
       <field name="name">Plan General Contable 2008</field>
@@ -15055,7 +15276,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472104">
-      <field name="code">472104</field>
+      <field name="code">4721%04</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 0.5%</field>
       <field name="reconcile" eval="True"/>
@@ -15064,7 +15285,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472108">
-      <field name="code">472108</field>
+      <field name="code">4721%08</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 1%</field>
       <field name="reconcile" eval="True"/>
@@ -15073,7 +15294,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472110">
-      <field name="code">472110</field>
+      <field name="code">4721%10</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 1.4%</field>
       <field name="reconcile" eval="True"/>
@@ -15082,7 +15303,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472118">
-      <field name="code">472118</field>
+      <field name="code">4721%18</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 4%</field>
       <field name="reconcile" eval="True"/>
@@ -15091,7 +15312,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472121">
-      <field name="code">472121</field>
+      <field name="code">4721%21</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA Recargo de Equivalencia 5.2%</field>
       <field name="reconcile" eval="True"/>
@@ -15100,7 +15321,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477104">
-      <field name="code">477104</field>
+      <field name="code">4771%04</field>
       <field ref="pgc_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 0.5%</field>
       <field name="reconcile" eval="True"/>
@@ -15109,7 +15330,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477108">
-      <field name="code">477108</field>
+      <field name="code">4771%08</field>
       <field ref="pgc_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 1%</field>
       <field name="reconcile" eval="True"/>
@@ -15118,7 +15339,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477110">
-      <field name="code">477110</field>
+      <field name="code">4771%10</field>
       <field ref="pgc_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 1.4%</field>
       <field name="reconcile" eval="True"/>
@@ -15127,7 +15348,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477118">
-      <field name="code">477118</field>
+      <field name="code">4771%18</field>
       <field ref="pgc_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 4%</field>
       <field name="reconcile" eval="True"/>
@@ -15136,7 +15357,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477121">
-      <field name="code">477121</field>
+      <field name="code">4771%21</field>
       <field ref="pgc_4771" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 5.2%</field>
       <field name="reconcile" eval="True"/>
@@ -15145,7 +15366,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472004">
-      <field name="code">472004</field>
+      <field name="code">4720%04</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 4%</field>
       <field name="reconcile" eval="True"/>
@@ -15154,7 +15375,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472007">
-      <field name="code">472007</field>
+      <field name="code">4720%07</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 7%</field>
       <field name="reconcile" eval="True"/>
@@ -15163,7 +15384,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472008">
-      <field name="code">472008</field>
+      <field name="code">4720%08</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 8%</field>
       <field name="reconcile" eval="True"/>
@@ -15172,7 +15393,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472010">
-      <field name="code">472010</field>
+      <field name="code">4720%10</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 10%</field>
       <field name="reconcile" eval="True"/>
@@ -15181,7 +15402,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472016">
-      <field name="code">472016</field>
+      <field name="code">4720%16</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 16%</field>
       <field name="reconcile" eval="True"/>
@@ -15190,7 +15411,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472018">
-      <field name="code">472018</field>
+      <field name="code">4720%18</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 18%</field>
       <field name="reconcile" eval="True"/>
@@ -15199,7 +15420,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_472021">
-      <field name="code">472021</field>
+      <field name="code">4720%21</field>
       <field ref="pgc_472" name="parent"/>
       <field name="name">Hacienda Pública. IVA soportado 21%</field>
       <field name="reconcile" eval="True"/>
@@ -15208,7 +15429,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477004">
-      <field name="code">477004</field>
+      <field name="code">4770%04</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 4%</field>
       <field name="reconcile" eval="True"/>
@@ -15217,7 +15438,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477007">
-      <field name="code">477007</field>
+      <field name="code">4770%07</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 7%</field>
       <field name="reconcile" eval="True"/>
@@ -15226,7 +15447,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477008">
-      <field name="code">477008</field>
+      <field name="code">4770%08</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 8%</field>
       <field name="reconcile" eval="True"/>
@@ -15235,7 +15456,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477010">
-      <field name="code">477010</field>
+      <field name="code">4770%10</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 10%</field>
       <field name="reconcile" eval="True"/>
@@ -15244,7 +15465,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477016">
-      <field name="code">477016</field>
+      <field name="code">4770%16</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 16%</field>
       <field name="reconcile" eval="True"/>
@@ -15253,7 +15474,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477018">
-      <field name="code">477018</field>
+      <field name="code">4770%18</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 18%</field>
       <field name="reconcile" eval="True"/>
@@ -15262,7 +15483,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_477021">
-      <field name="code">477021</field>
+      <field name="code">4770%21</field>
       <field ref="pgc_4770" name="parent"/>
       <field name="name">Hacienda Pública. IVA repercutido 21%</field>
       <field name="reconcile" eval="True"/>
@@ -15271,7 +15492,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475101">
-      <field name="code">475101</field>
+      <field name="code">4751%01</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones empresarios módulos 1%</field>
       <field name="reconcile" eval="True"/>
@@ -15280,7 +15501,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475102">
-      <field name="code">475102</field>
+      <field name="code">4751%02</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. agrícolas, ganaderas, forestales 2%</field>
       <field name="reconcile" eval="True"/>
@@ -15289,7 +15510,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475107">
-      <field name="code">475107</field>
+      <field name="code">4751%07</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 7%</field>
       <field name="reconcile" eval="True"/>
@@ -15298,7 +15519,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475109">
-      <field name="code">475109</field>
+      <field name="code">4751%09</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 9%</field>
       <field name="reconcile" eval="True"/>
@@ -15307,7 +15528,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475115">
-      <field name="code">475115</field>
+      <field name="code">4751%15</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones act. profesionales 15%</field>
       <field name="reconcile" eval="True"/>
@@ -15316,7 +15537,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475118">
-      <field name="code">475118</field>
+      <field name="code">4751%18</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 18%</field>
       <field name="reconcile" eval="True"/>
@@ -15325,7 +15546,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475119">
-      <field name="code">475119</field>
+      <field name="code">4751%19</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 19%</field>
       <field name="reconcile" eval="True"/>
@@ -15334,7 +15555,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475120">
-      <field name="code">475120</field>
+      <field name="code">4751%20</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 20%</field>
       <field name="reconcile" eval="True"/>
@@ -15343,7 +15564,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_475121">
-      <field name="code">475121</field>
+      <field name="code">4751%21</field>
       <field ref="pgc_4751" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 21%</field>
       <field name="reconcile" eval="True"/>
@@ -15352,7 +15573,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473001">
-      <field name="code">473001</field>
+      <field name="code">4730%01</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta empresarios módulos 1%</field>
       <field name="reconcile" eval="True"/>
@@ -15361,7 +15582,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473002">
-      <field name="code">473002</field>
+      <field name="code">4730%02</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. agrícolas, ganaderas, forestales 2%</field>
       <field name="reconcile" eval="True"/>
@@ -15370,7 +15591,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473007">
-      <field name="code">473007</field>
+      <field name="code">4730%07</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 7%</field>
       <field name="reconcile" eval="True"/>
@@ -15379,7 +15600,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473009">
-      <field name="code">473009</field>
+      <field name="code">4730%09</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 9%</field>
       <field name="reconcile" eval="True"/>
@@ -15388,7 +15609,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473015">
-      <field name="code">473015</field>
+      <field name="code">4730%15</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 15%</field>
       <field name="reconcile" eval="True"/>
@@ -15397,7 +15618,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473018">
-      <field name="code">473018</field>
+      <field name="code">4730%18</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 18%</field>
       <field name="reconcile" eval="True"/>
@@ -15406,7 +15627,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473019">
-      <field name="code">473019</field>
+      <field name="code">4730%19</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 19%</field>
       <field name="reconcile" eval="True"/>
@@ -15415,7 +15636,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473020">
-      <field name="code">473020</field>
+      <field name="code">4730%20</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 20%</field>
       <field name="reconcile" eval="True"/>
@@ -15424,7 +15645,7 @@
       <field name="deferral" eval="True"/>
     </record>
     <record model="account.account.template" id="pgc_473021">
-      <field name="code">473021</field>
+      <field name="code">4730%21</field>
       <field ref="pgc_473" name="parent"/>
       <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 21%</field>
       <field name="reconcile" eval="True"/>

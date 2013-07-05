@@ -8,9 +8,11 @@ account_ids = []
 
 def compute_code(account_id):
     if 'pymes' in account_id:
-        return account_id.replace('pgc_pymes_', '')
+        code = account_id.replace('pgc_pymes_', '')
     else:
-        return account_id.replace('pgc_', '')
+        code = account_id.replace('pgc_', '')
+    code = code[:-2] + '%' + code[-2:]
+    return code
 
 
 def compute_parent(account_id):
@@ -93,6 +95,7 @@ def create_account_types(xml_data, file_name):
                 {'name': 'sequence', 'eval': row[2]},
                 {'name': 'balance_sheet', 'eval': row[4]},
                 {'name': 'income_statement', 'eval': row[5]},
+                {'name': 'display_balance', 'text': row[6]},
             ],
         }
         set_record(xml_data, record)
@@ -344,7 +347,7 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
                     not row[0].startswith('fp_pymes_irpf'):
                 continue
             if percentage_irpf != row[0].replace('fp_irpf', '') and \
-                   percentage_irpf != row[0].replace('fp_pymes_irpf', '') :
+                   percentage_irpf != row[0].replace('fp_pymes_irpf', ''):
                 continue
             group = [f['ref'] for f in iva_record['fields'] if
                      f['name'] == 'group'][0]
