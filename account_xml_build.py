@@ -225,7 +225,7 @@ def read_tax_file(file_name):
                 {'name': 'account', 'ref': row[3]},
                 {'name': 'group', 'ref': row[4]},
                 {'name': 'type', 'text': row[5]},
-                {'name': 'percentage', 'eval': row[6]},
+                {'name': 'rate', 'eval': row[6]},
                 {'name': 'invoice_base_code', 'ref': row[7]},
                 {'name': 'invoice_tax_code', 'ref': row[8]},
                 {'name': 'credit_note_base_code', 'ref': row[9]},
@@ -341,13 +341,13 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
 
     def create_tax_rule_lines(tax_xml_data, iva_record, irpf_record):
         reader = get_csv_reader(rule_file)
-        percentage_irpf = irpf_record['id'].split('_')[-1:][0]
+        rate_irpf = irpf_record['id'].split('_')[-1:][0]
         for row in reader:
             if reader.line_num == 1 or not row[0].startswith('fp_irpf') and \
                     not row[0].startswith('fp_pymes_irpf'):
                 continue
-            if percentage_irpf != row[0].replace('fp_irpf', '') and \
-                   percentage_irpf != row[0].replace('fp_pymes_irpf', ''):
+            if rate_irpf != row[0].replace('fp_irpf', '') and \
+                   rate_irpf != row[0].replace('fp_pymes_irpf', ''):
                 continue
             group = [f['ref'] for f in iva_record['fields'] if
                      f['name'] == 'group'][0]
