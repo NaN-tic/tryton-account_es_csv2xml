@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 from lxml import etree
 import csv
+import re
 
 account_ids = []
 
@@ -215,6 +216,12 @@ def read_tax_file(file_name):
     for row in reader:
         if reader.line_num == 1:
             continue
+        rate = row[6]
+        regex = re.compile("^Decimal\('(.*)'\)$")
+        r = regex.search(rate)
+        if r:
+            value, = r.groups()
+            rate = 'Decimal(\'%s\')' % str(float(value) / 100.0)
         tax_record = {
             'model': 'account.tax.template',
             'id': row[0],
@@ -225,7 +232,7 @@ def read_tax_file(file_name):
                 {'name': 'account', 'ref': row[3]},
                 {'name': 'group', 'ref': row[4]},
                 {'name': 'type', 'text': row[5]},
-                {'name': 'rate', 'eval': row[6]},
+                {'name': 'rate', 'eval': rate},
                 {'name': 'invoice_base_code', 'ref': row[7]},
                 {'name': 'invoice_tax_code', 'ref': row[8]},
                 {'name': 'credit_note_base_code', 'ref': row[9]},
@@ -508,7 +515,7 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
 
 
 if __name__ == '__main__':
-    # Create xml standard files 
+    # Create xml standard files
     # Initialize xml etree.Elements for each file
     account_xml, account_xml_data = init_xml()
     tax_xml, tax_xml_data = init_xml()
@@ -538,7 +545,7 @@ if __name__ == '__main__':
     write_xml_file(tax_xml, tax_xml_data, 'ordinario/tax.xml')
 
 
-    # Create xml files for PYMES 
+    # Create xml files for PYMES
     # Initialize xml etree.Elements for each file
     account_xml_pymes, account_xml_pymes_data = init_xml()
     tax_xml_pymes, tax_xml_pymes_data = init_xml()
