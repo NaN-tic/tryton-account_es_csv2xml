@@ -247,6 +247,9 @@ def read_tax_file(file_name):
                 {'name': 'account_name', 'text': row[18]},
             ],
         }
+        if len(row) >= 20:
+            tax_record['fields'].append({
+                    'name': 'report_description', 'text': row[19]})
         records.append(tax_record)
     return records
 

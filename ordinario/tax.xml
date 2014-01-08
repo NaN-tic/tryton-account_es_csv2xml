@@ -1207,6 +1207,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_4700_child"/>
       <field name="credit_note_account" ref="pgc_4700_child"/>
+      <field name="report_description">Factura extenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_X0_compras_bi" model="account.tax.template">
       <field name="name">IVA 0% Importaciones bienes de inversión</field>
@@ -1223,6 +1224,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_4700_child"/>
       <field name="credit_note_account" ref="pgc_4700_child"/>
+      <field name="report_description">Factura extenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_X4_compras_bc" model="account.tax.template">
       <field name="name">IVA 4% Importaciones bienes corrientes</field>
@@ -1504,6 +1506,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_4700_child"/>
       <field name="credit_note_account" ref="pgc_4700_child"/>
+      <field name="report_description">Factura extenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_IO" model="account.tax.template">
       <field name="name">IVA 0% Intracomunitario</field>
@@ -1518,6 +1521,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_4750_child"/>
       <field name="credit_note_account" ref="pgc_4750_child"/>
+      <field name="report_description">Operación con inversión del sujeto pasivo, aticulo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del impuesto sobre el Valor Añadido.</field>
     </record>
     <record id="iva_IC_compras_4_bc" model="account.tax.template">
       <field name="name">IVA 4% Intracomunitario. Bienes corrientes</field>

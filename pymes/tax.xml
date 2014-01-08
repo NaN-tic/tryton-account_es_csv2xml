@@ -1207,6 +1207,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_pymes_4700_child"/>
       <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+      <field name="report_description">Factura extenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_pymes_X0_compras_bi" model="account.tax.template">
       <field name="name">IVA 0% Importaciones bienes de inversión</field>
@@ -1223,6 +1224,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_pymes_4700_child"/>
       <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+      <field name="report_description">Factura extenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_pymes_X4_compras_bc" model="account.tax.template">
       <field name="name">IVA 4% Importaciones bienes corrientes</field>
@@ -1490,8 +1492,8 @@
       <field name="credit_note_account" ref="pgc_pymes_4750_child"/>
     </record>
     <record id="iva_pymes_ISP_compras_16" model="account.tax.template">
-      <field name="name">IVA 16% Inversión del sujeto pasivo</field>
-      <field name="description">IVA 16% Inversión del sujeto pasivo</field>
+      <field name="name">IVA 0% Inversión del sujeto pasivo</field>
+      <field name="description">IVA 0% Inversión del sujeto pasivo</field>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_sale_pymes"/>
       <field name="type">percentage</field>
@@ -1502,199 +1504,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_pymes_4700_child"/>
       <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_16_1" model="account.tax.template">
-      <field name="name">IVA 16% Inversión del sujeto pasivo (1)</field>
-      <field name="description">IVA 16% Inversión del sujeto pasivo (1)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_16"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.0')" name="rate"/>
-      <field name="invoice_base_code" ref="base_pymes_extra_44"/>
-      <field name="credit_note_base_code" ref="base_pymes_extra_44"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-      <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_16_2" model="account.tax.template">
-      <field name="name">IVA 16% Inversión del sujeto pasivo (2)</field>
-      <field name="description">IVA 16% Inversión del sujeto pasivo (2)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_16"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('-0.16')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_dev_07"/>
-      <field name="invoice_tax_code" ref="iva_pymes_dev_09"/>
-      <field name="credit_note_base_code" ref="iva_pymes_dev_07"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_dev_09"/>
-      <field eval="-1" name="invoice_base_sign"/>
-      <field eval="-1" name="invoice_tax_sign"/>
-      <field eval="1" name="credit_note_base_sign"/>
-      <field eval="1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_477016"/>
-      <field name="credit_note_account" ref="pgc_pymes_477016"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_16_3" model="account.tax.template">
-      <field name="name">IVA 16% Inversión del sujeto pasivo (3)</field>
-      <field name="description">IVA 16% Inversión del sujeto pasivo (3)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_16"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.16')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_ded_22_16"/>
-      <field name="invoice_tax_code" ref="iva_pymes_ded_23_16"/>
-      <field name="credit_note_base_code" ref="iva_pymes_ded_22_16"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_ded_23_16"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_472016"/>
-      <field name="credit_note_account" ref="pgc_pymes_472016"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_18" model="account.tax.template">
-      <field name="name">IVA 18% Inversión del sujeto pasivo</field>
-      <field name="description">IVA 18% Inversión del sujeto pasivo</field>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.0')" name="rate"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-      <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_18_1" model="account.tax.template">
-      <field name="name">IVA 18% Inversión del sujeto pasivo (1)</field>
-      <field name="description">IVA 18% Inversión del sujeto pasivo (1)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_18"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.0')" name="rate"/>
-      <field name="invoice_base_code" ref="base_pymes_extra_44"/>
-      <field name="credit_note_base_code" ref="base_pymes_extra_44"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-      <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_18_2" model="account.tax.template">
-      <field name="name">IVA 18% Inversión del sujeto pasivo (2)</field>
-      <field name="description">IVA 18% Inversión del sujeto pasivo (2)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_18"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('-0.18')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_dev_07_18"/>
-      <field name="invoice_tax_code" ref="iva_pymes_dev_09_18"/>
-      <field name="credit_note_base_code" ref="iva_pymes_dev_07_18"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_dev_09_18"/>
-      <field eval="-1" name="invoice_base_sign"/>
-      <field eval="-1" name="invoice_tax_sign"/>
-      <field eval="1" name="credit_note_base_sign"/>
-      <field eval="1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_477018"/>
-      <field name="credit_note_account" ref="pgc_pymes_477018"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_18_3" model="account.tax.template">
-      <field name="name">IVA 18% Inversión del sujeto pasivo (3)</field>
-      <field name="description">IVA 18% Inversión del sujeto pasivo (3)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_18"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.18')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_ded_22_18"/>
-      <field name="invoice_tax_code" ref="iva_pymes_ded_23_18"/>
-      <field name="credit_note_base_code" ref="iva_pymes_ded_22_18"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_ded_23_18"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_472018"/>
-      <field name="credit_note_account" ref="pgc_pymes_472018"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_21" model="account.tax.template">
-      <field name="name">IVA 21% Inversión del sujeto pasivo</field>
-      <field name="description">IVA 21% Inversión del sujeto pasivo</field>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.0')" name="rate"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-      <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_21_1" model="account.tax.template">
-      <field name="name">IVA 21% Inversión del sujeto pasivo (1)</field>
-      <field name="description">IVA 21% Inversión del sujeto pasivo (1)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_21"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.0')" name="rate"/>
-      <field name="invoice_base_code" ref="base_pymes_extra_44"/>
-      <field name="credit_note_base_code" ref="base_pymes_extra_44"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-      <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_21_2" model="account.tax.template">
-      <field name="name">IVA 21% Inversión del sujeto pasivo (2)</field>
-      <field name="description">IVA 21% Inversión del sujeto pasivo (2)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_21"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('-0.21')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_dev_07_21"/>
-      <field name="invoice_tax_code" ref="iva_pymes_dev_09_21"/>
-      <field name="credit_note_base_code" ref="iva_pymes_dev_07_21"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_dev_09_21"/>
-      <field eval="-1" name="invoice_base_sign"/>
-      <field eval="-1" name="invoice_tax_sign"/>
-      <field eval="1" name="credit_note_base_sign"/>
-      <field eval="1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_477021"/>
-      <field name="credit_note_account" ref="pgc_pymes_477021"/>
-    </record>
-    <record id="iva_pymes_ISP_compras_21_3" model="account.tax.template">
-      <field name="name">IVA 21% Inversión del sujeto pasivo (3)</field>
-      <field name="description">IVA 21% Inversión del sujeto pasivo (3)</field>
-      <field name="parent" ref="iva_pymes_ISP_compras_21"/>
-      <field name="account" ref="pgc_pymes_0"/>
-      <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">percentage</field>
-      <field eval="Decimal('0.21')" name="rate"/>
-      <field name="invoice_base_code" ref="iva_pymes_ded_22_21"/>
-      <field name="invoice_tax_code" ref="iva_pymes_ded_23_21"/>
-      <field name="credit_note_base_code" ref="iva_pymes_ded_22_21"/>
-      <field name="credit_note_tax_code" ref="iva_pymes_ded_23_21"/>
-      <field eval="1" name="invoice_base_sign"/>
-      <field eval="1" name="invoice_tax_sign"/>
-      <field eval="-1" name="credit_note_base_sign"/>
-      <field eval="-1" name="credit_note_tax_sign"/>
-      <field name="invoice_account" ref="pgc_pymes_472021"/>
-      <field name="credit_note_account" ref="pgc_pymes_472021"/>
+      <field name="report_description">Factura extenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
     </record>
     <record id="iva_pymes_IO" model="account.tax.template">
       <field name="name">IVA 0% Intracomunitario</field>
@@ -1709,6 +1519,7 @@
       <field eval="-1" name="credit_note_tax_sign"/>
       <field name="invoice_account" ref="pgc_pymes_4750_child"/>
       <field name="credit_note_account" ref="pgc_pymes_4750_child"/>
+      <field name="report_description">Operación con inversión del sujeto pasivo, aticulo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del impuesto sobre el Valor Añadido.</field>
     </record>
     <record id="iva_pymes_IC_compras_4_bc" model="account.tax.template">
       <field name="name">IVA 4% Intracomunitario. Bienes corrientes</field>
