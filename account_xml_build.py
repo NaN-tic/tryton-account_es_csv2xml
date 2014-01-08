@@ -477,8 +477,14 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
     old_source_tax = ''
     old_target_tax = ''
     for re_row in re_reader:
-        if re_reader.line_num == 1 or re_row[1] != 'fp_recargo' \
-                and re_row[1] != 'fp_pymes_recargo':
+        if re_reader.line_num == 1:
+            continue
+        if re_row[1] == 'fp_recc' or re_row[1] == 'fp_pymes_recc':
+            #RECC lines are manually defined on file so no need of tax creation
+            tax_record = {'id': re_row[3]}
+            create_tax_rule_line(tax_xml_data, re_row, tax_record)
+            continue
+        if re_row[1] != 'fp_recargo' and re_row[1] != 'fp_pymes_recargo':
             continue
         new_source_tax = re_row[2]
         new_target_tax = re_row[3]
