@@ -1511,7 +1511,7 @@
       <field name="description">IVA 0% Intracomunitario</field>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_sale_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.0')" name="rate"/>
       <field name="invoice_base_code" ref="base_pymes_intra_42"/>
       <field name="credit_note_base_code" ref="base_pymes_intra_42"/>
@@ -1537,7 +1537,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_4_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.04')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_4"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_4"/>
@@ -1554,7 +1554,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_4_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.04')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1582,7 +1582,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_4_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.04')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_4"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_4"/>
@@ -1599,7 +1599,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_4_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.04')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1627,7 +1627,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_7_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.07')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_7"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_7"/>
@@ -1644,7 +1644,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_7_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.07')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1672,7 +1672,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_7_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.07')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_7"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_7"/>
@@ -1689,7 +1689,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_7_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.07')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1717,7 +1717,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_8_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.08')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_8"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_8"/>
@@ -1734,7 +1734,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_8_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.08')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1762,7 +1762,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_8_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.08')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_8"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_8"/>
@@ -1779,7 +1779,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_8_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.08')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1807,7 +1807,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_10_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.1')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_10"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_10"/>
@@ -1824,7 +1824,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_10_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.1')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1852,7 +1852,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_10_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.1')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_10"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_10"/>
@@ -1869,7 +1869,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_10_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.1')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1897,7 +1897,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_16_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.16')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_16"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_16"/>
@@ -1914,7 +1914,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_16_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.16')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1942,7 +1942,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_16_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.16')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_16"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_16"/>
@@ -1959,7 +1959,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_16_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.16')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -1987,7 +1987,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_18_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.18')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_18"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_18"/>
@@ -2004,7 +2004,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_18_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.18')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -2032,7 +2032,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_18_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.18')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_18"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_18"/>
@@ -2049,7 +2049,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_18_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.18')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -2077,7 +2077,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_21_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.21')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_30_21"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_31_21"/>
@@ -2094,7 +2094,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_21_bc"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.21')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
@@ -2122,7 +2122,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_21_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('0.21')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_ded_32_21"/>
       <field name="invoice_tax_code" ref="iva_pymes_ded_33_21"/>
@@ -2139,7 +2139,7 @@
       <field name="parent" ref="iva_pymes_IC_compras_21_bi"/>
       <field name="account" ref="pgc_pymes_0"/>
       <field name="group" ref="tax_group_purchase_pymes"/>
-      <field name="type">none</field>
+      <field name="type">percentage</field>
       <field eval="Decimal('-0.21')" name="rate"/>
       <field name="invoice_base_code" ref="iva_pymes_dev_19"/>
       <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
