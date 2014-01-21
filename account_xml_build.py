@@ -523,6 +523,68 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
             create_tax_rule_line(tax_xml_data, re_row, tax_record)
 
 
+def normalize_xml(archive):
+    data = ''
+    for line in open(archive):
+        spaces = 0
+        char = line[0]
+        while char == ' ':
+            spaces += 1
+            char = line[spaces]
+        spaces *= 2
+        line = line.strip()
+        if "encoding='UTF-8'" in line:
+            line = (line.replace("encoding='UTF-8'", '').
+                    replace("standalone='no'", '').replace('  ?', '?'))
+            line += ('\n<!-- This file is part of Tryton.  The COPYRIGHT file '
+                'at the top level of\nthis repository contains the full '
+                'copyright notices and license terms. -->')
+            data += ' ' * spaces + line + '\n'
+        elif 'tryton' in line or 'data' in line:
+            data += ' ' * spaces + line + '\n'
+        else:
+            line = line.strip('<>')
+            if '">' not in line and '</' not in line:
+                ends_label = False
+                if line[-1] == '/':
+                    ends_label = True
+                    line = line.strip('/')
+                model_attr = 0
+                id_attr = 0
+                name_attr = 0
+                ref_attr = 0
+                eval_attr = 0
+                words = line.split()
+                for word in words:
+                    if 'model' in word:
+                        model_attr = words.index(word)
+                    elif 'id' in word:
+                        id_attr = words.index(word)
+                    elif 'name' in word:
+                        name_attr = words.index(word)
+                    elif 'ref' in word:
+                        ref_attr = words.index(word)
+                    elif 'eval' in word:
+                        eval_attr = words.index(word)
+                if id_attr and model_attr > id_attr:
+                    words[id_attr], words[model_attr] = (
+                        words[model_attr], words[id_attr])
+                elif ref_attr and name_attr > ref_attr:
+                    words[ref_attr], words[name_attr] = (
+                        words[name_attr], words[ref_attr])
+                elif eval_attr and name_attr > eval_attr:
+                    words[eval_attr], words[name_attr] = (
+                        words[name_attr], words[eval_attr])
+                if ends_label:
+                    line = '<' + ' '.join([w for w in words]) + '/>'
+                else:
+                    line = '<' + ' '.join([w for w in words]) + '>'
+            else:
+                line = '<' + line + '>'
+            data += ' ' * spaces + line + '\n'
+    return data
+
+
 if __name__ == '__main__':
     # Create xml standard files
     # Initialize xml etree.Elements for each file
@@ -553,7 +615,6 @@ if __name__ == '__main__':
     write_xml_file(account_xml, account_xml_data, 'ordinario/account.xml')
     write_xml_file(tax_xml, tax_xml_data, 'ordinario/tax.xml')
 
-
     # Create xml files for PYMES
     # Initialize xml etree.Elements for each file
     account_xml_pymes, account_xml_pymes_data = init_xml()
@@ -582,3 +643,13 @@ if __name__ == '__main__':
     write_xml_file(account_xml_pymes, account_xml_pymes_data,
            'pymes/account.xml')
     write_xml_file(tax_xml_pymes, tax_xml_pymes_data, 'pymes/tax.xml')
+    archives = (
+        'ordinario/account.xml',
+        'ordinario/tax.xml',
+        'pymes/account.xml',
+        'pymes/tax.xml',
+        )
+    for archive in archives:
+        data = normalize_xml(archive)
+        with open(archive, 'w') as f:
+            f.write(data)
