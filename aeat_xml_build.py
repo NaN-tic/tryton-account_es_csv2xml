@@ -89,6 +89,8 @@ def create_349(xml_data):
     for row in reader:
         if reader.line_num == 1:
             continue
+        if not 'Intracomunitario' in row[1]:
+            continue
         keys = sale_keys if 'sale' in row[4] else purchase_keys
         default_direction = 'out' if 'sale' in row[4] else 'in'
         default_key = keys[0]
@@ -98,7 +100,8 @@ def create_349(xml_data):
                 'id': 'aeat_349_template_type_%s_%s' % (row[0], key),
                 'fields': [
                     {'name': 'tax', 'ref': 'account_es.' + str(row[0])},
-                    {'name': 'aeat_349_type', 'ref': 'aeat_349_key_%s' % key},
+                    {'name': 'aeat_349_type',
+                            'ref': 'aeat_349.aeat_349_key_%s' % key},
                 ],
             })
         field_name = 'aeat349_default_%s_operation_key' % default_direction
@@ -106,7 +109,8 @@ def create_349(xml_data):
             'model': 'account.tax.template',
             'id': 'account_es.' + row[0],
             'fields': [
-                {'name': field_name, 'ref': 'aeat_349_key_%s' % default_key},
+                {'name': field_name,
+                        'ref': 'aeat_349.aeat_349_key_%s' % default_key},
             ],
         })
     set_records(xml_data, records)
