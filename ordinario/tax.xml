@@ -85,43 +85,43 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_dev_10">
             <field name="name">Recargo Equivalencia Base Imponible 0.5%</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[10]</field>
+            <field name="code">[16]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_13">
             <field name="name">Recargo Equivalencia Base Imponible 1%</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[13]</field>
+            <field name="code">[19]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_13_14">
             <field name="name">Recargo Equivalencia Base Imponible 1.4%</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[13]</field>
+            <field name="code">[19]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_16">
             <field name="name">Recargo Equivalencia Base Imponible 4%</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[16]</field>
+            <field name="code">[19]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_16_52">
             <field name="name">Recargo Equivalencia Base Imponible 5.2%</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[16]</field>
+            <field name="code">[22]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_19">
             <field name="name">Adquisiciones intracomunitarias. Base Imponible</field>
             <field name="parent" ref="iva_dev_base"/>
-            <field name="code">[19]</field>
+            <field name="code">[10]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_21">
             <field name="name">IVA Cuota total devengada</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">[21]</field>
+            <field name="code">[27]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_03">
@@ -169,37 +169,37 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_dev_12">
             <field name="name">Recargo Equivalencia. Cuota 0.5%</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[12]</field>
+            <field name="code">[18]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_15">
             <field name="name">Recargo Equivalencia. Cuota 1%</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[15]</field>
+            <field name="code">[21]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_15_14">
             <field name="name">Recargo Equivalencia. Cuota 1.4%</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[15]</field>
+            <field name="code">[21]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_18">
             <field name="name">Recargo Equivalencia. Cuota 4%</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[18]</field>
+            <field name="code">[24]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_18_52">
             <field name="name">Recargo Equivalencia. Cuota 5.2%</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[18]</field>
+            <field name="code">[24]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_20">
             <field name="name">Adquisiciones intracomunitarias. Cuota</field>
             <field name="parent" ref="iva_dev_21"/>
-            <field name="code">[20]</field>
+            <field name="code">[11]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_base_total">
@@ -211,7 +211,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_22">
             <field name="name">Base operaciones interiores corrientes</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[22]</field>
+            <field name="code">[28]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_22_4">
@@ -259,7 +259,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_24">
             <field name="name">Base operaciones interiores bienes inversión</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[24]</field>
+            <field name="code">[30]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_24_4">
@@ -307,7 +307,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_26">
             <field name="name">Base importaciones bienes corrientes</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[26]</field>
+            <field name="code">[32]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_26_4">
@@ -355,7 +355,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_28">
             <field name="name">Base importaciones bienes inversión</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[28]</field>
+            <field name="code">[34]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_28_4">
@@ -403,7 +403,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_30">
             <field name="name">Base adquisiciones intracomunitarias bienes corrientes</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[30]</field>
+            <field name="code">[36]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_30_4">
@@ -451,7 +451,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_32">
             <field name="name">Base adquisiciones intracomunitarias bienes inversión</field>
             <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">[32]</field>
+            <field name="code">[38]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_32_4">
@@ -529,13 +529,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_cuota_total">
             <field name="name">IVA deducible (Cuota)- Total a deducir [Mod.303]</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">[37]</field>
+            <field name="code">[45]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_23">
             <field name="name">Cuotas soportadas operaciones interiores corrientes</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[23]</field>
+            <field name="code">[29]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_23_4">
@@ -583,7 +583,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_25">
             <field name="name">Cuotas soportadas operaciones interiores bienes inversión</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[25]</field>
+            <field name="code">[31]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_25_4">
@@ -631,7 +631,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_27">
             <field name="name">Cuotas devengadas importaciones bienes corrientes</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[27]</field>
+            <field name="code">[33]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_27_4">
@@ -679,7 +679,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_29">
             <field name="name">Cuotas devengadas importaciones bienes inversión</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[29]</field>
+            <field name="code">[35]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_29_4">
@@ -727,7 +727,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_31">
             <field name="name">En adquisiciones intracomunitarias bienes corrientes</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[31]</field>
+            <field name="code">[37]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_31_4">
@@ -775,7 +775,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="iva_ded_33">
             <field name="name">En adquisiciones intracomunitarias bienes inversión</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[33]</field>
+            <field name="code">[39]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_33_4">
@@ -823,49 +823,49 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.template" id="base_intra_42">
             <field name="name">Entregas Intracomunitarias</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">[42]</field>
+            <field name="code">[59]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="base_extra_43">
             <field name="name">Exportaciones y operaciones asimiladas</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">[43]</field>
+            <field name="code">[60]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="base_extra_44">
             <field name="name">Inversión del sujeto pasivo</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">[44]</field>
+            <field name="code">[61]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_12">
             <field name="name">Recargo Equivalencia Ded. Cuota 0.5%</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[12]</field>
+            <field name="code">[18]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_15">
             <field name="name">Recargo Equivalencia Ded. Cuota 1%</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[15]</field>
+            <field name="code">[21]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_15_14">
             <field name="name">Recargo Equivalencia Ded. Cuota 1.4%</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[15]</field>
+            <field name="code">[21]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_18">
             <field name="name">Recargo Equivalencia Ded. Cuota 4%</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[18]</field>
+            <field name="code">[24]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_18_52">
             <field name="name">Recargo Equivalencia Ded. Cuota 5.2%</field>
             <field name="parent" ref="iva_ded_cuota_total"/>
-            <field name="code">[18]</field>
+            <field name="code">[24]</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="irpf_base">
