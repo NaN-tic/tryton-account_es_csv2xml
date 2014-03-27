@@ -2155,6 +2155,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_477021"/>
             <field name="credit_note_account" ref="pgc_477021"/>
         </record>
+        <record model="account.tax.template" id="suplido_compras">
+            <field name="name">Suplido</field>
+            <field name="description">Suplido</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">none</field>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+        </record>
+        <record model="account.tax.template" id="suplido_ventas">
+            <field name="name">Suplido</field>
+            <field name="description">Suplido</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">none</field>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
