@@ -60,5 +60,5 @@
 "iva_pymes_IC_compras_21_bi","IVA 21% Intracomunitario. Bienes de inversión",,"pgc_pymes_0","tax_group_purchase_pymes","none","Decimal('0.0')",,,,,,,,,"pgc_pymes_4700_child","pgc_pymes_4700_child",,,
 "iva_pymes_IC_compras_21_bi_1","IVA 21% Intracomunitario. Bienes de inversión (1)","iva_pymes_IC_compras_21_bi","pgc_pymes_0","tax_group_purchase_pymes","percentage","Decimal('21.0')","iva_pymes_ded_32_21","iva_pymes_ded_33_21","iva_pymes_ded_32_21","iva_pymes_ded_33_21",,,"-1","-1","pgc_pymes_472021","pgc_pymes_472021",,,
 "iva_pymes_IC_compras_21_bi_2","IVA 21% Intracomunitario. Bienes de inversión (2)","iva_pymes_IC_compras_21_bi","pgc_pymes_0","tax_group_purchase_pymes","percentage","Decimal('-21.0')","iva_pymes_dev_19","iva_pymes_dev_20","iva_pymes_dev_19","iva_pymes_dev_20",,"-1","-1","1","pgc_pymes_477021","pgc_pymes_477021",,,
-"suplido_compras","Suplido",,"pgc_pymes_1","tax_group_purchase_pymes","none","Decimal('0.0')",,,,,,,,,"pgc_pymes_4700_child","pgc_pymes_4700_child",,,
-"suplido_ventas","Suplido",,"pgc_pymes_2","tax_group_sale_pymes","none","Decimal('0.0')",,,,,,,,,"pgc_pymes_4700_child","pgc_pymes_4700_child",,,
+"suplido_compras","Suplido",,"pgc_pymes_0","tax_group_purchase_pymes","none","Decimal('0.0')",,,,,,,,,"pgc_pymes_4700_child","pgc_pymes_4700_child",,,
+"suplido_ventas","Suplido",,"pgc_pymes_0","tax_group_sale_pymes","none","Decimal('0.0')",,,,,,,,,"pgc_pymes_4700_child","pgc_pymes_4700_child",,,

@@ -2156,7 +2156,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="suplido_compras">
             <field name="name">Suplido</field>
             <field name="description">Suplido</field>
-            <field name="account" ref="pgc_pymes_1"/>
+            <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="rate" eval="Decimal('0.0')"/>
@@ -2166,7 +2166,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="suplido_ventas">
             <field name="name">Suplido</field>
             <field name="description">Suplido</field>
-            <field name="account" ref="pgc_pymes_2"/>
+            <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
             <field name="type">none</field>
             <field name="rate" eval="Decimal('0.0')"/>
