@@ -60,5 +60,8 @@
 "iva_IC_compras_21_bi","IVA 21% Intracomunitario. Bienes de inversión",,"pgc_0","tax_group_purchase","none","Decimal('0.0')",,,,,,,,,"pgc_4700_child","pgc_4700_child",,,
 "iva_IC_compras_21_bi_1","IVA 21% Intracomunitario. Bienes de inversión (1)","iva_IC_compras_21_bi","pgc_0","tax_group_purchase","percentage","Decimal('21.0')","iva_ded_32_21","iva_ded_33_21","iva_ded_32_21","iva_ded_33_21",,,-1,-1,"pgc_472021","pgc_472021",,,
 "iva_IC_compras_21_bi_2","IVA 21% Intracomunitario. Bienes de inversión (2)","iva_IC_compras_21_bi","pgc_0","tax_group_purchase","percentage","Decimal('-21.0')","iva_dev_19","iva_dev_20","iva_dev_19","iva_dev_20",,-1,-1,1,"pgc_477021","pgc_477021",,,
+"iva_IC_compras_21_ser","IVA 21% Intracomunitario. Servicios",,"pgc_0","tax_group_purchase","none","Decimal('0.0')",,,,,,,,,"pgc_4700_child","pgc_4700_child",,,
+"iva_IC_compras_21_ser_1","IVA 21% Intracomunitario. Servicios (1)","iva_IC_compras_21_ser","pgc_0","tax_group_purchase","percentage","Decimal('21.0')","iva_ded_30_21","iva_ded_31_21","iva_ded_30_21","iva_ded_31_21",,,-1,-1,"pgc_472021","pgc_472021",,,
+"iva_IC_compras_21_ser_2","IVA 21% Intracomunitario. Servicios (2)","iva_IC_compras_21_ser","pgc_0","tax_group_purchase","percentage","Decimal('-21.0')","iva_dev_19","iva_dev_20","iva_dev_19","iva_dev_20",,-1,-1,1,"pgc_477021","pgc_477021",,,
 "suplido_compras","Suplido",,"pgc_0","tax_group_purchase","none","Decimal('0.0')",,,,,,,,,"pgc_4700_child","pgc_4700_child",,,
 "suplido_ventas","Suplido",,"pgc_0","tax_group_sale","none","Decimal('0.0')",,,,,,,,,"pgc_4700_child","pgc_4700_child",,,

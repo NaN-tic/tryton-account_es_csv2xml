@@ -2155,6 +2155,51 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_477021"/>
             <field name="credit_note_account" ref="pgc_477021"/>
         </record>
+        <record model="account.tax.template" id="iva_IC_compras_21_ser">
+            <field name="name">IVA 21% Intracomunitario. Servicios</field>
+            <field name="description">IVA 21% Intracomunitario. Servicios</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">none</field>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+        </record>
+        <record model="account.tax.template" id="iva_IC_compras_21_ser_1">
+            <field name="name">IVA 21% Intracomunitario. Servicios (1)</field>
+            <field name="description">IVA 21% Intracomunitario. Servicios (1)</field>
+            <field name="parent" ref="iva_IC_compras_21_ser"/>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="iva_ded_30_21"/>
+            <field name="invoice_tax_code" ref="iva_ded_31_21"/>
+            <field name="credit_note_base_code" ref="iva_ded_30_21"/>
+            <field name="credit_note_tax_code" ref="iva_ded_31_21"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_472021"/>
+            <field name="credit_note_account" ref="pgc_472021"/>
+        </record>
+        <record model="account.tax.template" id="iva_IC_compras_21_ser_2">
+            <field name="name">IVA 21% Intracomunitario. Servicios (2)</field>
+            <field name="description">IVA 21% Intracomunitario. Servicios (2)</field>
+            <field name="parent" ref="iva_IC_compras_21_ser"/>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="iva_dev_19"/>
+            <field name="invoice_tax_code" ref="iva_dev_20"/>
+            <field name="credit_note_base_code" ref="iva_dev_19"/>
+            <field name="credit_note_tax_code" ref="iva_dev_20"/>
+            <field name="invoice_tax_sign" eval="-1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477021"/>
+            <field name="credit_note_account" ref="pgc_477021"/>
+        </record>
         <record model="account.tax.template" id="suplido_compras">
             <field name="name">Suplido</field>
             <field name="description">Suplido</field>
