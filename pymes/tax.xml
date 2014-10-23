@@ -1281,6 +1281,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X7_compras_bi">
             <field name="name">IVA 7% Importaciones bienes de inversión</field>
@@ -1299,6 +1300,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X8_compras_bc">
             <field name="name">IVA 8% Importaciones bienes corrientes</field>
@@ -1317,6 +1319,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X8_compras_bi">
             <field name="name">IVA 8% Importaciones bienes de inversión</field>
@@ -1335,6 +1339,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X10_compras_bc">
             <field name="name">IVA 10% Importaciones bienes corrientes</field>
@@ -1353,6 +1359,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X10_compras_bi">
             <field name="name">IVA 10% Importaciones bienes de inversión</field>
@@ -1371,6 +1378,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X16_compras_bc">
             <field name="name">IVA 16% Importaciones bienes corrientes</field>
@@ -1389,6 +1397,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X16_compras_bi">
             <field name="name">IVA 16% Importaciones bienes de inversión</field>
@@ -1407,6 +1416,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X18_compras_bc">
             <field name="name">IVA 18% Importaciones bienes corrientes</field>
@@ -1425,6 +1435,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X18_compras_bi">
             <field name="name">IVA 18% Importaciones bienes de inversión</field>
@@ -1443,6 +1455,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X21_compras_bc">
             <field name="name">IVA 21% Importaciones bienes corrientes</field>
@@ -1461,6 +1475,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X21_compras_bi">
             <field name="name">IVA 21% Importaciones bienes de inversión</field>
@@ -1479,6 +1494,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_X0">
             <field name="name">IVA 0% Exportaciones</field>
@@ -1622,6 +1638,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_7_bc_1">
             <field name="name">IVA 7% Intracomunitario. Bienes corrientes (1)</field>
@@ -1639,6 +1656,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_7_bc_2">
             <field name="name">IVA 7% Intracomunitario. Bienes corrientes (2)</field>
@@ -1657,6 +1675,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_7_bi">
             <field name="name">IVA 7% Intracomunitario. Bienes de inversión</field>
@@ -1667,6 +1686,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_7_bi_1">
             <field name="name">IVA 7% Intracomunitario. Bienes de inversión (1)</field>
@@ -1684,6 +1704,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_7_bi_2">
             <field name="name">IVA 7% Intracomunitario. Bienes de inversión (2)</field>
@@ -1702,6 +1723,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bc">
             <field name="name">IVA 8% Intracomunitario. Bienes corrientes</field>
@@ -1712,6 +1734,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bc_1">
             <field name="name">IVA 8% Intracomunitario. Bienes corrientes (1)</field>
@@ -1729,6 +1753,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bc_2">
             <field name="name">IVA 8% Intracomunitario. Bienes corrientes (2)</field>
@@ -1747,6 +1773,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bi">
             <field name="name">IVA 8% Intracomunitario. Bienes de inversión</field>
@@ -1757,6 +1785,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bi_1">
             <field name="name">IVA 8% Intracomunitario. Bienes de inversión (1)</field>
@@ -1774,6 +1804,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_8_bi_2">
             <field name="name">IVA 8% Intracomunitario. Bienes de inversión (2)</field>
@@ -1792,6 +1824,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bc">
             <field name="name">IVA 10% Intracomunitario. Bienes corrientes</field>
@@ -1802,6 +1836,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bc_1">
             <field name="name">IVA 10% Intracomunitario. Bienes corrientes (1)</field>
@@ -1819,6 +1854,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bc_2">
             <field name="name">IVA 10% Intracomunitario. Bienes corrientes (2)</field>
@@ -1837,6 +1873,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bi">
             <field name="name">IVA 10% Intracomunitario. Bienes de inversión</field>
@@ -1847,6 +1884,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bi_1">
             <field name="name">IVA 10% Intracomunitario. Bienes de inversión (1)</field>
@@ -1864,6 +1902,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_10_bi_2">
             <field name="name">IVA 10% Intracomunitario. Bienes de inversión (2)</field>
@@ -1882,6 +1921,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bc">
             <field name="name">IVA 16% Intracomunitario. Bienes corrientes</field>
@@ -1892,6 +1932,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bc_1">
             <field name="name">IVA 16% Intracomunitario. Bienes corrientes (1)</field>
@@ -1909,6 +1950,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bc_2">
             <field name="name">IVA 16% Intracomunitario. Bienes corrientes (2)</field>
@@ -1927,6 +1969,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bi">
             <field name="name">IVA 16% Intracomunitario. Bienes de inversión</field>
@@ -1937,6 +1980,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bi_1">
             <field name="name">IVA 16% Intracomunitario. Bienes de inversión (1)</field>
@@ -1954,6 +1998,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_16_bi_2">
             <field name="name">IVA 16% Intracomunitario. Bienes de inversión (2)</field>
@@ -1972,6 +2017,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bc">
             <field name="name">IVA 18% Intracomunitario. Bienes corrientes</field>
@@ -1982,6 +2028,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bc_1">
             <field name="name">IVA 18% Intracomunitario. Bienes corrientes (1)</field>
@@ -1999,6 +2047,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bc_2">
             <field name="name">IVA 18% Intracomunitario. Bienes corrientes (2)</field>
@@ -2017,6 +2067,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bi">
             <field name="name">IVA 18% Intracomunitario. Bienes de inversión</field>
@@ -2027,6 +2079,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bi_1">
             <field name="name">IVA 18% Intracomunitario. Bienes de inversión (1)</field>
@@ -2044,6 +2098,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_18_bi_2">
             <field name="name">IVA 18% Intracomunitario. Bienes de inversión (2)</field>
@@ -2062,6 +2118,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bc">
             <field name="name">IVA 21% Intracomunitario. Bienes corrientes</field>
@@ -2072,6 +2130,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bc_1">
             <field name="name">IVA 21% Intracomunitario. Bienes corrientes (1)</field>
@@ -2089,6 +2148,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bc_2">
             <field name="name">IVA 21% Intracomunitario. Bienes corrientes (2)</field>
@@ -2107,6 +2167,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bi">
             <field name="name">IVA 21% Intracomunitario. Bienes de inversión</field>
@@ -2117,6 +2178,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bi_1">
             <field name="name">IVA 21% Intracomunitario. Bienes de inversión (1)</field>
@@ -2134,6 +2196,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_bi_2">
             <field name="name">IVA 21% Intracomunitario. Bienes de inversión (2)</field>
@@ -2152,6 +2215,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_ser">
             <field name="name">IVA 21% Intracomunitario. Servicios</field>
@@ -2162,6 +2226,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_ser_1">
             <field name="name">IVA 21% Intracomunitario. Servicios (1)</field>
@@ -2179,6 +2244,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_IC_compras_21_ser_2">
             <field name="name">IVA 21% Intracomunitario. Servicios (2)</field>
@@ -2197,6 +2263,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="suplido_compras">
             <field name="name">Suplido</field>
@@ -2269,6 +2336,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8">
             <field name="name">8% IVA Soportado (operaciones corrientes)</field>
@@ -2287,6 +2355,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10">
             <field name="name">10% IVA Soportado (operaciones corrientes)</field>
@@ -2305,6 +2375,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16">
             <field name="name">16% IVA Soportado (operaciones corrientes)</field>
@@ -2323,6 +2394,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18">
             <field name="name">18% IVA Soportado (operaciones corrientes)</field>
@@ -2342,6 +2414,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21">
             <field name="name">21% IVA Soportado (operaciones corrientes)</field>
@@ -2361,6 +2435,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_ex_inv">
             <field name="name">IVA Soportado exento (bienes de inversión)</field>
@@ -2413,6 +2488,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv">
             <field name="name">8% IVA Soportado (bienes de inversión)</field>
@@ -2431,6 +2507,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv">
             <field name="name">10% IVA Soportado (bienes de inversión)</field>
@@ -2449,6 +2527,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv">
             <field name="name">16% IVA Soportado (bienes de inversión)</field>
@@ -2467,6 +2546,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv">
             <field name="name">18% IVA Soportado (bienes de inversión)</field>
@@ -2485,6 +2565,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv">
             <field name="name">21% IVA Soportado (bienes de inversión)</field>
@@ -2503,6 +2585,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_ex">
             <field name="name">IVA Exento</field>
@@ -2555,6 +2638,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8">
             <field name="name">IVA 8%</field>
@@ -2573,6 +2657,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10">
             <field name="name">IVA 10%</field>
@@ -2591,6 +2677,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16">
             <field name="name">IVA 16%</field>
@@ -2609,6 +2696,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18">
             <field name="name">IVA 18%</field>
@@ -2628,6 +2716,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21">
             <field name="name">IVA 21%</field>
@@ -2647,6 +2737,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_4_recc">
             <field name="name">IVA Criterio Caja 4%</field>
@@ -3204,6 +3295,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_1_irpf_child">
@@ -3255,6 +3347,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_1_irpf_child">
@@ -3306,6 +3400,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_1_irpf_child">
@@ -3357,6 +3452,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_1_irpf_child">
@@ -3409,6 +3505,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_1_irpf_child">
@@ -3461,6 +3559,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_1_irpf_child">
@@ -3612,6 +3711,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_1_irpf_child">
@@ -3663,6 +3763,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_1_irpf_child">
@@ -3714,6 +3816,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_1_irpf_child">
@@ -3765,6 +3868,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_1_irpf_child">
@@ -3816,6 +3920,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_1_irpf_child">
@@ -3867,6 +3973,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_1_irpf_child">
@@ -4172,6 +4279,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_2_irpf_child">
@@ -4223,6 +4331,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_2_irpf_child">
@@ -4274,6 +4384,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_2_irpf_child">
@@ -4325,6 +4436,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_2_irpf_child">
@@ -4377,6 +4489,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_2_irpf_child">
@@ -4429,6 +4543,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_2_irpf_child">
@@ -4580,6 +4695,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_2_irpf_child">
@@ -4631,6 +4747,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_2_irpf_child">
@@ -4682,6 +4800,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_2_irpf_child">
@@ -4733,6 +4852,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_2_irpf_child">
@@ -4784,6 +4904,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_2_irpf_child">
@@ -4835,6 +4957,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_2_irpf_child">
@@ -5140,6 +5263,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_7_irpf_child">
@@ -5191,6 +5315,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_7_irpf_child">
@@ -5242,6 +5368,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_7_irpf_child">
@@ -5293,6 +5420,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_7_irpf_child">
@@ -5345,6 +5473,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_7_irpf_child">
@@ -5397,6 +5527,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_7_irpf_child">
@@ -5548,6 +5679,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_7_irpf_child">
@@ -5599,6 +5731,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_7_irpf_child">
@@ -5650,6 +5784,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_7_irpf_child">
@@ -5701,6 +5836,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_7_irpf_child">
@@ -5752,6 +5888,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_7_irpf_child">
@@ -5803,6 +5941,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_7_irpf_child">
@@ -6108,6 +6247,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_9_irpf_child">
@@ -6159,6 +6299,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_9_irpf_child">
@@ -6210,6 +6352,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_9_irpf_child">
@@ -6261,6 +6404,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_9_irpf_child">
@@ -6313,6 +6457,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_9_irpf_child">
@@ -6365,6 +6511,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_9_irpf_child">
@@ -6516,6 +6663,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_9_irpf_child">
@@ -6567,6 +6715,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_9_irpf_child">
@@ -6618,6 +6768,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_9_irpf_child">
@@ -6669,6 +6820,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_9_irpf_child">
@@ -6720,6 +6872,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_9_irpf_child">
@@ -6771,6 +6925,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_9_irpf_child">
@@ -7076,6 +7231,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_15_irpf_child">
@@ -7127,6 +7283,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_15_irpf_child">
@@ -7178,6 +7336,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_15_irpf_child">
@@ -7229,6 +7388,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_15_irpf_child">
@@ -7281,6 +7441,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_15_irpf_child">
@@ -7333,6 +7495,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_15_irpf_child">
@@ -7484,6 +7647,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_15_irpf_child">
@@ -7535,6 +7699,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_15_irpf_child">
@@ -7586,6 +7752,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_15_irpf_child">
@@ -7637,6 +7804,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_15_irpf_child">
@@ -7688,6 +7856,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_15_irpf_child">
@@ -7739,6 +7909,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_15_irpf_child">
@@ -8044,6 +8215,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_18_irpf_child">
@@ -8095,6 +8267,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_18_irpf_child">
@@ -8146,6 +8320,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_18_irpf_child">
@@ -8197,6 +8372,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_18_irpf_child">
@@ -8249,6 +8425,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_18_irpf_child">
@@ -8301,6 +8479,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_18_irpf_child">
@@ -8452,6 +8631,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_18_irpf_child">
@@ -8503,6 +8683,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_18_irpf_child">
@@ -8554,6 +8736,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_18_irpf_child">
@@ -8605,6 +8788,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_18_irpf_child">
@@ -8656,6 +8840,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_18_irpf_child">
@@ -8707,6 +8893,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_18_irpf_child">
@@ -9012,6 +9199,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_19_irpf_child">
@@ -9063,6 +9251,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_19_irpf_child">
@@ -9114,6 +9304,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_19_irpf_child">
@@ -9165,6 +9356,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_19_irpf_child">
@@ -9217,6 +9409,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_19_irpf_child">
@@ -9269,6 +9463,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_19_irpf_child">
@@ -9420,6 +9615,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_19_irpf_child">
@@ -9471,6 +9667,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_19_irpf_child">
@@ -9522,6 +9720,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_19_irpf_child">
@@ -9573,6 +9772,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_19_irpf_child">
@@ -9624,6 +9824,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_19_irpf_child">
@@ -9675,6 +9877,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_19_irpf_child">
@@ -9980,6 +10183,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_20_irpf_child">
@@ -10031,6 +10235,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_20_irpf_child">
@@ -10082,6 +10288,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_20_irpf_child">
@@ -10133,6 +10340,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_20_irpf_child">
@@ -10185,6 +10393,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_20_irpf_child">
@@ -10237,6 +10447,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_20_irpf_child">
@@ -10388,6 +10599,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_20_irpf_child">
@@ -10439,6 +10651,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_20_irpf_child">
@@ -10490,6 +10704,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_20_irpf_child">
@@ -10541,6 +10756,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_20_irpf_child">
@@ -10592,6 +10808,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_20_irpf_child">
@@ -10643,6 +10861,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_20_irpf_child">
@@ -10948,6 +11167,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+irpf_pymes_21_irpf_child">
@@ -10999,6 +11219,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+irpf_pymes_21_irpf_child">
@@ -11050,6 +11272,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+irpf_pymes_21_irpf_child">
@@ -11101,6 +11324,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+irpf_pymes_21_irpf_child">
@@ -11153,6 +11377,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+irpf_pymes_21_irpf_child">
@@ -11205,6 +11431,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+irpf_pymes_21_irpf_child">
@@ -11356,6 +11583,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_7_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+irpf_pymes_21_irpf_child">
@@ -11407,6 +11635,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_8_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+irpf_pymes_21_irpf_child">
@@ -11458,6 +11688,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_10_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+irpf_pymes_21_irpf_child">
@@ -11509,6 +11740,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_sop_16_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+irpf_pymes_21_irpf_child">
@@ -11560,6 +11792,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_sop_18_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+irpf_pymes_21_irpf_child">
@@ -11611,6 +11845,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_sop_21_inv+irpf_pymes_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+irpf_pymes_21_irpf_child">
@@ -11916,6 +12151,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_1_irpf_child">
@@ -11967,6 +12203,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_1_irpf_child">
@@ -12018,6 +12256,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_1_irpf_child">
@@ -12069,6 +12308,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_1_irpf_child">
@@ -12121,6 +12361,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_1_irpf_child">
@@ -12173,6 +12415,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_1_irpf_child">
@@ -12478,6 +12721,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_2_irpf_child">
@@ -12529,6 +12773,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_2_irpf_child">
@@ -12580,6 +12826,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_2_irpf_child">
@@ -12631,6 +12878,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_2_irpf_child">
@@ -12683,6 +12931,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_2_irpf_child">
@@ -12735,6 +12985,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_2_irpf_child">
@@ -13040,6 +13291,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_7_irpf_child">
@@ -13091,6 +13343,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_7_irpf_child">
@@ -13142,6 +13396,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_7_irpf_child">
@@ -13193,6 +13448,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_7_irpf_child">
@@ -13245,6 +13501,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_7_irpf_child">
@@ -13297,6 +13555,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_7_irpf_child">
@@ -13602,6 +13861,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_9_irpf_child">
@@ -13653,6 +13913,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_9_irpf_child">
@@ -13704,6 +13966,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_9_irpf_child">
@@ -13755,6 +14018,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_9_irpf_child">
@@ -13807,6 +14071,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_9_irpf_child">
@@ -13859,6 +14125,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_9_irpf_child">
@@ -14164,6 +14431,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_15_irpf_child">
@@ -14215,6 +14483,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_15_irpf_child">
@@ -14266,6 +14536,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_15_irpf_child">
@@ -14317,6 +14588,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_15_irpf_child">
@@ -14369,6 +14641,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_15_irpf_child">
@@ -14421,6 +14695,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_15_irpf_child">
@@ -14726,6 +15001,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_18_irpf_child">
@@ -14777,6 +15053,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_18_irpf_child">
@@ -14828,6 +15106,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_18_irpf_child">
@@ -14879,6 +15158,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_18_irpf_child">
@@ -14931,6 +15211,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_18_irpf_child">
@@ -14983,6 +15265,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_18_irpf_child">
@@ -15288,6 +15571,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_19_irpf_child">
@@ -15339,6 +15623,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_19_irpf_child">
@@ -15390,6 +15676,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_19_irpf_child">
@@ -15441,6 +15728,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_19_irpf_child">
@@ -15493,6 +15781,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_19_irpf_child">
@@ -15545,6 +15835,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_19_irpf_child">
@@ -15850,6 +16141,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_20_irpf_child">
@@ -15901,6 +16193,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_20_irpf_child">
@@ -15952,6 +16246,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_20_irpf_child">
@@ -16003,6 +16298,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_20_irpf_child">
@@ -16055,6 +16351,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_20_irpf_child">
@@ -16107,6 +16405,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_20_irpf_child">
@@ -16412,6 +16711,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_7+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+irpf_pymes_sale_21_irpf_child">
@@ -16463,6 +16763,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_8+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+irpf_pymes_sale_21_irpf_child">
@@ -16514,6 +16816,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_10+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+irpf_pymes_sale_21_irpf_child">
@@ -16565,6 +16868,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
             <field name="parent" ref="iva_pymes_rep_16+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+irpf_pymes_sale_21_irpf_child">
@@ -16617,6 +16921,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
             <field name="parent" ref="iva_pymes_rep_18+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+irpf_pymes_sale_21_irpf_child">
@@ -16669,6 +16975,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
             <field name="parent" ref="iva_pymes_rep_21+irpf_pymes_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+irpf_pymes_sale_21_irpf_child">
@@ -16926,6 +17233,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477007"/>
             <field name="credit_note_account" ref="pgc_pymes_477007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_7+re_pymes_1_re_child">
             <field name="parent" ref="iva_pymes_rep_7+re_pymes_1"/>
@@ -16977,6 +17285,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477008"/>
             <field name="credit_note_account" ref="pgc_pymes_477008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_8+re_pymes_1_re_child">
             <field name="parent" ref="iva_pymes_rep_8+re_pymes_1"/>
@@ -17028,6 +17338,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
             <field name="credit_note_account" ref="pgc_pymes_477010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_10+re_pymes_14_re_child">
             <field name="parent" ref="iva_pymes_rep_10+re_pymes_14"/>
@@ -17079,6 +17390,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_477016"/>
             <field name="credit_note_account" ref="pgc_pymes_477016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_16+re_pymes_4_re_child">
             <field name="parent" ref="iva_pymes_rep_16+re_pymes_4"/>
@@ -17131,6 +17443,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477018"/>
             <field name="credit_note_account" ref="pgc_pymes_477018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_18+re_pymes_4_re_child">
             <field name="parent" ref="iva_pymes_rep_18+re_pymes_4"/>
@@ -17183,6 +17497,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_477021"/>
             <field name="credit_note_account" ref="pgc_pymes_477021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_rep_21+re_pymes_52_re_child">
             <field name="parent" ref="iva_pymes_rep_21+re_pymes_52"/>
@@ -17285,6 +17600,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7+re_pymes_buy_1_re_child">
             <field name="parent" ref="iva_pymes_sop_7+re_pymes_buy_1"/>
@@ -17336,6 +17652,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8+re_pymes_buy_1_re_child">
             <field name="parent" ref="iva_pymes_sop_8+re_pymes_buy_1"/>
@@ -17387,6 +17705,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10+re_pymes_buy_14_re_child">
             <field name="parent" ref="iva_pymes_sop_10+re_pymes_buy_14"/>
@@ -17438,6 +17757,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16+re_pymes_buy_4_re_child">
             <field name="parent" ref="iva_pymes_sop_16+re_pymes_buy_4"/>
@@ -17490,6 +17810,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
             <field name="sequence">0</field>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18+re_pymes_buy_4_re_child">
             <field name="parent" ref="iva_pymes_sop_18+re_pymes_buy_4"/>
@@ -17542,6 +17864,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
             <field name="sequence">0</field>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21+re_pymes_buy_52_re_child">
             <field name="parent" ref="iva_pymes_sop_21+re_pymes_buy_52"/>
@@ -17644,6 +17967,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472007"/>
             <field name="credit_note_account" ref="pgc_pymes_472007"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_7_inv+re_pymes_buy_1_re_child">
             <field name="parent" ref="iva_pymes_sop_7_inv+re_pymes_buy_1"/>
@@ -17695,6 +18019,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472008"/>
             <field name="credit_note_account" ref="pgc_pymes_472008"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_8_inv+re_pymes_buy_1_re_child">
             <field name="parent" ref="iva_pymes_sop_8_inv+re_pymes_buy_1"/>
@@ -17746,6 +18072,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
             <field name="credit_note_account" ref="pgc_pymes_472010"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_10_inv+re_pymes_buy_14_re_child">
             <field name="parent" ref="iva_pymes_sop_10_inv+re_pymes_buy_14"/>
@@ -17797,6 +18124,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472016"/>
             <field name="credit_note_account" ref="pgc_pymes_472016"/>
+            <field name="end_date">2010-06-30</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_16_inv+re_pymes_buy_4_re_child">
             <field name="parent" ref="iva_pymes_sop_16_inv+re_pymes_buy_4"/>
@@ -17848,6 +18176,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472018"/>
             <field name="credit_note_account" ref="pgc_pymes_472018"/>
+            <field name="start_date">2010-07-01</field>
+            <field name="end_date">2012-08-31</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_18_inv+re_pymes_buy_4_re_child">
             <field name="parent" ref="iva_pymes_sop_18_inv+re_pymes_buy_4"/>
@@ -17899,6 +18229,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
             <field name="credit_note_account" ref="pgc_pymes_472021"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_pymes_sop_21_inv+re_pymes_buy_52_re_child">
             <field name="parent" ref="iva_pymes_sop_21_inv+re_pymes_buy_52"/>

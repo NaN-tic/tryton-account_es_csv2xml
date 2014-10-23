@@ -244,12 +244,14 @@ def read_tax_file(file_name):
                 {'name': 'invoice_account', 'ref': row[15]},
                 {'name': 'credit_note_account', 'ref': row[16]},
                 {'name': 'sequence', 'text': row[17]},
-                {'name': 'account_name', 'text': row[18]},
+                {'name': 'start_date', 'text': row[18]},
+                {'name': 'end_date', 'text': row[19]},
+                {'name': 'account_name', 'text': row[20]},
             ],
         }
-        if len(row) >= 20:
+        if len(row) >= 22:
             tax_record['fields'].append({
-                    'name': 'report_description', 'text': row[19]})
+                    'name': 'report_description', 'text': row[21]})
         records.append(tax_record)
     return records
 
