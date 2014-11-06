@@ -119,6 +119,7 @@ def create_accounts(xml_data, file_name):
                 {'name': 'kind', 'text': row[5]},
                 {'name': 'type', 'ref': row[6]},
                 {'name': 'deferral', 'eval': row[7]},
+                {'name': 'party_required', 'eval': row[8]},
             ],
         }
         set_record(xml_data, record)
