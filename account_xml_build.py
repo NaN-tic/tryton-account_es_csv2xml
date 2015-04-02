@@ -390,7 +390,6 @@ def create_tax_accounts(account_xml, file_names):
                 levels[level].append(record)
             else:
                 levels[level] = [record]
-#             set_record(account_xml_data, record)
             account_ids.append(record['id'])
 
     for level in levels:
@@ -459,7 +458,6 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
         0: [],
         }
     account_tax_rule_line_records = []
-#    create_tax_accounts(account_xml_data)
     iva_records = read_tax_file(iva_file)
     irpf_records = read_tax_file(irpf_file)
 
@@ -555,7 +553,6 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
             {'name': 'account', 'ref': account},
             {'name': 'group', 'ref': group},
         ])
-#         set_record(tax_xml_data, record)
         return record
 
     def create_substitution_child_tax(fields, record_id, tail_id):
@@ -567,7 +564,6 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
         fields = [f for f in fields if f['name'] != 'account_name']
         record['fields'].extend(fields)
         return record
-#         set_record(tax_xml_data, record)
 
     def create_tax_rule_line(row, tax_record):
         record = {
@@ -581,7 +577,6 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
             ],
         }
         return record
-#         set_record(tax_xml_data, record)
 
     levels = {
         0: [],
