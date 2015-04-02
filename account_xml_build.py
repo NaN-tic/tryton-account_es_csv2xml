@@ -38,8 +38,7 @@ def get_csv_reader(file_name):
 
 def init_xml():
     xml = etree.Element('tryton')
-    xml_data = etree.SubElement(xml, 'data')
-    return xml, xml_data
+    return xml
 
 
 def write_xml_file(xml, xml_data, target_file):
@@ -48,14 +47,18 @@ def write_xml_file(xml, xml_data, target_file):
         standalone=False, pretty_print=True)
 
 
-def set_record(xml_data, record):
-
-    def set_subelement(parent_xml_element, label, attrib, text=False):
+def set_subelement(parent_xml_element, label, attrib=None, text=None):
+    if attrib:
         xml_element = etree.SubElement(parent_xml_element, label,
-                                       attrib=attrib)
-        if text:
-            xml_element.text = text.decode('utf-8')
-        return xml_element
+            attrib=attrib)
+    else:
+        xml_element = etree.SubElement(parent_xml_element, label)
+    if text:
+        xml_element.text = text.decode('utf-8')
+    return xml_element
+
+
+def set_record(xml_data, record):
 
     attrib = {
         'model': record['model'],
@@ -81,9 +84,26 @@ def set_records(xml_data, records):
         set_record(xml_data, record)
 
 
-def create_account_types(xml_data, file_name):
+def compute_level(record, levels):
+    parent = None
+    for field in record['fields']:
+        if field['name'] == 'parent':
+            parent = field['ref']
+            break
+    if parent:
+        for level in levels:
+            for record in levels[level]:
+                if parent == record['id']:
+                    return level + 1
+    return 0
+
+
+def create_account_types(account_xml, file_name):
     # Read account_type csv file
     reader = get_csv_reader(file_name)
+    levels = {
+        0: [],
+        }
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -97,14 +117,25 @@ def create_account_types(xml_data, file_name):
                 {'name': 'balance_sheet', 'eval': row[4]},
                 {'name': 'income_statement', 'eval': row[5]},
                 {'name': 'display_balance', 'text': row[6]},
-            ],
-        }
-        set_record(xml_data, record)
+                ],
+            }
+        level = compute_level(record, levels)
+        if level in levels:
+            levels[level].append(record)
+        else:
+            levels[level] = [record]
+
+    for level in levels:
+        xml_data = set_subelement(account_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
 
 
-def create_accounts(xml_data, file_name):
+def create_accounts(account_xml, file_name):
     # Read account_csv file
     reader = get_csv_reader(file_name)
+    levels = {
+        0: [],
+        }
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -122,13 +153,22 @@ def create_accounts(xml_data, file_name):
                 {'name': 'party_required', 'eval': row[8]},
             ],
         }
-        set_record(xml_data, record)
+        level = compute_level(record, levels)
+        if level in levels:
+            levels[level].append(record)
+        else:
+            levels[level] = [record]
         account_ids.append(record['id'])
 
+    for level in levels:
+        xml_data = set_subelement(account_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
 
-def create_tax_groups(xml_data, file_name):
+
+def create_tax_groups(tax_xml, file_name):
     # Read tax_group csv file
     reader = get_csv_reader(file_name)
+    xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -144,9 +184,12 @@ def create_tax_groups(xml_data, file_name):
         set_record(xml_data, record)
 
 
-def create_tax_codes(xml_data, file_name):
+def create_tax_codes(tax_xml, file_name):
     # Read tax_code csv file
     reader = get_csv_reader(file_name)
+    levels = {
+        0: [],
+        }
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -160,22 +203,42 @@ def create_tax_codes(xml_data, file_name):
                 {'name': 'account', 'ref': row[4]},
             ],
         }
-        set_record(xml_data, record)
+        level = compute_level(record, levels)
+        if level in levels:
+            levels[level].append(record)
+        else:
+            levels[level] = [record]
+    for level in levels:
+        xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
 
 
-def create_taxes(xml_data, file_names):
+def create_taxes(tax_xml, file_names):
+    levels = {
+        0: [],
+        }
     for file_name in file_names:
         records = read_tax_file(file_name)
         for record in records:
             if record['fields'][len(record['fields']) - 1]['name'] == \
                     'account_name':
                 record['fields'].pop()
-            set_record(xml_data, record)
+
+            level = compute_level(record, levels)
+            if level in levels:
+                levels[level].append(record)
+            else:
+                levels[level] = [record]
+
+    for level in levels:
+        xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
 
 
-def create_tax_rules(xml_data, file_name):
+def create_tax_rules(tax_xml, file_name):
     # Read tax_rule csv file
     reader = get_csv_reader(file_name)
+    xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -191,8 +254,9 @@ def create_tax_rules(xml_data, file_name):
         set_record(xml_data, record)
 
 
-def create_tax_rule_lines(tax_xml_data, file_name):
+def create_tax_rule_lines(tax_xml, file_name):
     reader = get_csv_reader(file_name)
+    xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
         if reader.line_num == 1 or row[1] not in ['fp_intra', 'fp_extra'] and \
                 row[1] not in ['fp_pymes_intra', 'fp_pymes_extra']:
@@ -207,7 +271,7 @@ def create_tax_rule_lines(tax_xml_data, file_name):
                 {'name': 'group', 'ref': row[4]},
             ],
         }
-        set_record(tax_xml_data, record)
+        set_record(xml_data, record)
 
 
 def read_tax_file(file_name):
@@ -257,7 +321,7 @@ def read_tax_file(file_name):
     return records
 
 
-def create_tax_accounts(account_xml_data, file_names):
+def create_tax_accounts(account_xml, file_names):
     records = []
     for file_name in file_names:
         records.extend(read_tax_file(file_name))
@@ -284,6 +348,9 @@ def create_tax_accounts(account_xml_data, file_names):
         'pg_pymesc_4770': 'es_balance_pymes_32590',
         'pgc_pymes_4771': 'es_balance_pymes_32590',
     }
+    levels = {
+        0: [],
+        }
     for re_record in records:
         record = {
             'model': 'account.account.template',
@@ -301,7 +368,7 @@ def create_tax_accounts(account_xml_data, file_names):
                 ])
                 if parent in map_2_type and parent:
                     account_type = map_2_type[parent]
-                if parent == 'pgc_4750' or  parent == 'pgc_pymes_4750':
+                if parent == 'pgc_4750' or parent == 'pgc_pymes_4750':
                     kind = 'payable'
                 elif parent == 'pgc_4700' or parent == 'pgc_pymes_4700':
                     kind = 'receivable'
@@ -318,15 +385,23 @@ def create_tax_accounts(account_xml_data, file_names):
             {'name': 'deferral', 'eval': 'True'},
         ])
         if record['id'] not in account_ids:
-            set_record(account_xml_data, record)
+            level = compute_level(record, levels)
+            if level in levels:
+                levels[level].append(record)
+            else:
+                levels[level] = [record]
+#             set_record(account_xml_data, record)
             account_ids.append(record['id'])
 
+    for level in levels:
+        xml_data = set_subelement(account_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
 
-def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
+
+def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
                           irpf_file):
 
-    def create_substitution_tax(tax_xml_data, group, record_id, name,
-                                ref):
+    def create_substitution_tax(group, record_id, name, ref):
         record = {
             'model': 'account.tax.template',
             'id': record_id,
@@ -338,21 +413,24 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
                 {'name': 'group', 'ref': group},
             ],
         }
-        set_record(tax_xml_data, record)
         return record
 
-    def create_substitution_child_tax(tax_xml_data, tax_record, record_id,
-                                      id_tail):
+    def create_substitution_child_tax(tax_record, record_id, id_tail):
         record = tax_record.copy()
         record['id'] = record_id + id_tail
         record['fields'] = [f for f in record['fields'] if
                                 f['name'] != 'account_name']
-        record['fields'].extend([
-            {'name': 'parent', 'ref': record_id},
-        ])
-        set_record(tax_xml_data, record)
+        for field in record['fields']:
+            if field['name'] == 'parent':
+                field['ref'] = record_id
+                break
+        else:
+            record['fields'].extend([
+                    {'name': 'parent', 'ref': record_id},
+                    ])
+        return record
 
-    def create_tax_rule_lines(tax_xml_data, iva_record, irpf_record):
+    def create_tax_rule_lines(iva_record, irpf_record):
         reader = get_csv_reader(rule_file)
         rate_irpf = irpf_record['id'].split('_')[-1:][0]
         for row in reader:
@@ -370,14 +448,17 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
                 'fields': [
                     {'name': 'rule', 'ref': row[0]},
                     {'name': 'origin_tax', 'ref': iva_record['id']},
-                    {'name': 'tax', 'ref': iva_record['id'] + '+' + \
+                    {'name': 'tax', 'ref': iva_record['id'] + '+' +
                             irpf_record['id']},
                     {'name': 'group', 'ref': group},
                 ],
             }
-            set_record(tax_xml_data, record)
-            break
+            return record
 
+    levels = {
+        0: [],
+        }
+    account_tax_rule_line_records = []
 #    create_tax_accounts(account_xml_data)
     iva_records = read_tax_file(iva_file)
     irpf_records = read_tax_file(irpf_file)
@@ -405,20 +486,45 @@ def create_irpf_tax_rules(tax_xml_data, account_xml_data, rule_file, iva_file,
             irpf_group = [f['ref'] for f in irpf_record['fields'] if
                      f['name'] == 'group'][0]
             if iva_group == irpf_group:
-                create_substitution_tax(tax_xml_data, iva_group, record_id,
-                                        complete_name, ref)
-                create_substitution_child_tax(tax_xml_data, iva_record, record_id,
-                                              '_iva_child')
-                create_substitution_child_tax(tax_xml_data, irpf_record, record_id,
-                                              '_irpf_child')
-                create_tax_rule_lines(tax_xml_data, iva_record, irpf_record)
+
+                record = create_substitution_tax(iva_group, record_id,
+                    complete_name, ref)
+                level = compute_level(record, levels)
+                if level in levels:
+                    levels[level].append(record)
+                else:
+                    levels[level] = [record]
+
+                record = create_substitution_child_tax(iva_record, record_id,
+                    '_iva_child')
+                level = compute_level(record, levels)
+                if level in levels:
+                    levels[level].append(record)
+                else:
+                    levels[level] = [record]
+
+                record = create_substitution_child_tax(irpf_record, record_id,
+                    '_irpf_child')
+                level = compute_level(record, levels)
+                if level in levels:
+                    levels[level].append(record)
+                else:
+                    levels[level] = [record]
+
+                account_tax_rule_line_records.append(create_tax_rule_lines(
+                    iva_record, irpf_record))
+
+    for level in levels:
+        xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
+    xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+    set_records(xml_data, account_tax_rule_line_records)
 
 
-def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
+def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
                         rule_line_file):
 
-    def create_substitution_tax(tax_xml_data, iva_id, re_id, iva_fields,
-                                re_fields):
+    def create_substitution_tax(iva_id, re_id, iva_fields, re_fields):
         record = {
             'model': 'account.tax.template',
             'id': iva_id + '+' + re_id,
@@ -449,11 +555,10 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
             {'name': 'account', 'ref': account},
             {'name': 'group', 'ref': group},
         ])
-        set_record(tax_xml_data, record)
+#         set_record(tax_xml_data, record)
         return record
 
-    def create_substitution_child_tax(tax_xml_data, fields, record_id,
-                                      tail_id):
+    def create_substitution_child_tax(fields, record_id, tail_id):
         record = {
             'model': 'account.tax.template',
             'id': record_id + tail_id,
@@ -461,9 +566,10 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
         }
         fields = [f for f in fields if f['name'] != 'account_name']
         record['fields'].extend(fields)
-        set_record(tax_xml_data, record)
+        return record
+#         set_record(tax_xml_data, record)
 
-    def create_tax_rule_line(tax_xml_data, row, tax_record):
+    def create_tax_rule_line(row, tax_record):
         record = {
             'model': 'account.tax.rule.line.template',
             'id': row[0],
@@ -474,8 +580,13 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
                 {'name': 'group', 'ref': row[4]},
             ],
         }
-        set_record(tax_xml_data, record)
+        return record
+#         set_record(tax_xml_data, record)
 
+    levels = {
+        0: [],
+        }
+    account_tax_rule_line_records = []
     iva_records = read_tax_file(iva_file)
     re_records = read_tax_file(re_file)
     re_reader = get_csv_reader(rule_line_file)
@@ -488,7 +599,8 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
         if re_row[1] == 'fp_recc' or re_row[1] == 'fp_pymes_recc':
             #RECC lines are manually defined on file so no need of tax creation
             tax_record = {'id': re_row[3]}
-            create_tax_rule_line(tax_xml_data, re_row, tax_record)
+            account_tax_rule_line_records.append(create_tax_rule_line(re_row,
+                tax_record))
             continue
         if re_row[1] != 'fp_recargo' and re_row[1] != 'fp_pymes_recargo':
             continue
@@ -517,13 +629,39 @@ def create_re_tax_rules(tax_xml_data, account_xml_data, iva_file, re_file,
         re_group = [f['ref'] for f in re_record['fields'] if
                  f['name'] == 'group'][0]
         if iva_group == re_group:
-            tax_record = create_substitution_tax(tax_xml_data, iva_id, re_id,
-                                                 iva_fields, re_fields)
-            create_substitution_child_tax(tax_xml_data, iva_fields,
-                                          tax_record['id'], '_iva_child')
-            create_substitution_child_tax(tax_xml_data, re_fields,
-                                          tax_record['id'], '_re_child')
-            create_tax_rule_line(tax_xml_data, re_row, tax_record)
+
+            tax_record = create_substitution_tax(iva_id, re_id, iva_fields,
+                re_fields)
+            level = compute_level(tax_record, levels)
+            if level in levels:
+                levels[level].append(tax_record)
+            else:
+                levels[level] = [tax_record]
+
+            record = create_substitution_child_tax(iva_fields,
+                tax_record['id'], '_iva_child')
+            level = compute_level(record, levels)
+            if level in levels:
+                levels[level].append(record)
+            else:
+                levels[level] = [record]
+
+            record = create_substitution_child_tax(re_fields,
+                tax_record['id'], '_re_child')
+            level = compute_level(record, levels)
+            if level in levels:
+                levels[level].append(record)
+            else:
+                levels[level] = [record]
+
+            account_tax_rule_line_records.append(create_tax_rule_line(re_row,
+                tax_record))
+
+    for level in levels:
+        xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+        set_records(xml_data, levels[level])
+    xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
+    set_records(xml_data, account_tax_rule_line_records)
 
 
 def normalize_xml(archive):
@@ -591,61 +729,61 @@ def normalize_xml(archive):
 if __name__ == '__main__':
     # Create xml standard files
     # Initialize xml etree.Elements for each file
-    account_xml, account_xml_data = init_xml()
-    tax_xml, tax_xml_data = init_xml()
+    account_xml = init_xml()
+    tax_xml = init_xml()
 
     # Next add data to each xml etree.Element
     # First to account_xml etree.Element
-    create_account_types(account_xml_data, 'account_type.csv')
-    create_accounts(account_xml_data, 'account.csv')
-    create_tax_accounts(account_xml_data, ['tax_re.csv', 'tax_iva.csv',
+    create_account_types(account_xml, 'account_type.csv')
+    create_accounts(account_xml, 'account.csv')
+    create_tax_accounts(account_xml, ['tax_re.csv', 'tax_iva.csv',
                                         'tax_irpf.csv', 'tax.csv'])
     # And then to tax_xml etree.Element
-    create_tax_groups(tax_xml_data, 'tax_group.csv')
-    create_tax_codes(tax_xml_data, 'tax_code.csv')
-    create_taxes(tax_xml_data, [
+    create_tax_groups(tax_xml, 'tax_group.csv')
+    create_tax_codes(tax_xml, 'tax_code.csv')
+    create_taxes(tax_xml, [
         'tax.csv',
         'tax_iva.csv',
     ])
-    create_tax_rules(tax_xml_data, 'tax_rule.csv')
-    create_tax_rule_lines(tax_xml_data, 'tax_rule_line.csv')
-    create_irpf_tax_rules(tax_xml_data, account_xml_data, 'tax_rule.csv',
+    create_tax_rules(tax_xml, 'tax_rule.csv')
+    create_tax_rule_lines(tax_xml, 'tax_rule_line.csv')
+    create_irpf_tax_rules(tax_xml, account_xml, 'tax_rule.csv',
             'tax_iva.csv', 'tax_irpf.csv')
 
-    create_re_tax_rules(tax_xml_data, account_xml_data, 'tax_iva.csv',
+    create_re_tax_rules(tax_xml, account_xml, 'tax_iva.csv',
             'tax_re.csv', 'tax_rule_line.csv')
     # Finally save each xml etree.Element to a file
-    write_xml_file(account_xml, account_xml_data, 'ordinario/account.xml')
-    write_xml_file(tax_xml, tax_xml_data, 'ordinario/tax.xml')
+    write_xml_file(account_xml, account_xml, 'ordinario/account.xml')
+    write_xml_file(tax_xml, tax_xml, 'ordinario/tax.xml')
 
     # Create xml files for PYMES
     # Initialize xml etree.Elements for each file
-    account_xml_pymes, account_xml_pymes_data = init_xml()
-    tax_xml_pymes, tax_xml_pymes_data = init_xml()
+    account_xml_pymes = init_xml()
+    tax_xml_pymes = init_xml()
 
     # Next add data to each xml etree.Element
     # First to account_xml_pymes etree.Element
-    create_account_types(account_xml_pymes_data, 'account_type_pymes.csv')
-    create_accounts(account_xml_pymes_data, 'account_pymes.csv')
-    create_tax_accounts(account_xml_pymes_data, ['tax_re_pymes.csv',
+    create_account_types(account_xml_pymes, 'account_type_pymes.csv')
+    create_accounts(account_xml_pymes, 'account_pymes.csv')
+    create_tax_accounts(account_xml_pymes, ['tax_re_pymes.csv',
             'tax_iva_pymes.csv', 'tax_irpf_pymes.csv', 'tax_pymes.csv'])
     # And then to tax_xml_pymes etree.Element
-    create_tax_groups(tax_xml_pymes_data, 'tax_group_pymes.csv')
-    create_tax_codes(tax_xml_pymes_data, 'tax_code_pymes.csv')
-    create_taxes(tax_xml_pymes_data, [
+    create_tax_groups(tax_xml_pymes, 'tax_group_pymes.csv')
+    create_tax_codes(tax_xml_pymes, 'tax_code_pymes.csv')
+    create_taxes(tax_xml_pymes, [
             'tax_pymes.csv',
             'tax_iva_pymes.csv',
     ])
-    create_tax_rules(tax_xml_pymes_data, 'tax_rule_pymes.csv')
-    create_tax_rule_lines(tax_xml_pymes_data, 'tax_rule_line_pymes.csv')
-    create_irpf_tax_rules(tax_xml_pymes_data, account_xml_pymes_data,
+    create_tax_rules(tax_xml_pymes, 'tax_rule_pymes.csv')
+    create_tax_rule_lines(tax_xml_pymes, 'tax_rule_line_pymes.csv')
+    create_irpf_tax_rules(tax_xml_pymes, account_xml_pymes,
             'tax_rule_pymes.csv', 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
-    create_re_tax_rules(tax_xml_pymes_data, account_xml_pymes_data,
+    create_re_tax_rules(tax_xml_pymes, account_xml_pymes,
             'tax_iva_pymes.csv', 'tax_re_pymes.csv', 'tax_rule_line_pymes.csv')
     # Finally save each xml etree.Element to a file
-    write_xml_file(account_xml_pymes, account_xml_pymes_data,
+    write_xml_file(account_xml_pymes, account_xml_pymes,
            'pymes/account.xml')
-    write_xml_file(tax_xml_pymes, tax_xml_pymes_data, 'pymes/tax.xml')
+    write_xml_file(tax_xml_pymes, tax_xml_pymes, 'pymes/tax.xml')
     archives = (
         'ordinario/account.xml',
         'ordinario/tax.xml',
