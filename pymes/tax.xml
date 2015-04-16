@@ -1732,7 +1732,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="start_date">2012-09-01</field>
         </record>
-        <record model="account.tax.template" id="suplido_compras">
+        <record model="account.tax.template" id="suplido_pymes_compras">
             <field name="name">Suplido</field>
             <field name="description">Suplido</field>
             <field name="account" ref="pgc_pymes_0"/>
@@ -1742,7 +1742,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
         </record>
-        <record model="account.tax.template" id="suplido_ventas">
+        <record model="account.tax.template" id="suplido_pymes_ventas">
             <field name="name">Suplido</field>
             <field name="description">Suplido</field>
             <field name="account" ref="pgc_pymes_0"/>
