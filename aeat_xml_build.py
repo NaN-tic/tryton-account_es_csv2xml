@@ -185,7 +185,8 @@ def create_340(xml, files):
                 aeat_key = 'aeat_340_key_%s' % key
                 records.append({
                     'model': 'aeat.340.type-account.tax.template',
-                    'id': 'aeat_340_template_type_%s_%s' % (row[0], key),
+                    'id': 'aeat_340_%s_template_type_%s_%s' %
+                        ('pyme' if 'pyme' in module else '', row[0], key),
                     'fields': [
                         {'name': 'tax', 'ref': module + '.' + str(row[0])},
                         {'name': 'aeat_340_type', 'ref': aeat_key},
