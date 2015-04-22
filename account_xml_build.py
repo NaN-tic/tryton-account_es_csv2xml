@@ -732,13 +732,14 @@ if __name__ == '__main__':
     create_account_types(account_xml, 'account_type.csv')
     create_accounts(account_xml, 'account.csv')
     create_tax_accounts(account_xml, ['tax_re.csv', 'tax_iva.csv',
-                                        'tax_irpf.csv', 'tax.csv'])
+            'tax_igic.csv', 'tax_irpf.csv', 'tax.csv'])
     # And then to tax_xml etree.Element
     create_tax_groups(tax_xml, 'tax_group.csv')
     create_tax_codes(tax_xml, 'tax_code.csv')
     create_taxes(tax_xml, [
         'tax.csv',
         'tax_iva.csv',
+        'tax_igic.csv',
     ])
     create_tax_rules(tax_xml, 'tax_rule.csv')
     create_tax_rule_lines(tax_xml, 'tax_rule_line.csv')
@@ -761,13 +762,15 @@ if __name__ == '__main__':
     create_account_types(account_xml_pymes, 'account_type_pymes.csv')
     create_accounts(account_xml_pymes, 'account_pymes.csv')
     create_tax_accounts(account_xml_pymes, ['tax_re_pymes.csv',
-            'tax_iva_pymes.csv', 'tax_irpf_pymes.csv', 'tax_pymes.csv'])
+            'tax_iva_pymes.csv', 'tax_igic_pymes.csv', 'tax_irpf_pymes.csv',
+            'tax_pymes.csv'])
     # And then to tax_xml_pymes etree.Element
     create_tax_groups(tax_xml_pymes, 'tax_group_pymes.csv')
     create_tax_codes(tax_xml_pymes, 'tax_code_pymes.csv')
     create_taxes(tax_xml_pymes, [
             'tax_pymes.csv',
             'tax_iva_pymes.csv',
+            'tax_igic_pymes.csv',
     ])
     create_tax_rules(tax_xml_pymes, 'tax_rule_pymes.csv')
     create_tax_rule_lines(tax_xml_pymes, 'tax_rule_line_pymes.csv')

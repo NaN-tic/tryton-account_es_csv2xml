@@ -270,7 +270,7 @@ def normalize_xml(archive):
 
 if __name__ == '__main__':
     xml = init_xml()
-    files = ['tax.csv', 'tax_pymes.csv']
+    files = ['tax.csv', 'tax_pymes.csv', 'tax_igic.csv']
     create_349(xml, files)
     write_xml_file(xml, 'aeat/349.xml')
 
