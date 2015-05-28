@@ -415,18 +415,12 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
         return record
 
     def create_substitution_child_tax(tax_record, record_id, id_tail):
-        record = tax_record.copy()
+        record = {}
         record['id'] = record_id + id_tail
-        record['fields'] = [f for f in record['fields'] if
-                                f['name'] != 'account_name']
-        for field in record['fields']:
-            if field['name'] == 'parent':
-                field['ref'] = record_id
-                break
-        else:
-            record['fields'].extend([
-                    {'name': 'parent', 'ref': record_id},
-                    ])
+        record['model'] = 'account.tax.template'
+        record['fields'] = [f for f in tax_record['fields'] if
+                                f['name'] not in ['account_name', 'parent']]
+        record['fields'].append({'name': 'parent', 'ref': record_id})
         return record
 
     def create_tax_rule_lines(iva_record, irpf_record):
@@ -484,7 +478,6 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
             irpf_group = [f['ref'] for f in irpf_record['fields'] if
                      f['name'] == 'group'][0]
             if iva_group == irpf_group:
-
                 record = create_substitution_tax(iva_group, record_id,
                     complete_name, ref)
                 level = compute_level(record, levels)
