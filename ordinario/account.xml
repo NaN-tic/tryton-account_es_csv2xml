@@ -6728,7 +6728,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_200"/>
             <field name="code">200</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11160"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6738,7 +6738,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_201"/>
             <field name="code">201</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11110"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6748,7 +6748,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_202"/>
             <field name="code">202</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11120"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6758,7 +6758,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_203"/>
             <field name="code">203</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11130"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6768,7 +6768,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_204"/>
             <field name="code">204</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11140"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6778,7 +6778,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_205"/>
             <field name="code">205</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11170"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6788,7 +6788,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_206"/>
             <field name="code">206</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11150"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6798,7 +6798,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_209"/>
             <field name="code">209</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11170"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6808,7 +6808,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_210"/>
             <field name="code">210</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11210"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6818,7 +6818,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_211"/>
             <field name="code">211</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11210"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6828,7 +6828,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_212"/>
             <field name="code">212</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6838,7 +6838,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_213"/>
             <field name="code">213</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6848,7 +6848,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_214"/>
             <field name="code">214</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6858,7 +6858,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_215"/>
             <field name="code">215</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6868,7 +6868,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_216"/>
             <field name="code">216</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6878,7 +6878,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_217"/>
             <field name="code">217</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6888,7 +6888,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_218"/>
             <field name="code">218</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6898,7 +6898,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_219"/>
             <field name="code">219</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11220"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6908,7 +6908,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_220"/>
             <field name="code">220</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11310"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6918,7 +6918,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_221"/>
             <field name="code">221</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11320"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6928,7 +6928,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_230"/>
             <field name="code">230</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6938,7 +6938,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_231"/>
             <field name="code">231</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6948,7 +6948,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_232"/>
             <field name="code">232</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6958,7 +6958,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_233"/>
             <field name="code">233</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6968,7 +6968,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_237"/>
             <field name="code">237</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6978,7 +6978,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="pgc_239"/>
             <field name="code">239</field>
             <field name="reconcile" eval="False"/>
-            <field name="kind">other</field>
+            <field name="kind">expense</field>
             <field name="type" ref="es_balance_normal_11230"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
