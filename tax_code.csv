@@ -149,6 +149,7 @@ irpf_base_9,IRPF Retenciones practicadas Base Imponible 9%,B.IRPF9.P,irpf_base,p
 irpf_base_15,IRPF Retenciones practicadas Base Imponible 15%,B.IRPF15.P,irpf_base,pgc_0
 irpf_base_18,IRPF Retenciones practicadas Base Imponible 18%,B.IRPF18.P,irpf_base,pgc_0
 irpf_base_19,IRPF Retenciones practicadas Base Imponible 19%,B.IRPF19.P,irpf_base,pgc_0
+irpf_base_195,"IRPF Retenciones practicadas Base Imponible 19,5%",B.IRPF195.P,irpf_base,pgc_0
 irpf_base_20,IRPF Retenciones practicadas Base Imponible 20%,B.IRPF20.P,irpf_base,pgc_0
 irpf_base_21,IRPF Retenciones practicadas Base Imponible 21%,B.IRPF21.P,irpf_base,pgc_0
 irpf_cuota_total,IRPF Retenciones practicadas Total Cuota,IRPF.P,vat_code_chart_root,pgc_0
@@ -159,6 +160,7 @@ irpf_cuota_9,IRPF Retenciones practicadas Cuota 9%,IRPF9.P,irpf_cuota_total,pgc_
 irpf_cuota_15,IRPF Retenciones practicadas Cuota 15%,IRPF15.P,irpf_cuota_total,pgc_0
 irpf_cuota_18,IRPF Retenciones practicadas Cuota 18%,IRPF18.P,irpf_cuota_total,pgc_0
 irpf_cuota_19,IRPF Retenciones practicadas Cuota 19%,IRPF19.P,irpf_cuota_total,pgc_0
+irpf_cuota_195,"IRPF Retenciones practicadas Cuota 19,5%",IRPF195.P,irpf_cuota_total,pgc_0
 irpf_cuota_20,IRPF Retenciones practicadas Cuota 20%,IRPF20.P,irpf_cuota_total,pgc_0
 irpf_cuota_21,IRPF Retenciones practicadas Cuota 21%,IRPF21.P,irpf_cuota_total,pgc_0
 irpf_base_sale,IRPF Retenciones a cuenta Base Imponible,B.IRPF.AC,vat_code_chart_root,pgc_0
@@ -169,6 +171,7 @@ irpf_base_sale_9,IRPF Retenciones a cuenta Base Imponible 9%,B.IRPF9.AC,irpf_bas
 irpf_base_sale_15,IRPF Retenciones a cuenta Base Imponible 15%,B.IRPF15.AC,irpf_base_sale,pgc_0
 irpf_base_sale_18,IRPF Retenciones a cuenta Base Imponible 18%,B.IRPF18.AC,irpf_base_sale,pgc_0
 irpf_base_sale_19,IRPF Retenciones a cuenta Base Imponible 19%,B.IRPF19.AC,irpf_base_sale,pgc_0
+irpf_base_sale_195,"IRPF Retenciones a cuenta Base Imponible 19,5%",B.IRPF195.AC,irpf_base_sale,pgc_0
 irpf_base_sale_20,IRPF Retenciones a cuenta Base Imponible 20%,B.IRPF20.AC,irpf_base_sale,pgc_0
 irpf_base_sale_21,IRPF Retenciones a cuenta Base Imponible 21%,B.IRPF21.AC,irpf_base_sale,pgc_0
 irpf_cuota_sale_total,IRPF Retenciones a cuenta Total Cuota,IRPF.AC,vat_code_chart_root,pgc_0
@@ -179,6 +182,7 @@ irpf_cuota_sale_9,IRPF Retenciones a cuenta Cuota 9%,IRPF9.AC,irpf_cuota_sale_to
 irpf_cuota_sale_15,IRPF Retenciones a cuenta Cuota 15%,IRPF15.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_18,IRPF Retenciones a cuenta Cuota 18%,IRPF18.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_19,IRPF Retenciones a cuenta Cuota 19%,IRPF19.AC,irpf_cuota_sale_total,pgc_0
+irpf_cuota_sale_195,"IRPF Retenciones a cuenta Cuota 19,5%",IRPF195.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_20,IRPF Retenciones a cuenta Cuota 20%,IRPF20.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_21,IRPF Retenciones a cuenta Cuota 21%,IRPF21.AC,irpf_cuota_sale_total,pgc_0
 recc,Régimen especial criterio de Caja,RECC,vat_code_chart_root,pgc_0

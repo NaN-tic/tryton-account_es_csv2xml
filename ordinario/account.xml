@@ -17387,6 +17387,15 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type" ref="es_balance_normal_32560"/>
             <field name="deferral" eval="True"/>
         </record>
+        <record model="account.account.template" id="pgc_475195">
+            <field name="code">4751%95</field>
+            <field name="parent" ref="pgc_4751"/>
+            <field name="name">Hacienda Pública. Retenciones arrendamientos, cap. mobiliario 19,5%</field>
+            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_32560"/>
+            <field name="deferral" eval="True"/>
+        </record>
         <record model="account.account.template" id="pgc_475120">
             <field name="code">4751%20</field>
             <field name="parent" ref="pgc_4751"/>
@@ -17463,6 +17472,15 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">4730%19</field>
             <field name="parent" ref="pgc_473"/>
             <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 19%</field>
+            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_12360"/>
+            <field name="deferral" eval="True"/>
+        </record>
+        <record model="account.account.template" id="pgc_473095">
+            <field name="code">4730%95</field>
+            <field name="parent" ref="pgc_473"/>
+            <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 19,5%</field>
             <field name="reconcile" eval="True"/>
             <field name="kind">other</field>
             <field name="type" ref="es_balance_normal_12360"/>
