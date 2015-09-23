@@ -14559,5 +14559,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type" ref="es_balance_pymes_12390"/>
             <field name="deferral" eval="True"/>
         </record>
+        <record model="account.account.template" id="pgc_pymes_472012">
+            <field name="code">4720%12</field>
+            <field name="parent" ref="pgc_pymes_472"/>
+            <field name="name">Hacienda Pública. IVA soportado 12%</field>
+            <field name="reconcile" eval="True"/>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_pymes_12390"/>
+            <field name="deferral" eval="True"/>
+        </record>
     </data>
 </tryton>

@@ -220,9 +220,13 @@ def create_taxes(tax_xml, file_names):
     for file_name in file_names:
         records = read_tax_file(file_name)
         for record in records:
-            if record['fields'][len(record['fields']) - 1]['name'] == \
-                    'account_name':
-                record['fields'].pop()
+            to_remove = None
+            for i, field in enumerate(record['fields']):
+                if field['name'] == 'account_name':
+                    to_remove = i
+                    break
+            if to_remove:
+                record['fields'].pop(to_remove)
 
             level = compute_level(record, levels)
             if level in levels:
@@ -258,8 +262,10 @@ def create_tax_rule_lines(tax_xml, file_name):
     reader = get_csv_reader(file_name)
     xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
-        if reader.line_num == 1 or row[1] not in ['fp_intra', 'fp_extra'] and \
-                row[1] not in ['fp_pymes_intra', 'fp_pymes_extra']:
+        if (reader.line_num == 1 or
+                (row[1] not in ['fp_intra', 'fp_extra', 'fp_reagp'] and
+                    row[1] not in ['fp_pymes_intra', 'fp_pymes_extra',
+                        'fp_pymes_reagp'])):
             continue
         record = {
             'model': 'account.tax.rule.line.template',

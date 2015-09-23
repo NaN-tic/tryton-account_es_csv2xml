@@ -293,3 +293,5 @@ igic_pymes_ded_33_03,En adquisiciones intracomunitarias bienes inversión IGIC (
 igic_pymes_ded_33_07,En adquisiciones intracomunitarias bienes inversión IGIC (7%,IGIC.AIBI7.C,igic_pymes_ded_33,pgc_pymes_0
 igic_pymes_ded_33_09_5,"En adquisiciones intracomunitarias bienes inversión IGIC (9,5%)",IGIC.AIBI95.C,igic_pymes_ded_33,pgc_pymes_0
 igic_pymes_ded_33_13_5,"En adquisiciones intracomunitarias bienes inversión IGIC (13,5%)",IGIC.AIBI135.C,igic_pymes_ded_33,pgc_pymes_0
+base_pymes_ded_reagp_12,Base regimen especial agricultura ganaderia y pesca (12%),B.IVA12.REAGP.C,iva_pymes_ded_22,pgc_pymes_0
+cuota_pymes_ded_reagp_12,Cuotas soportadas regimen especial agricultura ganaderia y pesca (12%),IVA12.REAGP.C,iva_pymes_ded_23,pgc_pymes_0

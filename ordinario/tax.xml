@@ -1788,6 +1788,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">IGIC.AIBI135.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
+        <record model="account.tax.code.template" id="base_ded_reagp_12">
+            <field name="name">Base regimen especial agricultura ganaderia y pesca (12%)</field>
+            <field name="parent" ref="iva_ded_22"/>
+            <field name="code">B.IVA12.REAGP.C</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="cuota_ded_reagp_12">
+            <field name="name">Cuotas soportadas regimen especial agricultura ganaderia y pesca (12%)</field>
+            <field name="parent" ref="iva_ded_23"/>
+            <field name="code">IVA12.REAGP.C</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.template" id="iva_X0_compras_bc">
@@ -2626,6 +2638,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_472200"/>
             <field name="credit_note_account" ref="pgc_472200"/>
+        </record>
+        <record model="account.tax.template" id="iva_reagp_compras_12">
+            <field name="name">IVA Soportado 12% + IRPF 2% Regimen Especial Agricultura y Pesca</field>
+            <field name="description">IVA Soportado 12% + IRPF 2% Regimen Especial Agricultura y Pesca</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">none</field>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="start_date">2012-09-01</field>
         </record>
         <record model="account.tax.template" id="iva_sop_ex">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -4296,6 +4319,46 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_477213"/>
             <field name="credit_note_account" ref="pgc_477213"/>
         </record>
+        <record model="account.tax.template" id="iva_reagp_compras_12_1">
+            <field name="name">IVA Soportado 12% Regimen Especial Agricultura y Pesca</field>
+            <field name="description">IVA Soportado 12% Regimen Especial Agricultura y Pesca</field>
+            <field name="parent" ref="iva_reagp_compras_12"/>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="rate" eval="Decimal('0.12')"/>
+            <field name="invoice_base_code" ref="base_ded_reagp_12"/>
+            <field name="invoice_tax_code" ref="cuota_ded_reagp_12"/>
+            <field name="credit_note_base_code" ref="base_ded_reagp_12"/>
+            <field name="credit_note_tax_code" ref="cuota_ded_reagp_12"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_472012"/>
+            <field name="credit_note_account" ref="pgc_472012"/>
+            <field name="start_date">2012-09-01</field>
+        </record>
+        <record model="account.tax.template" id="iva_reagp_compras_12_2">
+            <field name="name">IRPF Soportado 2% Regimen Especial Agricultura y Pesca</field>
+            <field name="description">IRPF Soportado 2% Regimen Especial Agricultura y Pesca</field>
+            <field name="parent" ref="iva_reagp_compras_12"/>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="rate" eval="Decimal('-0.02')"/>
+            <field name="invoice_base_code" ref="irpf_base_2"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_2"/>
+            <field name="credit_note_base_code" ref="irpf_base_2"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_2"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475102"/>
+            <field name="credit_note_account" ref="pgc_475102"/>
+            <field name="start_date">2012-09-01</field>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.rule.template" id="fp_nacional">
@@ -4370,6 +4433,11 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <record model="account.tax.rule.template" id="fp_recc">
             <field name="name">Regimen Especial del Criterio de Caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_reagp">
+            <field name="name">Regimen especial agricultura ganaderia y pesca</field>
             <field name="account" ref="pgc_0"/>
             <field name="kind">both</field>
         </record>
@@ -4626,6 +4694,42 @@ this repository contains the full copyright notices and license terms. -->
             <field name="origin_tax" ref="iva_rep_21"/>
             <field name="tax" ref="iva_IO"/>
             <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_4">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_4_inv">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_10">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_10_inv">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_21">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_reagp_iva_21_inv">
+            <field name="rule" ref="fp_reagp"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_reagp_compras_12"/>
+            <field name="group" ref="tax_group_purchase"/>
         </record>
     </data>
     <data grouped="1">
