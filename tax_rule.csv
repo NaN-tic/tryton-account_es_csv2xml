@@ -5,7 +5,9 @@ fp_extra,Régimen Extracomunitario,pgc_0,both
 fp_intra,Régimen Intracomunitario,pgc_0,both
 fp_irpf21,Retención IRPF 21%,pgc_0,both
 fp_irpf20,Retención IRPF 20%,pgc_0,both
+fp_irpf20a,Retención IRPF Arrendamientos 20%,pgc_0,both
 fp_irpf195,"Retención IRPF 19,5%",pgc_0,both
+fp_irpf195a,"Retención IRPF Arrendamientos 19,5%",pgc_0,both
 fp_irpf19,Retención IRPF 19%,pgc_0,both
 fp_irpf18,Retención IRPF 18%,pgc_0,both
 fp_irpf15,Retención IRPF 15%,pgc_0,both

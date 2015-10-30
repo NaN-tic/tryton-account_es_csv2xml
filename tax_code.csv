@@ -152,6 +152,8 @@ irpf_base_19,IRPF Retenciones practicadas Base Imponible 19%,B.IRPF19.P,irpf_bas
 irpf_base_195,"IRPF Retenciones practicadas Base Imponible 19,5%",B.IRPF195.P,irpf_base,pgc_0
 irpf_base_20,IRPF Retenciones practicadas Base Imponible 20%,B.IRPF20.P,irpf_base,pgc_0
 irpf_base_21,IRPF Retenciones practicadas Base Imponible 21%,B.IRPF21.P,irpf_base,pgc_0
+irpf_base_195a,"IRPF Retenciones practicadas Arrendamientos Base Imponible 19,5%",B.IRPF195.PA,irpf_base,pgc_0
+irpf_base_20a,IRPF Retenciones practicadas Arrendamientos Base Imponible 20%,B.IRPF20.PA,irpf_base,pgc_0
 irpf_cuota_total,IRPF Retenciones practicadas Total Cuota,IRPF.P,vat_code_chart_root,pgc_0
 irpf_cuota_1,IRPF Retenciones practicadas Cuota 1%,IRPF1.P,irpf_cuota_total,pgc_0
 irpf_cuota_2,IRPF Retenciones practicadas Cuota 2%,IRPF2.P,irpf_cuota_total,pgc_0
@@ -163,6 +165,8 @@ irpf_cuota_19,IRPF Retenciones practicadas Cuota 19%,IRPF19.P,irpf_cuota_total,p
 irpf_cuota_195,"IRPF Retenciones practicadas Cuota 19,5%",IRPF195.P,irpf_cuota_total,pgc_0
 irpf_cuota_20,IRPF Retenciones practicadas Cuota 20%,IRPF20.P,irpf_cuota_total,pgc_0
 irpf_cuota_21,IRPF Retenciones practicadas Cuota 21%,IRPF21.P,irpf_cuota_total,pgc_0
+irpf_cuota_195a,"IRPF Retenciones practicadas Arrendamientos Cuota 19,5%",IRPF195.PA,irpf_cuota_total,pgc_0
+irpf_cuota_20a,IRPF Retenciones practicadas Arrendamientos Cuota 20%,IRPF20.PA,irpf_cuota_total,pgc_0
 irpf_base_sale,IRPF Retenciones a cuenta Base Imponible,B.IRPF.AC,vat_code_chart_root,pgc_0
 irpf_base_sale_1,IRPF Retenciones a cuenta Base Imponible 1%,B.IRPF1.AC,irpf_base_sale,pgc_0
 irpf_base_sale_2,IRPF Retenciones a cuenta Base Imponible 2%,B.IRPF2.AC,irpf_base_sale,pgc_0
@@ -174,6 +178,8 @@ irpf_base_sale_19,IRPF Retenciones a cuenta Base Imponible 19%,B.IRPF19.AC,irpf_
 irpf_base_sale_195,"IRPF Retenciones a cuenta Base Imponible 19,5%",B.IRPF195.AC,irpf_base_sale,pgc_0
 irpf_base_sale_20,IRPF Retenciones a cuenta Base Imponible 20%,B.IRPF20.AC,irpf_base_sale,pgc_0
 irpf_base_sale_21,IRPF Retenciones a cuenta Base Imponible 21%,B.IRPF21.AC,irpf_base_sale,pgc_0
+irpf_base_sale_195a,"IRPF Retenciones a cuenta Arrendamientos Base Imponible 19,5%",B.IRPF195.ACA,irpf_base_sale,pgc_0
+irpf_base_sale_20a,IRPF Retenciones a cuenta Arrendamientos Base Imponible 20%,B.IRPF20.ACA,irpf_base_sale,pgc_0
 irpf_cuota_sale_total,IRPF Retenciones a cuenta Total Cuota,IRPF.AC,vat_code_chart_root,pgc_0
 irpf_cuota_sale_1,IRPF Retenciones a cuenta Cuota 1%,IRPF1.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_2,IRPF Retenciones a cuenta Cuota 2%,IRPF2.AC,irpf_cuota_sale_total,pgc_0
@@ -185,6 +191,8 @@ irpf_cuota_sale_19,IRPF Retenciones a cuenta Cuota 19%,IRPF19.AC,irpf_cuota_sale
 irpf_cuota_sale_195,"IRPF Retenciones a cuenta Cuota 19,5%",IRPF195.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_20,IRPF Retenciones a cuenta Cuota 20%,IRPF20.AC,irpf_cuota_sale_total,pgc_0
 irpf_cuota_sale_21,IRPF Retenciones a cuenta Cuota 21%,IRPF21.AC,irpf_cuota_sale_total,pgc_0
+irpf_cuota_sale_195a,"IRPF Retenciones a cuenta Arrendamientos Cuota 19,5%",IRPF195.ACA,irpf_cuota_sale_total,pgc_0
+irpf_cuota_sale_20a,IRPF Retenciones a cuenta Arrendamientos Cuota 20%,IRPF20.ACA,irpf_cuota_sale_total,pgc_0
 recc,Régimen especial criterio de Caja,RECC,vat_code_chart_root,pgc_0
 recc_base_ven,Base ventas Régimen especial criterio de Caja,B.RECC.V,recc,pgc_0
 recc_base_dev_04,Régimen especial criterio de Caja. Base devengada 4%,B.RECC4.V,recc_base_ven,pgc_0
