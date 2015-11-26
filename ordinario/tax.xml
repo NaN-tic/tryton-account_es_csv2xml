@@ -152,6 +152,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">IGIC.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
+        <record model="account.tax.code.template" id="base_areagp">
+            <field name="name">Base adquisiciones regimen especial agricultura ganaderia y pesca</field>
+            <field name="parent" ref="vat_code_chart_root"/>
+            <field name="code">B.AREAGP.C</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.code.template" id="iva_dev_01">
@@ -896,6 +902,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">En adquisiciones intracomunitarias bienes inversión IGIC</field>
             <field name="parent" ref="igic_ded_cuota_total"/>
             <field name="code">IGIC.AIBI.C</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="base_ded_reagp_12">
+            <field name="name">Base regimen especial agricultura ganaderia y pesca (12%)</field>
+            <field name="parent" ref="base_areagp"/>
+            <field name="code">B.IVA12.REAGP.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
     </data>
@@ -1834,12 +1846,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">En adquisiciones intracomunitarias bienes inversión IGIC (13,5%)</field>
             <field name="parent" ref="igic_ded_33"/>
             <field name="code">IGIC.AIBI135.C</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
-        <record model="account.tax.code.template" id="base_ded_reagp_12">
-            <field name="name">Base regimen especial agricultura ganaderia y pesca (12%)</field>
-            <field name="parent" ref="iva_ded_22"/>
-            <field name="code">B.IVA12.REAGP.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="cuota_ded_reagp_12">
