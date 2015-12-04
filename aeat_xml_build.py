@@ -207,6 +207,71 @@ def create_340(xml, files):
         set_records(xml_data, records)
 
 
+def create_child_tax_340(xml, rule_line_file):
+    """ Creates xml data for 340 model for child IVA taxes"""
+    records = []
+    rule_reader = get_csv_reader(rule_line_file)
+    module = ('account_es' if 'pyme' not in rule_line_file
+        else 'account_es_pyme')
+
+    records = []
+    for rule_row in rule_reader:
+        if rule_reader.line_num == 1:
+            continue
+        if rule_row[1] not in ('fp_recargo', 'fp_pymes_recargo'):
+            # TODO: allow IRPF?
+            continue
+        if 'sale' not in rule_row[4]:
+            # TODO: support purchase taxes?
+            continue
+        if rule_row[2] == rule_row[3]:
+            # Get line with other tax id
+            continue
+
+        # Build name of tax.template with names of IVA plus RE
+        iva_id = rule_row[2]
+        other_id = rule_row[3]
+        tax_record_id = iva_id + '+' + other_id + '_iva_child'
+
+        keys = []
+        default_direction = 'out' if 'sale' in rule_row[4] else 'in'
+        if default_direction == 'in':
+            keys.append('R')
+        else:
+            keys.append('E')
+        # if 'inversión' in rule_row[1]:
+        #     keys.append('I')
+        if rule_row[1] == 'fp_intra':
+            keys.append('U')
+        default_key = keys[0]
+
+        for key in keys:
+            aeat_key = 'aeat_340_key_%s' % key
+            records.append({
+                    'model': 'aeat.340.type-account.tax.template',
+                    'id': 'aeat_340_template_type_%s_%s' % (
+                        tax_record_id, key),
+                    'fields': [
+                        {'name': 'tax', 'ref': module + '.' + tax_record_id},
+                        {'name': 'aeat_340_type', 'ref': aeat_key},
+                        ],
+                    })
+        field_name = 'aeat340_default_%s_book_key' % default_direction
+        aeat_key = 'aeat_340_key_%s' % default_key
+        records.append({
+                'model': 'account.tax.template',
+                'id': module + '.' + tax_record_id,
+                'fields': [
+                    {'name': field_name, 'ref': aeat_key},
+                    ],
+                })
+    xml_data = set_subelement(xml, 'data', {
+            'grouped': '1',
+            'depends': module,
+            })
+    set_records(xml_data, records)
+
+
 def normalize_xml(archive):
     data = ''
     for line in open(archive):
@@ -277,6 +342,8 @@ if __name__ == '__main__':
     xml = init_xml()
     files = ['tax.csv', 'tax_iva.csv', 'tax_pymes.csv', 'tax_iva_pymes.csv']
     create_340(xml, files)
+    create_child_tax_340(xml, 'tax_rule_line.csv')
+    create_child_tax_340(xml, 'tax_rule_line_pymes.csv')
     write_xml_file(xml, 'aeat/340.xml')
 
     archives = (
