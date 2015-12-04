@@ -287,7 +287,7 @@ def read_tax_file(file_name):
     for row in reader:
         if reader.line_num == 1:
             continue
-        rate = row[6]
+        rate = row[7]
         regex = re.compile("^Decimal\('(.*)'\)$")
         r = regex.search(rate)
         if r:
@@ -303,26 +303,27 @@ def read_tax_file(file_name):
                 {'name': 'account', 'ref': row[3]},
                 {'name': 'group', 'ref': row[4]},
                 {'name': 'type', 'text': row[5]},
+                {'name': 'recargo_equivalencia', 'eval': row[6]},
                 {'name': 'rate', 'eval': rate},
-                {'name': 'invoice_base_code', 'ref': row[7]},
-                {'name': 'invoice_tax_code', 'ref': row[8]},
-                {'name': 'credit_note_base_code', 'ref': row[9]},
-                {'name': 'credit_note_tax_code', 'ref': row[10]},
-                {'name': 'invoice_base_sign', 'eval': row[11]},
-                {'name': 'invoice_tax_sign', 'eval': row[12]},
-                {'name': 'credit_note_base_sign', 'eval': row[13]},
-                {'name': 'credit_note_tax_sign', 'eval': row[14]},
-                {'name': 'invoice_account', 'ref': row[15]},
-                {'name': 'credit_note_account', 'ref': row[16]},
-                {'name': 'sequence', 'text': row[17]},
-                {'name': 'start_date', 'text': row[18]},
-                {'name': 'end_date', 'text': row[19]},
-                {'name': 'account_name', 'text': row[20]},
+                {'name': 'invoice_base_code', 'ref': row[8]},
+                {'name': 'invoice_tax_code', 'ref': row[9]},
+                {'name': 'credit_note_base_code', 'ref': row[10]},
+                {'name': 'credit_note_tax_code', 'ref': row[11]},
+                {'name': 'invoice_base_sign', 'eval': row[12]},
+                {'name': 'invoice_tax_sign', 'eval': row[13]},
+                {'name': 'credit_note_base_sign', 'eval': row[14]},
+                {'name': 'credit_note_tax_sign', 'eval': row[15]},
+                {'name': 'invoice_account', 'ref': row[16]},
+                {'name': 'credit_note_account', 'ref': row[17]},
+                {'name': 'sequence', 'text': row[18]},
+                {'name': 'start_date', 'text': row[19]},
+                {'name': 'end_date', 'text': row[20]},
+                {'name': 'account_name', 'text': row[21]},
             ],
         }
-        if len(row) >= 22:
+        if len(row) >= 23:
             tax_record['fields'].append({
-                    'name': 'report_description', 'text': row[21]})
+                    'name': 'report_description', 'text': row[22]})
         records.append(tax_record)
     return records
 
