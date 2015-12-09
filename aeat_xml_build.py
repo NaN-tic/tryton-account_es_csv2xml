@@ -221,9 +221,6 @@ def create_child_tax_340(xml, rule_line_file):
         if rule_row[1] not in ('fp_recargo', 'fp_pymes_recargo'):
             # TODO: allow IRPF?
             continue
-        if 'sale' not in rule_row[4]:
-            # TODO: support purchase taxes?
-            continue
         if rule_row[2] == rule_row[3]:
             # Get line with other tax id
             continue
