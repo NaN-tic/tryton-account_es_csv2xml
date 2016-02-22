@@ -304,3 +304,8 @@ igic_pymes_ded_33_13_5,"En adquisiciones intracomunitarias bienes inversión IGI
 base_pymes_areagp,Base adquisiciones regimen especial agricultura ganaderia y pesca,B.AREAGP.C,vat_code_chart_pymes_root,pgc_pymes_0
 base_pymes_ded_reagp_12,Base regimen especial agricultura ganaderia y pesca (12%),B.IVA12.REAGP.C,base_pymes_areagp,pgc_pymes_0
 cuota_pymes_ded_reagp_12,Cuotas soportadas regimen especial agricultura ganaderia y pesca (12%),IVA12.REAGP.C,iva_pymes_ded_23,pgc_pymes_0
+ispc_pymes,Inversión del sujeto pasivo compras,ISP.C,vat_code_chart_pymes_root,pgc_pymes_0
+bases_pymes_ispc,Base soportada Inversión del sujeto pasivo compras,BS.ISP.C,ispc_pymes,pgc_pymes_0
+baser_pymes_ispc,Base repercutida Inversión del sujeto pasivo compras,BR.ISP.C,ispc_pymes,pgc_pymes_0
+cuotas_pymes_ispc,Cuota soportada Inversión del sujeto pasivo compras,BS.ISP.C,ispc_pymes,pgc_pymes_0
+cuotar_pymes_ispc,Cuota repercutida Inversión del sujeto pasivo compras,BR.ISP.C,ispc_pymes,pgc_pymes_0

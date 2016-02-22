@@ -158,6 +158,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">B.AREAGP.C</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
+        <record model="account.tax.code.template" id="ispc_pymes">
+            <field name="name">Inversión del sujeto pasivo compras</field>
+            <field name="parent" ref="vat_code_chart_pymes_root"/>
+            <field name="code">ISP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.code.template" id="iva_pymes_dev_01">
@@ -908,6 +914,30 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Base regimen especial agricultura ganaderia y pesca (12%)</field>
             <field name="parent" ref="base_pymes_areagp"/>
             <field name="code">B.IVA12.REAGP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="bases_pymes_ispc">
+            <field name="name">Base soportada Inversión del sujeto pasivo compras</field>
+            <field name="parent" ref="ispc_pymes"/>
+            <field name="code">BS.ISP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="baser_pymes_ispc">
+            <field name="name">Base repercutida Inversión del sujeto pasivo compras</field>
+            <field name="parent" ref="ispc_pymes"/>
+            <field name="code">BR.ISP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="cuotas_pymes_ispc">
+            <field name="name">Quota soportada Inversión del sujeto pasivo compras</field>
+            <field name="parent" ref="ispc_pymes"/>
+            <field name="code">BS.ISP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="cuotar_pymes_ispc">
+            <field name="name">Quota repercutida Inversión del sujeto pasivo compras</field>
+            <field name="parent" ref="ispc_pymes"/>
+            <field name="code">BR.ISP.C</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
     </data>
@@ -2764,6 +2794,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="start_date">2012-09-01</field>
         </record>
+        <record model="account.tax.template" id="iva_pymes_ISP_compras">
+            <field name="name">IVA Inversión del sujeto pasivo</field>
+            <field name="description">IVA Inversión del sujeto pasivo</field>
+            <field name="account" ref="pgc_pymes_0"/>
+            <field name="group" ref="tax_group_purchase_pymes"/>
+            <field name="type">none</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_account" ref="pgc_pymes_4700_child"/>
+            <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+            <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
+        </record>
         <record model="account.tax.template" id="iva_pymes_sop_ex">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -4565,6 +4607,46 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_pymes_475102"/>
             <field name="credit_note_account" ref="pgc_pymes_475102"/>
             <field name="start_date">2012-09-01</field>
+        </record>
+        <record model="account.tax.template" id="iva_pymes_ISP_compras_1">
+            <field name="name">IVA Inversión del sujeto pasivo (1) </field>
+            <field name="description">IVA Inversión del sujeto pasivo (1) </field>
+            <field name="parent" ref="iva_pymes_ISP_compras"/>
+            <field name="account" ref="pgc_pymes_0"/>
+            <field name="group" ref="tax_group_purchase_pymes"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="bases_pymes_ispc"/>
+            <field name="invoice_tax_code" ref="cuotas_pymes_ispc"/>
+            <field name="credit_note_base_code" ref="bases_pymes_ispc"/>
+            <field name="credit_note_tax_code" ref="cuotas_pymes_ispc"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_pymes_4700_child"/>
+            <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
+        </record>
+        <record model="account.tax.template" id="iva_pymes_ISP_compras_2">
+            <field name="name">IVA Inversión del sujeto pasivo (2)</field>
+            <field name="description">IVA Inversión del sujeto pasivo (2)</field>
+            <field name="parent" ref="iva_pymes_ISP_compras"/>
+            <field name="account" ref="pgc_pymes_0"/>
+            <field name="group" ref="tax_group_purchase_pymes"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="baser_pymes_ispc"/>
+            <field name="invoice_tax_code" ref="cuotar_pymes_ispc"/>
+            <field name="credit_note_base_code" ref="baser_pymes_ispc"/>
+            <field name="credit_note_tax_code" ref="cuotar_pymes_ispc"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_pymes_4700_child"/>
+            <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
         </record>
     </data>
     <data grouped="1">
