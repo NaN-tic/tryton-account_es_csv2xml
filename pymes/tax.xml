@@ -134,18 +134,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">EI.IGIC</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
-        <record model="account.tax.code.template" id="base_pymes_extra_43_igic">
-            <field name="name">Exportaciones y operaciones asimiladas IGIC</field>
-            <field name="parent" ref="vat_code_chart_pymes_root"/>
-            <field name="code">EOA.IGIC</field>
-            <field name="account" ref="pgc_pymes_0"/>
-        </record>
-        <record model="account.tax.code.template" id="base_pymes_extra_44_igic">
-            <field name="name">Inversión del sujeto pasivo IGIC</field>
-            <field name="parent" ref="vat_code_chart_pymes_root"/>
-            <field name="code">ISP.IGIC</field>
-            <field name="account" ref="pgc_pymes_0"/>
-        </record>
         <record model="account.tax.code.template" id="igic_pymes_ded_cuota_total">
             <field name="name">IGIC deducible (Cuota)- Total a deducir</field>
             <field name="parent" ref="vat_code_chart_pymes_root"/>
@@ -929,13 +917,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="pgc_pymes_0"/>
         </record>
         <record model="account.tax.code.template" id="cuotas_pymes_ispc">
-            <field name="name">Quota soportada Inversión del sujeto pasivo compras</field>
+            <field name="name">Cuota soportada Inversión del sujeto pasivo compras</field>
             <field name="parent" ref="ispc_pymes"/>
             <field name="code">BS.ISP.C</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
         <record model="account.tax.code.template" id="cuotar_pymes_ispc">
-            <field name="name">Quota repercutida Inversión del sujeto pasivo compras</field>
+            <field name="name">Cuota repercutida Inversión del sujeto pasivo compras</field>
             <field name="parent" ref="ispc_pymes"/>
             <field name="code">BR.ISP.C</field>
             <field name="account" ref="pgc_pymes_0"/>
@@ -2645,39 +2633,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_472213"/>
             <field name="credit_note_account" ref="pgc_pymes_472213"/>
-        </record>
-        <record model="account.tax.template" id="igic_pymes_X0">
-            <field name="name">IGIC 0% Exportaciones</field>
-            <field name="description">IGIC 0% Exportaciones</field>
-            <field name="account" ref="pgc_pymes_0"/>
-            <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="base_pymes_extra_43_igic"/>
-            <field name="credit_note_base_code" ref="base_pymes_extra_43_igic"/>
-            <field name="credit_note_base_sign" eval="-1"/>
-            <field name="invoice_account" ref="pgc_pymes_4750_child"/>
-            <field name="credit_note_account" ref="pgc_pymes_4750_child"/>
-            <field name="report_description">Factura exenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
-        </record>
-        <record model="account.tax.template" id="igic_pymes_ISP">
-            <field name="name">IGIC 0% Inversión del sujeto pasivo</field>
-            <field name="description">IGIC 0% Inversión del sujeto pasivo</field>
-            <field name="account" ref="pgc_pymes_0"/>
-            <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="base_pymes_extra_44_igic"/>
-            <field name="credit_note_base_code" ref="base_pymes_extra_44_igic"/>
-            <field name="invoice_base_sign" eval="1"/>
-            <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="-1"/>
-            <field name="credit_note_tax_sign" eval="-1"/>
-            <field name="invoice_account" ref="pgc_pymes_4700_child"/>
-            <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
-            <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
         </record>
         <record model="account.tax.template" id="igic_pymes_IO">
             <field name="name">IGIC 0% Intracomunitario</field>

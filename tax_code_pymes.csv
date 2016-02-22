@@ -262,8 +262,6 @@ igic_pymes_ded_32_13_5,"Base adquisiciones intracomunitarias bienes inversión I
 igic_pymes_dev_20,Adquisiciones intracomunitarias IGIC. Cuota,IGIC.AI.C,igic_pymes_dev_21,pgc_pymes_0
 igic_pymes_dev_19,Adquisiciones intracomunitarias. Base Imponible IGIC,B.IGIC.AI.C,igic_pymes_dev_base,pgc_pymes_0
 base_pymes_intra_42_igic,Entregas Intracomunitarias IGIC,EI.IGIC,vat_code_chart_pymes_root,pgc_pymes_0
-base_pymes_extra_43_igic,Exportaciones y operaciones asimiladas IGIC,EOA.IGIC,vat_code_chart_pymes_root,pgc_pymes_0
-base_pymes_extra_44_igic,Inversión del sujeto pasivo IGIC,ISP.IGIC,vat_code_chart_pymes_root,pgc_pymes_0
 igic_pymes_ded_cuota_total,IGIC deducible (Cuota)- Total a deducir,IGIC.C,vat_code_chart_pymes_root,pgc_pymes_0
 igic_pymes_ded_23,Cuotas soportadas operaciones interiores corrientes IGIC,IGIC.OIBC.C,igic_pymes_ded_cuota_total,pgc_pymes_0
 igic_pymes_ded_23_00,Cuotas soportadas operaciones interiores corrientes IGIC (0%),IGIC.OIBC0.C,igic_pymes_ded_23,pgc_pymes_0
