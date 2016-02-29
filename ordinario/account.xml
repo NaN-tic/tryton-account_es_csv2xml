@@ -2385,7 +2385,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión por retribuciones del personal</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">140</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2394,7 +2394,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión para impuestos</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">141</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2403,7 +2403,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión para otras responsabilidades</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">142</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2412,7 +2412,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión por desmantelamiento, retiro o rehabilitación del inmovilizado</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">143</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2421,7 +2421,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión para actuaciones medioambientales</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">145</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2430,7 +2430,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión para reestructuraciones</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">146</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -2439,7 +2439,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión por transacciones con pagos basados en instrumentos de patrimonio</field>
             <field name="parent" ref="pgc_14"/>
             <field name="code">147</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3492,7 +3492,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores por prestaciones de servicios</field>
             <field name="parent" ref="pgc_41"/>
             <field name="code">410</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3501,7 +3501,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores, efectos comerciales a pagar</field>
             <field name="parent" ref="pgc_41"/>
             <field name="code">411</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3510,7 +3510,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores por operaciones en común</field>
             <field name="parent" ref="pgc_41"/>
             <field name="code">419</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3600,7 +3600,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudores</field>
             <field name="parent" ref="pgc_44"/>
             <field name="code">440</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3609,7 +3609,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudores, efectos comerciales a cobrar</field>
             <field name="parent" ref="pgc_44"/>
             <field name="code">441</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3618,7 +3618,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudores de dudoso cobro</field>
             <field name="parent" ref="pgc_44"/>
             <field name="code">446</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -3627,7 +3627,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudores por operaciones en común</field>
             <field name="parent" ref="pgc_44"/>
             <field name="code">449</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6579,7 +6579,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Pasivos por derivados financieros, carter de negociación</field>
             <field name="parent" ref="pgc_176"/>
             <field name="code">1765</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -6588,7 +6588,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Pasivos por derivados financieros, instrumentos de cobertura</field>
             <field name="parent" ref="pgc_176"/>
             <field name="code">1768</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7912,7 +7912,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores (euros)</field>
             <field name="parent" ref="pgc_400"/>
             <field name="code">4000</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7921,7 +7921,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores (moneda extranjera)</field>
             <field name="parent" ref="pgc_400"/>
             <field name="code">4004</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7930,7 +7930,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores, facturas pendientes de recibir o de formalizar</field>
             <field name="parent" ref="pgc_400"/>
             <field name="code">4009</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7949,7 +7949,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores, empresas del grupo (euros)</field>
             <field name="parent" ref="pgc_403"/>
             <field name="code">4030</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7958,7 +7958,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales a pagar, empresas del grupo</field>
             <field name="parent" ref="pgc_403"/>
             <field name="code">4031</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7967,7 +7967,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores, empresas del grupo (moneda extranjera)</field>
             <field name="parent" ref="pgc_403"/>
             <field name="code">4034</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7976,7 +7976,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Envases y embalajes a devolver a proveedores, empresas del grupo</field>
             <field name="parent" ref="pgc_403"/>
             <field name="code">4036</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -7985,7 +7985,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Proveedores, empresas del grupo, facturas pendientes de recibir o de formalizar</field>
             <field name="parent" ref="pgc_403"/>
             <field name="code">4039</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8034,7 +8034,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores por prestaciones de servicios (euros)</field>
             <field name="parent" ref="pgc_410"/>
             <field name="code">4100</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8043,7 +8043,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores por prestaciones de servicios (moneda extranjera)</field>
             <field name="parent" ref="pgc_410"/>
             <field name="code">4104</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8052,7 +8052,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Acreedores por prestaciones de servicios, facturas pendientes de recibir o de formalizar</field>
             <field name="parent" ref="pgc_410"/>
             <field name="code">4109</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8081,7 +8081,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes (euros)</field>
             <field name="parent" ref="pgc_430"/>
             <field name="code">4300</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8090,7 +8090,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes (moneda extranjera)</field>
             <field name="parent" ref="pgc_430"/>
             <field name="code">4304</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8099,7 +8099,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes, facturas pendientes de recibir o de formalizar</field>
             <field name="parent" ref="pgc_430"/>
             <field name="code">4309</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8108,7 +8108,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales en cartera</field>
             <field name="parent" ref="pgc_431"/>
             <field name="code">4310</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8117,7 +8117,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales descontados</field>
             <field name="parent" ref="pgc_431"/>
             <field name="code">4311</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8126,7 +8126,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales en gestión de cobro</field>
             <field name="parent" ref="pgc_431"/>
             <field name="code">4312</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8135,7 +8135,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales impagados</field>
             <field name="parent" ref="pgc_431"/>
             <field name="code">4315</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8154,7 +8154,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes empresas del grupo (euros)</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4330</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8163,7 +8163,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Efectos comerciales a cobrar, empresas del grupo</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4331</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8172,7 +8172,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes empresas del grupo, operaciones de factoring</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4332</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8181,7 +8181,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes empresas del grupo (moneda extranjera)</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4334</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8190,7 +8190,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes empresas del grupo de dudoso cobro</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4336</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8199,7 +8199,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Envases y embalajes a devolver a clientes, empresas del grupo</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4337</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8208,7 +8208,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Clientes empresas del grupo, facturas pendientes de formalizar</field>
             <field name="parent" ref="pgc_433"/>
             <field name="code">4339</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8380,7 +8380,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, deudora por IVA</field>
             <field name="parent" ref="pgc_470"/>
             <field name="code">4700</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8389,7 +8389,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, deudora por subvenciones concedidas</field>
             <field name="parent" ref="pgc_470"/>
             <field name="code">4708</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8398,7 +8398,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, deudora por devolución de impuestos</field>
             <field name="parent" ref="pgc_470"/>
             <field name="code">4709</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8444,7 +8444,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, acreedora por IVA</field>
             <field name="parent" ref="pgc_475"/>
             <field name="code">4750</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8453,7 +8453,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, acreedora por retenciones practicadas</field>
             <field name="parent" ref="pgc_475"/>
             <field name="code">4751</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8462,7 +8462,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, acreedora por impuesto sobre sociedades</field>
             <field name="parent" ref="pgc_475"/>
             <field name="code">4752</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8471,7 +8471,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Hacienda Pública, acreedora por subvenciones a reintegrar</field>
             <field name="parent" ref="pgc_475"/>
             <field name="code">4758</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8548,7 +8548,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deterioro de valor de créditos por operaciones comerciales con empresas del grupo</field>
             <field name="parent" ref="pgc_493"/>
             <field name="code">4933</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8557,7 +8557,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deterioro de valor de créditos por operaciones comerciales con empresas asociadas</field>
             <field name="parent" ref="pgc_493"/>
             <field name="code">4934</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8566,7 +8566,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deterioro de valor de créditos por operaciones comerciales con otras partes vinculadas</field>
             <field name="parent" ref="pgc_493"/>
             <field name="code">4935</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8575,7 +8575,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión por contratos onerosos</field>
             <field name="parent" ref="pgc_499"/>
             <field name="code">4994</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8584,7 +8584,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión para otras operaciones comerciales</field>
             <field name="parent" ref="pgc_499"/>
             <field name="code">4999</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8653,7 +8653,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Obligaciones y bonos amortizados</field>
             <field name="parent" ref="pgc_509"/>
             <field name="code">5090</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8662,7 +8662,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Obligaciones y bonos convertibles amortizados</field>
             <field name="parent" ref="pgc_509"/>
             <field name="code">5091</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8671,7 +8671,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Otros valores negociables amortizados</field>
             <field name="parent" ref="pgc_509"/>
             <field name="code">5095</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8815,7 +8815,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Préstamos a corto plazo de entidades de crédito</field>
             <field name="parent" ref="pgc_520"/>
             <field name="code">5200</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8824,7 +8824,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudas a corto plazo por crédito dispuesto</field>
             <field name="parent" ref="pgc_520"/>
             <field name="code">5201</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8833,7 +8833,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudas por efectos descontados</field>
             <field name="parent" ref="pgc_520"/>
             <field name="code">5208</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8842,7 +8842,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Deudas por operaciones de “factoring”</field>
             <field name="parent" ref="pgc_520"/>
             <field name="code">5209</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8931,7 +8931,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo por retribuciones al personal</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5290</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8940,7 +8940,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo para impuestos</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5291</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8949,7 +8949,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo para otras responsabilidades</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5292</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8958,7 +8958,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo por desmantelamiento, retiro o rehabilitación del inmovilizado</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5293</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8967,7 +8967,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo para actuaciones medioambientales</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5295</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8976,7 +8976,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo para reestructuraciones de patrimonio</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5296</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
@@ -8985,7 +8985,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Provisión a corto plazo por transacciones con pagos basados en instrumentos</field>
             <field name="parent" ref="pgc_529"/>
             <field name="code">5297</field>
-            <field name="reconcile" eval="True"/>
+            <field name="reconcile" eval="False"/>
             <field name="kind">view</field>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
