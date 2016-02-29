@@ -146,13 +146,14 @@ def create_accounts(account_xml, file_name):
                 {'name': 'name', 'text': row[1]},
                 {'name': 'parent', 'ref': row[3]},
                 {'name': 'code', 'text': row[2]},
-                {'name': 'reconcile', 'eval': row[4]},
                 {'name': 'kind', 'text': row[5]},
                 {'name': 'type', 'ref': row[6]},
                 {'name': 'deferral', 'eval': row[7]},
                 {'name': 'party_required', 'eval': row[8]},
             ],
         }
+        if row[4] == "True":
+            record['fields'].append({'name': 'reconcile', 'eval': row[4]})
         level = compute_level(record, levels)
         if level in levels:
             levels[level].append(record)
@@ -386,7 +387,6 @@ def create_tax_accounts(account_xml, file_names):
                     {'name': 'name', 'text': field['text']},
                 ])
         record['fields'].extend([
-            {'name': 'reconcile', 'eval': 'True'},
             {'name': 'kind', 'text': kind},
             {'name': 'type', 'ref': account_type},
             {'name': 'deferral', 'eval': 'True'},
