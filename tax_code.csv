@@ -307,3 +307,5 @@ bases_ispc,Base soportada Inversión del sujeto pasivo compras,BS.ISP.C,ispc,pgc
 baser_ispc,Base repercutida Inversión del sujeto pasivo compras,BR.ISP.C,ispc,pgc_0
 cuotas_ispc,Cuota soportada Inversión del sujeto pasivo compras,BS.ISP.C,ispc,pgc_0
 cuotar_ispc,Cuota repercutida Inversión del sujeto pasivo compras,BR.ISP.C,ispc,pgc_0
+base_sop_alq_ex,Base soportada alquiler vivienda exenta,B.SAVE,vat_code_chart_root,pgc_0
+base_rep_alq_ex,Base repercutida alquiler vivienda xentas,B.RAVE,vat_code_chart_root,pgc_0

@@ -152,6 +152,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">ISP.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
+        <record model="account.tax.code.template" id="base_sop_alq_ex">
+            <field name="name">Base soportada alquiler vivienda exenta</field>
+            <field name="parent" ref="vat_code_chart_root"/>
+            <field name="code">B.SAVE</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="base_rep_alq_ex">
+            <field name="name">Base repercutida alquiler vivienda xentas</field>
+            <field name="parent" ref="vat_code_chart_root"/>
+            <field name="code">B.RAVE</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.code.template" id="iva_dev_01">
@@ -3357,6 +3369,40 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_472921"/>
             <field name="sequence">0</field>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+        </record>
         <record model="account.tax.template" id="igic_sop_0">
             <field name="name">0% IGIC Soportado (operaciones corrientes)</field>
             <field name="description">0% IGIC Soportado (operaciones corrientes)</field>
@@ -5122,6 +5168,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_1">
+            <field name="name">Retenciones IRPF 1% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 1% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_2">
             <field name="name">Retenciones IRPF 2% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -5252,6 +5305,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones IRPF 2% + 21% IVA Soportado criterio de caja</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones IRPF 2% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_2">
+            <field name="name">Retenciones IRPF 2% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 2% + IVA Soportado alquiler vivienda exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
@@ -5388,6 +5448,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_7">
+            <field name="name">Retenciones IRPF 7% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 7% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_9">
             <field name="name">Retenciones IRPF 9% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -5518,6 +5585,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones IRPF 9% + 21% IVA Soportado criterio de caja</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones IRPF 9% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_9">
+            <field name="name">Retenciones IRPF 9% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 9% + IVA Soportado alquiler vivienda exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
@@ -5654,6 +5728,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_15">
+            <field name="name">Retenciones IRPF 15% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 15% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_18">
             <field name="name">Retenciones IRPF 18% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -5784,6 +5865,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones IRPF 18% + 21% IVA Soportado criterio de caja</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones IRPF 18% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_18">
+            <field name="name">Retenciones IRPF 18% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 18% + IVA Soportado alquiler vivienda exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
@@ -5920,6 +6008,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19">
+            <field name="name">Retenciones IRPF 19% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 19% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_195">
             <field name="name">Retenciones IRPF 19,5% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -6050,6 +6145,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones IRPF 19,5% + 21% IVA Soportado criterio de caja</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones IRPF 19,5% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195">
+            <field name="name">Retenciones IRPF 19,5% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 19,5% + IVA Soportado alquiler vivienda exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
@@ -6186,6 +6288,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20">
+            <field name="name">Retenciones IRPF 20% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 20% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_21">
             <field name="name">Retenciones IRPF 21% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -6316,6 +6425,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones IRPF 21% + 21% IVA Soportado criterio de caja</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones IRPF 21% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_21">
+            <field name="name">Retenciones IRPF 21% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF 21% + IVA Soportado alquiler vivienda exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
@@ -6452,6 +6568,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195a">
+            <field name="name">Retenciones IRPF Arrendamientos 19,5% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19,5% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_20a">
             <field name="name">Retenciones IRPF Arrendamientos 20% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -6585,6 +6708,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20a">
+            <field name="name">Retenciones IRPF Arrendamientos 20% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 20% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_1">
             <field name="name">Retenciones a cuenta IRPF 1% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -6659,6 +6789,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 1% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 1% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_1">
+            <field name="name">Retenciones a cuenta IRPF 1% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 1% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -6739,6 +6876,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_2">
+            <field name="name">Retenciones a cuenta IRPF 2% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 2% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_7">
             <field name="name">Retenciones a cuenta IRPF 7% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -6813,6 +6957,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 7% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 7% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_7">
+            <field name="name">Retenciones a cuenta IRPF 7% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 7% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -6893,6 +7044,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_9">
+            <field name="name">Retenciones a cuenta IRPF 9% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 9% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_15">
             <field name="name">Retenciones a cuenta IRPF 15% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -6967,6 +7125,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 15% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 15% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_15">
+            <field name="name">Retenciones a cuenta IRPF 15% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 15% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -7047,6 +7212,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_18">
+            <field name="name">Retenciones a cuenta IRPF 18% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 18% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_19">
             <field name="name">Retenciones a cuenta IRPF 19% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -7121,6 +7293,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 19% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 19% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19">
+            <field name="name">Retenciones a cuenta IRPF 19% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -7201,6 +7380,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195">
+            <field name="name">Retenciones a cuenta IRPF 19,5% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19,5% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_20">
             <field name="name">Retenciones a cuenta IRPF 20% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -7275,6 +7461,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 20% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 20% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20">
+            <field name="name">Retenciones a cuenta IRPF 20% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 20% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -7355,6 +7548,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_21">
+            <field name="name">Retenciones a cuenta IRPF 21% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 21% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_195a">
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -7432,6 +7632,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_20a">
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
@@ -7506,6 +7713,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA Criterio Caja 21%</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF Arrendamientos 20% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20% + IVA alquiler vivienda Exento</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
         </record>
@@ -8286,6 +8500,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475101"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_1"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_1_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_1_irpf_child">
+            <field name="name">Retenciones IRPF 1%</field>
+            <field name="description">Retenciones IRPF 1%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.01')"/>
+            <field name="invoice_base_code" ref="irpf_base_1"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_1"/>
+            <field name="credit_note_base_code" ref="irpf_base_1"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_1"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475101"/>
+            <field name="credit_note_account" ref="pgc_475101"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_1"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_2_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -9060,6 +9312,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_475102"/>
             <field name="credit_note_account" ref="pgc_475102"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_2_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_2_irpf_child">
+            <field name="name">Retenciones IRPF 2%</field>
+            <field name="description">Retenciones IRPF 2%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.02')"/>
+            <field name="invoice_base_code" ref="irpf_base_2"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_2"/>
+            <field name="credit_note_base_code" ref="irpf_base_2"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_2"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475102"/>
+            <field name="credit_note_account" ref="pgc_475102"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_2"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_7_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -9836,6 +10126,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475107"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_7"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_7_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_7_irpf_child">
+            <field name="name">Retenciones IRPF 7%</field>
+            <field name="description">Retenciones IRPF 7%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.07')"/>
+            <field name="invoice_base_code" ref="irpf_base_7"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_7"/>
+            <field name="credit_note_base_code" ref="irpf_base_7"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_7"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475107"/>
+            <field name="credit_note_account" ref="pgc_475107"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_7"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_9_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -10610,6 +10938,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_475109"/>
             <field name="credit_note_account" ref="pgc_475109"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_9_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_9_irpf_child">
+            <field name="name">Retenciones IRPF 9%</field>
+            <field name="description">Retenciones IRPF 9%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.09')"/>
+            <field name="invoice_base_code" ref="irpf_base_9"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_9"/>
+            <field name="credit_note_base_code" ref="irpf_base_9"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_9"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475109"/>
+            <field name="credit_note_account" ref="pgc_475109"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_9"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_15_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -11386,6 +11752,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475115"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_15"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_15_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_15_irpf_child">
+            <field name="name">Retenciones IRPF 15%</field>
+            <field name="description">Retenciones IRPF 15%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.15')"/>
+            <field name="invoice_base_code" ref="irpf_base_15"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_15"/>
+            <field name="credit_note_base_code" ref="irpf_base_15"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_15"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475115"/>
+            <field name="credit_note_account" ref="pgc_475115"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_15"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_18_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -12160,6 +12564,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_475118"/>
             <field name="credit_note_account" ref="pgc_475118"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_18_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_18_irpf_child">
+            <field name="name">Retenciones IRPF 18%</field>
+            <field name="description">Retenciones IRPF 18%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.18')"/>
+            <field name="invoice_base_code" ref="irpf_base_18"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_18"/>
+            <field name="credit_note_base_code" ref="irpf_base_18"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_18"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475118"/>
+            <field name="credit_note_account" ref="pgc_475118"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_18"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_19_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -12936,6 +13378,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475119"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_19"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19_irpf_child">
+            <field name="name">Retenciones IRPF 19%</field>
+            <field name="description">Retenciones IRPF 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19"/>
+            <field name="credit_note_base_code" ref="irpf_base_19"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_19"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_195_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -13710,6 +14190,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_475195"/>
             <field name="credit_note_account" ref="pgc_475195"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195_irpf_child">
+            <field name="name">Retenciones IRPF 19,5%</field>
+            <field name="description">Retenciones IRPF 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
+            <field name="invoice_base_code" ref="irpf_base_195"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_195"/>
+            <field name="credit_note_base_code" ref="irpf_base_195"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_195"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475195"/>
+            <field name="credit_note_account" ref="pgc_475195"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_195"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_20_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -14486,6 +15004,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475120"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_20"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20_irpf_child">
+            <field name="name">Retenciones IRPF 20%</field>
+            <field name="description">Retenciones IRPF 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_20"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_20"/>
+            <field name="credit_note_base_code" ref="irpf_base_20"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_20"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475120"/>
+            <field name="credit_note_account" ref="pgc_475120"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_20"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_21_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -15260,6 +15816,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_475121"/>
             <field name="credit_note_account" ref="pgc_475121"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_21_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_21_irpf_child">
+            <field name="name">Retenciones IRPF 21%</field>
+            <field name="description">Retenciones IRPF 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="irpf_base_21"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_21"/>
+            <field name="credit_note_base_code" ref="irpf_base_21"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475121"/>
+            <field name="credit_note_account" ref="pgc_475121"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_21"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_195a_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
@@ -16036,6 +16630,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475195"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_195a"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195a_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_195a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19,5%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_195a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
+            <field name="credit_note_base_code" ref="irpf_base_195a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_195a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475195"/>
+            <field name="credit_note_account" ref="pgc_475195"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_195a"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_20a_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -16811,6 +17443,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_475120"/>
             <field name="parent" ref="iva_sop_21_recc+irpf_20a"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20a_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_20a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 20%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_20a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_20a"/>
+            <field name="credit_note_base_code" ref="irpf_base_20a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_20a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_475120"/>
+            <field name="credit_note_account" ref="pgc_475120"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_20a"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_1_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -17259,6 +17929,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473001"/>
             <field name="credit_note_account" ref="pgc_473001"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_1_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_1_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 1%</field>
+            <field name="description">Retenciones a cuenta IRPF 1%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.01')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_1"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_1"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473001"/>
+            <field name="credit_note_account" ref="pgc_473001"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_1"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_2_iva_child">
             <field name="name">IVA Exento</field>
@@ -17709,6 +18417,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473002"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_2"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_2_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_2_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 2%</field>
+            <field name="description">Retenciones a cuenta IRPF 2%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.02')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_2"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_2"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473002"/>
+            <field name="credit_note_account" ref="pgc_473002"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_2"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_7_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -18157,6 +18903,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473007"/>
             <field name="credit_note_account" ref="pgc_473007"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_7_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_7_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 7%</field>
+            <field name="description">Retenciones a cuenta IRPF 7%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.07')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_7"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_7"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473007"/>
+            <field name="credit_note_account" ref="pgc_473007"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_7"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_9_iva_child">
             <field name="name">IVA Exento</field>
@@ -18607,6 +19391,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473009"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_9"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_9_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_9_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 9%</field>
+            <field name="description">Retenciones a cuenta IRPF 9%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.09')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_9"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_9"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473009"/>
+            <field name="credit_note_account" ref="pgc_473009"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_9"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_15_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -19055,6 +19877,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473015"/>
             <field name="credit_note_account" ref="pgc_473015"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_15_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_15_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 15%</field>
+            <field name="description">Retenciones a cuenta IRPF 15%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.15')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_15"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_15"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473015"/>
+            <field name="credit_note_account" ref="pgc_473015"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_15"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_18_iva_child">
             <field name="name">IVA Exento</field>
@@ -19505,6 +20365,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473018"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_18"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_18_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_18_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 18%</field>
+            <field name="description">Retenciones a cuenta IRPF 18%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.18')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_18"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_18"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473018"/>
+            <field name="credit_note_account" ref="pgc_473018"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_18"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_19_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -19953,6 +20851,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473019"/>
             <field name="credit_note_account" ref="pgc_473019"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19%</field>
+            <field name="description">Retenciones a cuenta IRPF 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_19"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_195_iva_child">
             <field name="name">IVA Exento</field>
@@ -20403,6 +21339,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473095"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_195"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_195"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_20_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -20851,6 +21825,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473020"/>
             <field name="credit_note_account" ref="pgc_473020"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 20%</field>
+            <field name="description">Retenciones a cuenta IRPF 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_20"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_21_iva_child">
             <field name="name">IVA Exento</field>
@@ -21301,6 +22313,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473021"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_21"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_21_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_21_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 21%</field>
+            <field name="description">Retenciones a cuenta IRPF 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_21"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_21"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473021"/>
+            <field name="credit_note_account" ref="pgc_473021"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_21"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_195a_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -21749,6 +22799,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_473095"/>
             <field name="credit_note_account" ref="pgc_473095"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195a_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_195a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_195a"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_20a_iva_child">
             <field name="name">IVA Exento</field>
@@ -22199,6 +23287,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473020"/>
             <field name="parent" ref="iva_rep_21_recc+irpf_sale_20a"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20a_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_20a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_20a"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.rule.line.template" id="fp_irpf1+iva_sop_ex">
@@ -22315,6 +23441,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_1"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf1+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf1"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_1"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf2+iva_sop_ex">
             <field name="rule" ref="fp_irpf2"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -22427,6 +23559,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf2"/>
             <field name="origin_tax" ref="iva_sop_21_recc"/>
             <field name="tax" ref="iva_sop_21_recc+irpf_2"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf2+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf2"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_2"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf7+iva_sop_ex">
@@ -22543,6 +23681,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_7"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf7+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf7"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_7"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf9+iva_sop_ex">
             <field name="rule" ref="fp_irpf9"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -22655,6 +23799,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf9"/>
             <field name="origin_tax" ref="iva_sop_21_recc"/>
             <field name="tax" ref="iva_sop_21_recc+irpf_9"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf9+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf9"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_9"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf15+iva_sop_ex">
@@ -22771,6 +23921,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_15"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf15+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf15"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_15"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf18+iva_sop_ex">
             <field name="rule" ref="fp_irpf18"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -22883,6 +24039,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf18"/>
             <field name="origin_tax" ref="iva_sop_21_recc"/>
             <field name="tax" ref="iva_sop_21_recc+irpf_18"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf18+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf18"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_18"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf19+iva_sop_ex">
@@ -22999,6 +24161,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_19"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf19"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_19"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195+iva_sop_ex">
             <field name="rule" ref="fp_irpf195"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -23111,6 +24279,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf195"/>
             <field name="origin_tax" ref="iva_sop_21_recc"/>
             <field name="tax" ref="iva_sop_21_recc+irpf_195"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf195"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_195"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20+iva_sop_ex">
@@ -23227,6 +24401,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_20"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf20"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_20"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf21+iva_sop_ex">
             <field name="rule" ref="fp_irpf21"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -23339,6 +24519,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf21"/>
             <field name="origin_tax" ref="iva_sop_21_recc"/>
             <field name="tax" ref="iva_sop_21_recc+irpf_21"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf21+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf21"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_21"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_sop_ex">
@@ -23455,6 +24641,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_195a"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf195a"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_195a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_sop_ex">
             <field name="rule" ref="fp_irpf20a"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -23569,6 +24761,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_21_recc+irpf_20a"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf20a"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_20a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf1+iva_rep_ex">
             <field name="rule" ref="fp_irpf1"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -23633,6 +24831,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf1"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_1"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf1+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf1"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_1"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf2+iva_rep_ex">
@@ -23701,6 +24905,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_2"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf2+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf2"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_2"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf7+iva_rep_ex">
             <field name="rule" ref="fp_irpf7"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -23765,6 +24975,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf7"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_7"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf7+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf7"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_7"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf9+iva_rep_ex">
@@ -23833,6 +25049,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_9"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf9+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf9"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_9"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf15+iva_rep_ex">
             <field name="rule" ref="fp_irpf15"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -23897,6 +25119,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf15"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_15"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf15+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf15"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_15"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf18+iva_rep_ex">
@@ -23965,6 +25193,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_18"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf18+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf18"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_18"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf19+iva_rep_ex">
             <field name="rule" ref="fp_irpf19"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -24029,6 +25263,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf19"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_19"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf19"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_19"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195+iva_rep_ex">
@@ -24097,6 +25337,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_195"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf195"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_195"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20+iva_rep_ex">
             <field name="rule" ref="fp_irpf20"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -24161,6 +25407,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf20"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_20"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf20"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_20"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf21+iva_rep_ex">
@@ -24229,6 +25481,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_21"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf21+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf21"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_21"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_ex">
             <field name="rule" ref="fp_irpf195a"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -24295,6 +25553,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_195a"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf195a"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_195a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_rep_ex">
             <field name="rule" ref="fp_irpf20a"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
@@ -24359,6 +25623,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf20a"/>
             <field name="origin_tax" ref="iva_rep_21_recc"/>
             <field name="tax" ref="iva_rep_21_recc+irpf_sale_20a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf20a"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_20a"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
     </data>
