@@ -1,19 +1,21 @@
-id,name,account,kind
-fp_pymes_nacional,Régimen Nacional,pgc_pymes_0,both
-fp_pymes_recargo,Recargo de Equivalencia,pgc_pymes_0,both
-fp_pymes_extra,Régimen Extracomunitario,pgc_pymes_0,both
-fp_pymes_intra,Régimen Intracomunitario,pgc_pymes_0,both
-fp_pymes_irpf21,Retención IRPF 21%,pgc_pymes_0,both
-fp_pymes_irpf20,Retención IRPF 20%,pgc_pymes_0,both
-fp_pymes_irpf20a,Retención IRPF Arrendamientos 20%,pgc_pymes_0,both
-fp_pymes_irpf195,"Retención IRPF 19,5%",pgc_pymes_0,both
-fp_pymes_irpf195a,"Retención IRPF Arrendamientos 19,5%",pgc_pymes_0,both
-fp_pymes_irpf19,Retención IRPF 19%,pgc_pymes_0,both
-fp_pymes_irpf18,Retención IRPF 18%,pgc_pymes_0,both
-fp_pymes_irpf15,Retención IRPF 15%,pgc_pymes_0,both
-fp_pymes_irpf9,Retención IRPF 9%,pgc_pymes_0,both
-fp_pymes_irpf7,Retención IRPF 7%,pgc_pymes_0,both
-fp_pymes_irpf2,Retención IRPF 2%,pgc_pymes_0,both
-fp_pymes_irpf1,Retención IRPF 1%,pgc_pymes_0,both
-fp_pymes_recc,Régimen Especial del Criterio de Caja,pgc_pymes_0,both
-fp_pymes_reagp,Régimen especial agricultura ganadería y pesca,pgc_pymes_0,both
+"id","name","account","kind"
+"fp_pymes_nacional","Régimen Nacional","pgc_pymes_0","both"
+"fp_pymes_recargo","Recargo de Equivalencia","pgc_pymes_0","both"
+"fp_pymes_extra","Régimen Extracomunitario","pgc_pymes_0","both"
+"fp_pymes_intra","Régimen Intracomunitario","pgc_pymes_0","both"
+"fp_pymes_irpf37","Retención IRPF 37%","pgc_pymes_0","both"
+"fp_pymes_irpf35","Retención IRPF 35%","pgc_pymes_0","both"
+"fp_pymes_irpf21","Retención IRPF 21%","pgc_pymes_0","both"
+"fp_pymes_irpf20","Retención IRPF 20%","pgc_pymes_0","both"
+"fp_pymes_irpf20a","Retención IRPF Arrendamientos 20%","pgc_pymes_0","both"
+"fp_pymes_irpf195","Retención IRPF 19,5%","pgc_pymes_0","both"
+"fp_pymes_irpf195a","Retención IRPF Arrendamientos 19,5%","pgc_pymes_0","both"
+"fp_pymes_irpf19","Retención IRPF 19%","pgc_pymes_0","both"
+"fp_pymes_irpf18","Retención IRPF 18%","pgc_pymes_0","both"
+"fp_pymes_irpf15","Retención IRPF 15%","pgc_pymes_0","both"
+"fp_pymes_irpf9","Retención IRPF 9%","pgc_pymes_0","both"
+"fp_pymes_irpf7","Retención IRPF 7%","pgc_pymes_0","both"
+"fp_pymes_irpf2","Retención IRPF 2%","pgc_pymes_0","both"
+"fp_pymes_irpf1","Retención IRPF 1%","pgc_pymes_0","both"
+"fp_pymes_recc","Régimen Especial del Criterio de Caja","pgc_pymes_0","both"
+"fp_pymes_reagp","Régimen especial agricultura ganadería y pesca","pgc_pymes_0","both"

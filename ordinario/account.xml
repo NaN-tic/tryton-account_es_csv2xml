@@ -15778,6 +15778,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type" ref="es_balance_normal_32560"/>
             <field name="deferral" eval="True"/>
         </record>
+        <record model="account.account.template" id="pgc_475135">
+            <field name="code">4751%35</field>
+            <field name="parent" ref="pgc_4751"/>
+            <field name="name">Hacienda Pública. Retenciones act. profesionales 35%</field>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_32560"/>
+            <field name="deferral" eval="True"/>
+        </record>
+        <record model="account.account.template" id="pgc_475137">
+            <field name="code">4751%37</field>
+            <field name="parent" ref="pgc_4751"/>
+            <field name="name">Hacienda Pública. Retenciones act. profesionales 37%</field>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_32560"/>
+            <field name="deferral" eval="True"/>
+        </record>
         <record model="account.account.template" id="pgc_473001">
             <field name="code">4730%01</field>
             <field name="parent" ref="pgc_473"/>
@@ -15854,6 +15870,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">4730%21</field>
             <field name="parent" ref="pgc_473"/>
             <field name="name">Hacienda Pública. Retenciones a cuenta arrendamientos, cap. mobiliario 21%</field>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_12360"/>
+            <field name="deferral" eval="True"/>
+        </record>
+        <record model="account.account.template" id="pgc_473035">
+            <field name="code">4730%35</field>
+            <field name="parent" ref="pgc_473"/>
+            <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 35%</field>
+            <field name="kind">other</field>
+            <field name="type" ref="es_balance_normal_12360"/>
+            <field name="deferral" eval="True"/>
+        </record>
+        <record model="account.account.template" id="pgc_473037">
+            <field name="code">4730%37</field>
+            <field name="parent" ref="pgc_473"/>
+            <field name="name">Hacienda Pública. Retenciones a cuenta act. profesionales 37%</field>
             <field name="kind">other</field>
             <field name="type" ref="es_balance_normal_12360"/>
             <field name="deferral" eval="True"/>
