@@ -577,7 +577,7 @@
 "pgc_pymes_4758","Hacienda Pública, acreedora por subvenciones a reintegrar",4758,"pgc_pymes_475","False","view",,"True","False"
 "pgc_pymes_4758_child","Hacienda Pública, acreedora por subvenciones a reintegrar",4758,"pgc_pymes_4758","True","payable","es_balance_pymes_32590","True","False"
 "pgc_pymes_476","Organismos de la Seguridad Social, acreedores",476,"pgc_pymes_47","False","view",,"True","False"
-"pgc_pymes_476_child","Organismos de la Seguridad Social, acreedores",476,"pgc_pymes_476","False","other","es_balance_pymes_32590","True","False"
+"pgc_pymes_476_child","Organismos de la Seguridad Social, acreedores",476,"pgc_pymes_476","True","other","es_balance_pymes_32590","True","False"
 "pgc_pymes_477","Hacienda Pública, IVA repercutido",477,"pgc_pymes_47","False","view",,"True","False"
 "pgc_pymes_4770","Hacienda Pública, IVA repercutido",4770,"pgc_pymes_477","False","view",,"True","False"
 "pgc_pymes_4771","Hacienda Pública, IVA repercutido, Recargo de Equivalencia",4771,"pgc_pymes_477","False","view",,"True","False"

@@ -7722,6 +7722,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type" ref="es_balance_normal_32560"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="pgc_4770">
             <field name="name">Hacienda Pública, IVA repercutido</field>
