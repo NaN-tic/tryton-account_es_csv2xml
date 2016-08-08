@@ -316,7 +316,7 @@ def read_tax_file(file_name):
                 {'name': 'credit_note_tax_sign', 'eval': row[15]},
                 {'name': 'invoice_account', 'ref': row[16]},
                 {'name': 'credit_note_account', 'ref': row[17]},
-                {'name': 'sequence', 'text': row[18]},
+                {'name': 'sequence', 'eval': row[18]},
                 {'name': 'start_date', 'text': row[19]},
                 {'name': 'end_date', 'text': row[20]},
                 {'name': 'account_name', 'text': row[21]},
@@ -487,6 +487,14 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
             if iva_group == irpf_group:
                 record = create_substitution_tax(iva_group, record_id,
                     complete_name, ref)
+                iva_sequence, = [f['eval'] for f in iva_record['fields']
+                    if f['name'] == 'sequence']
+                irpf_sequence, = [f['eval'] for f in irpf_record['fields']
+                    if f['name'] == 'sequence']
+                record['fields'].append({
+                        'name': 'sequence',
+                        'eval': max(iva_sequence, irpf_sequence),
+                        })
                 level = compute_level(record, levels)
                 if level in levels:
                     levels[level].append(record)
@@ -627,6 +635,14 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
 
             tax_record = create_substitution_tax(iva_id, re_id, iva_fields,
                 re_fields)
+            iva_sequence, = [f['eval'] for f in iva_record['fields']
+                if f['name'] == 'sequence']
+            re_sequence, = [f['eval'] for f in re_record['fields']
+                if f['name'] == 'sequence']
+            tax_record['fields'].append({
+                    'name': 'sequence',
+                    'eval': max(iva_sequence, re_sequence),
+                    })
             level = compute_level(tax_record, levels)
             if level in levels:
                 levels[level].append(tax_record)
