@@ -2216,6 +2216,24 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="2400"/>
             <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
         </record>
+        <record model="account.tax.template" id="iva_rep_no_sujeto">
+            <field name="name">No sujeto</field>
+            <field name="description">No sujeto</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">none</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="sequence" eval="1240"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_no_sujeto">
+            <field name="name">No sujeto</field>
+            <field name="description">No sujeto</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">none</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="sequence" eval="1250"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
