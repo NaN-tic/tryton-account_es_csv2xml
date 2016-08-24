@@ -1555,17 +1555,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_ded_26"/>
             <field name="invoice_tax_code" ref="iva_ded_27"/>
             <field name="credit_note_base_code" ref="iva_ded_26"/>
             <field name="credit_note_tax_code" ref="iva_ded_27"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2230"/>
             <field name="report_description">Factura exenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
@@ -1574,17 +1573,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_ded_28"/>
             <field name="invoice_tax_code" ref="iva_ded_29"/>
             <field name="credit_note_base_code" ref="iva_ded_28"/>
             <field name="credit_note_tax_code" ref="iva_ded_29"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2230"/>
             <field name="report_description">Factura exenta en virtud del artículo 70.u.7 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
@@ -1717,14 +1715,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Exportaciones</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_extra_43"/>
             <field name="credit_note_base_code" ref="base_extra_43"/>
             <field name="credit_note_base_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4750_child"/>
-            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1200"/>
             <field name="report_description">Factura exenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
@@ -1733,17 +1730,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Inversión del sujeto pasivo</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_extra_44"/>
             <field name="credit_note_base_code" ref="base_extra_44"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1210"/>
             <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
         </record>
@@ -1752,15 +1748,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Intracomunitario</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_intra_42"/>
             <field name="credit_note_base_code" ref="base_intra_42"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4750_child"/>
-            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_IC_compras_4_bc">
@@ -1770,9 +1765,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2300"/>
         </record>
         <record model="account.tax.template" id="iva_IC_compras_4_bi">
@@ -1782,9 +1776,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2300"/>
         </record>
         <record model="account.tax.template" id="iva_IC_compras_10_bc">
@@ -1794,9 +1787,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2270"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -1807,9 +1799,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2270"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -1820,9 +1811,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2240"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -1833,9 +1823,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2240"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -1846,9 +1835,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2240"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -1859,9 +1847,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2400"/>
         </record>
         <record model="account.tax.template" id="suplido_ventas">
@@ -1871,9 +1858,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1230"/>
         </record>
         <record model="account.tax.template" id="igic_X0_compras_bc">
@@ -1881,9 +1867,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_ded_26_00"/>
             <field name="invoice_tax_code" ref="igic_ded_27_00"/>
             <field name="credit_note_base_code" ref="igic_ded_26_00"/>
@@ -1892,8 +1877,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4240"/>
             <field name="report_description">Factura exenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
@@ -1902,9 +1887,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_ded_28_00"/>
             <field name="invoice_tax_code" ref="igic_ded_29_00"/>
             <field name="credit_note_base_code" ref="igic_ded_28_00"/>
@@ -1913,8 +1897,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4240"/>
             <field name="report_description">Factura exenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
@@ -2083,15 +2067,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Intracomunitario</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_intra_42_igic"/>
             <field name="credit_note_base_code" ref="base_intra_42_igic"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4750_child"/>
-            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1240"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_3_bc">
@@ -2101,9 +2084,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4330"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_3_bi">
@@ -2113,9 +2095,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4330"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_7_bc">
@@ -2125,9 +2106,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4300"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_7_bi">
@@ -2137,9 +2117,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4300"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_9_5_bc">
@@ -2149,9 +2128,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4270"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_9_5_bi">
@@ -2161,9 +2139,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4270"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_13_5_bc">
@@ -2173,9 +2150,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4240"/>
         </record>
         <record model="account.tax.template" id="igic_IC_compras_13_5_bi">
@@ -2185,9 +2161,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_472200"/>
-            <field name="credit_note_account" ref="pgc_472200"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="4240"/>
         </record>
         <record model="account.tax.template" id="iva_reagp_compras_12">
@@ -2197,9 +2172,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2410"/>
             <field name="start_date">2012-09-01</field>
         </record>
@@ -2210,9 +2184,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="2400"/>
             <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
         </record>
@@ -2223,6 +2196,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1240"/>
         </record>
         <record model="account.tax.template" id="iva_sop_no_sujeto">
@@ -2232,6 +2207,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="invoice_account" eval="None"/>
+            <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1250"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex">
