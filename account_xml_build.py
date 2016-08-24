@@ -294,6 +294,11 @@ def read_tax_file(file_name):
         if r:
             value, = r.groups()
             rate = 'Decimal(\'%s\')' % str(float(value) / 100.0)
+
+        # set eval that those invoice/credit note accounts ara None
+        # (force update all taxes that not have invoice/credit note accounts)
+        invoice_account = 'ref' if row[16] else 'eval'
+        credit_note_account = 'ref' if row[17] else 'eval'
         tax_record = {
             'model': 'account.tax.template',
             'id': row[0],
@@ -314,8 +319,8 @@ def read_tax_file(file_name):
                 {'name': 'invoice_tax_sign', 'eval': row[13]},
                 {'name': 'credit_note_base_sign', 'eval': row[14]},
                 {'name': 'credit_note_tax_sign', 'eval': row[15]},
-                {'name': 'invoice_account', 'ref': row[16]},
-                {'name': 'credit_note_account', 'ref': row[17]},
+                {'name': 'invoice_account', invoice_account: row[16] or 'None'},
+                {'name': 'credit_note_account', credit_note_account: row[17] or 'None'},
                 {'name': 'sequence', 'eval': row[18]},
                 {'name': 'start_date', 'text': row[19]},
                 {'name': 'end_date', 'text': row[20]},
@@ -366,12 +371,15 @@ def create_tax_accounts(account_xml, file_names):
         }
         for field in re_record['fields']:
             if field['name'] == 'invoice_account':
-                record['id'] = field['ref']
+                ref = field.get('ref')
+                if not ref:
+                    continue
+                record['id'] = ref
                 if record['id'] in account_ids:
                     break
-                parent = compute_parent(field['ref'])
+                parent = compute_parent(ref)
                 record['fields'].extend([
-                    {'name': 'code', 'text': compute_code(field['ref'])},
+                    {'name': 'code', 'text': compute_code(ref)},
                     {'name': 'parent', 'ref': parent},
                 ])
                 if parent in map_2_type and parent:
@@ -391,7 +399,7 @@ def create_tax_accounts(account_xml, file_names):
             {'name': 'type', 'ref': account_type},
             {'name': 'deferral', 'eval': 'True'},
         ])
-        if record['id'] not in account_ids:
+        if record.get('id') and record['id'] not in account_ids:
             level = compute_level(record, levels)
             if level in levels:
                 levels[level].append(record)
