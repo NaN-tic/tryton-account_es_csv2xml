@@ -1555,9 +1555,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_pymes_ded_26"/>
             <field name="invoice_tax_code" ref="iva_pymes_ded_27"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_26"/>
@@ -1574,9 +1573,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_pymes_ded_28"/>
             <field name="invoice_tax_code" ref="iva_pymes_ded_29"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_28"/>
@@ -1717,9 +1715,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Exportaciones</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_pymes_extra_43"/>
             <field name="credit_note_base_code" ref="base_pymes_extra_43"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -1733,9 +1730,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Inversión del sujeto pasivo</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -1750,9 +1746,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Intracomunitario</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_pymes_intra_42"/>
             <field name="credit_note_base_code" ref="base_pymes_intra_42"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -1768,7 +1763,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2300"/>
@@ -1780,7 +1774,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2300"/>
@@ -1792,7 +1785,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2270"/>
@@ -1805,7 +1797,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2270"/>
@@ -1818,7 +1809,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2240"/>
@@ -1831,7 +1821,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2240"/>
@@ -1844,7 +1833,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2240"/>
@@ -1857,7 +1845,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2400"/>
@@ -1869,7 +1856,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="1230"/>
@@ -1879,9 +1865,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_pymes_ded_26_00"/>
             <field name="invoice_tax_code" ref="igic_pymes_ded_27_00"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_26_00"/>
@@ -1900,9 +1885,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_pymes_ded_28_00"/>
             <field name="invoice_tax_code" ref="igic_pymes_ded_29_00"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_28_00"/>
@@ -2081,9 +2065,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Intracomunitario</field>
             <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
-            <field name="type">percentage</field>
+            <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_pymes_intra_42_igic"/>
             <field name="credit_note_base_code" ref="base_pymes_intra_42_igic"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -2099,7 +2082,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4330"/>
@@ -2135,7 +2117,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4300"/>
@@ -2147,7 +2128,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4270"/>
@@ -2159,7 +2139,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4270"/>
@@ -2171,7 +2150,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4240"/>
@@ -2183,7 +2161,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_472200"/>
             <field name="credit_note_account" ref="pgc_pymes_472200"/>
             <field name="sequence" eval="4240"/>
@@ -2195,7 +2172,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2410"/>
@@ -2208,7 +2184,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
             <field name="credit_note_account" ref="pgc_pymes_4700_child"/>
             <field name="sequence" eval="2400"/>
