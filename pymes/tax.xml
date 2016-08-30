@@ -2192,7 +2192,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="iva_pymes_rep_no_sujeto">
             <field name="name">No sujeto</field>
             <field name="description">No sujeto</field>
-            <field name="account" ref="pgc_0"/>
+            <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_sale_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
@@ -2203,7 +2203,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="iva_pymes_sop_no_sujeto">
             <field name="name">No sujeto</field>
             <field name="description">No sujeto</field>
-            <field name="account" ref="pgc_0"/>
+            <field name="account" ref="pgc_pymes_0"/>
             <field name="group" ref="tax_group_purchase_pymes"/>
             <field name="type">none</field>
             <field name="recargo_equivalencia" eval="False"/>
