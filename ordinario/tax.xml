@@ -1555,8 +1555,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_ded_26"/>
             <field name="invoice_tax_code" ref="iva_ded_27"/>
             <field name="credit_note_base_code" ref="iva_ded_26"/>
@@ -1573,8 +1574,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="iva_ded_28"/>
             <field name="invoice_tax_code" ref="iva_ded_29"/>
             <field name="credit_note_base_code" ref="iva_ded_28"/>
@@ -1715,8 +1717,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Exportaciones</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_extra_43"/>
             <field name="credit_note_base_code" ref="base_extra_43"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -1730,8 +1733,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Inversión del sujeto pasivo</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_extra_44"/>
             <field name="credit_note_base_code" ref="base_extra_44"/>
             <field name="invoice_base_sign" eval="1"/>
@@ -1748,8 +1752,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IVA 0% Intracomunitario</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_intra_42"/>
             <field name="credit_note_base_code" ref="base_intra_42"/>
             <field name="credit_note_base_sign" eval="1"/>
@@ -1867,8 +1872,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes corrientes</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_ded_26_00"/>
             <field name="invoice_tax_code" ref="igic_ded_27_00"/>
             <field name="credit_note_base_code" ref="igic_ded_26_00"/>
@@ -1887,8 +1893,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Importaciones bienes de inversión</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_purchase"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="igic_ded_28_00"/>
             <field name="invoice_tax_code" ref="igic_ded_29_00"/>
             <field name="credit_note_base_code" ref="igic_ded_28_00"/>
@@ -2067,8 +2074,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">IGIC 0% Intracomunitario</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
-            <field name="type">none</field>
+            <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
             <field name="invoice_base_code" ref="base_intra_42_igic"/>
             <field name="credit_note_base_code" ref="base_intra_42_igic"/>
             <field name="credit_note_base_sign" eval="1"/>
