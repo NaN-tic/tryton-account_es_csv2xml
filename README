@@ -1,10 +1,14 @@
 Tryton Spanish Account CSV to XML
 =================================
 
-This project convert CSV data to XML data (account and tax files)
+This project convert CSV data to XML data for odules account_es/_pyme,
+aeat_340, aeat_349 and account_invoice_facturae
+
 
 How to
-======
+------
+
+Update accounts and taxes of account_es/_pyme modules:
 
 * Remove content in ordinario and pymes folders.
 * Modify CSV files.
@@ -12,3 +16,20 @@ How to
 * In ordinario and pymes folders, you have new XML with new data from CSV.
 * Copy XML from ordinario to account_es module
 * Copy XML from pymes to account_es_pyme module
+
+Update data of eaat_340 and aeat_349 modules:
+
+* Remove content in aeat folder.
+* Modify CSV files.
+* Exceute python aeat_xml_build.py
+* In aeat folder you have new XML with new data from CSV.
+* Copy XML from aeat/340.xml to aeat_340 module
+* Copy XML from aeat/349.xml to aeat_349 module
+
+Update data of account_invoice_facturae module:
+
+* Remove content in facturae folder.
+* Modify CSV files.
+* Exceute python facturae_xml_build.py
+* In facturae folder you have new XML with new data from CSV.
+* Copy XML from facturae/tax.xml to account_invoice_facturae module
