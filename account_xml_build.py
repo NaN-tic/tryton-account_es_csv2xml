@@ -207,9 +207,10 @@ def create_tax_rule_lines(tax_xml, file_name):
     xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
         if (reader.line_num == 1 or
-                (row[1] not in ['fp_intra', 'fp_extra', 'fp_reagp'] and
-                    row[1] not in ['fp_pymes_intra', 'fp_pymes_extra',
-                        'fp_pymes_reagp'])):
+                (row[1] not in [
+                        'fp_intra', 'fp_extra', 'fp_reagp', 'fp_exento',
+                        'fp_pymes_intra', 'fp_pymes_extra', 'fp_pymes_reagp',
+                        'fp_pymes_exento'])):
             continue
         record = {
             'model': 'account.tax.rule.line.template',
