@@ -5562,6 +5562,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type" ref="es_balance_pymes_32580"/>
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
+            <field name="reconcile" eval="True"/>
         </record>
         <record model="account.account.template" id="pgc_pymes_4030">
             <field name="name">Proveedores, empresas del grupo (euros)</field>

@@ -446,7 +446,7 @@
 "pgc_pymes_4009","Proveedores, facturas pendientes de recibir o de formalizar",4009,"pgc_pymes_400","False","view",,"True","False"
 "pgc_pymes_4009_child","Proveedores, facturas pendientes de recibir o de formalizar",4009,"pgc_pymes_4009","True","payable","es_balance_pymes_32580","True","True"
 "pgc_pymes_401","Proveedores, efectos comerciales a pagar",401,"pgc_pymes_40","False","view",,"True","False"
-"pgc_pymes_401_child","Proveedores, efectos comerciales a pagar",401,"pgc_pymes_401","False","other","es_balance_pymes_32580","True","False"
+"pgc_pymes_401_child","Proveedores, efectos comerciales a pagar",401,"pgc_pymes_401","True","other","es_balance_pymes_32580","True","False"
 "pgc_pymes_403","Proveedores, empresas del grupo",403,"pgc_pymes_40","False","view",,"True","False"
 "pgc_pymes_4030","Proveedores, empresas del grupo (euros)",4030,"pgc_pymes_403","False","view",,"True","False"
 "pgc_pymes_4030_child","Proveedores, empresas del grupo (euros)",4030,"pgc_pymes_4030","True","payable","es_balance_pymes_32580","True","True"
