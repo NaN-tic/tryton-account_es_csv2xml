@@ -206,9 +206,12 @@ def create_tax_rule_lines(tax_xml, file_name):
     reader = get_csv_reader(file_name)
     xml_data = set_subelement(tax_xml, 'data', {'grouped': '1'})
     for row in reader:
+        # print row[1]
         if (reader.line_num == 1 or
                 (row[1] not in [
-                        'fp_intra', 'fp_extra', 'fp_reagp', 'fp_exento',
+                        'fp_intra', 'fp_intra_serv', 'fp_extra', 'fp_reagp',
+                        'fp_exento', 'fp_exento_ter_rus', 'fp_exento_asis',
+                        'fp_isp_reciclaje', 'fp_isp_obra',
                         'fp_pymes_intra', 'fp_pymes_extra', 'fp_pymes_reagp',
                         'fp_pymes_exento'])):
             continue

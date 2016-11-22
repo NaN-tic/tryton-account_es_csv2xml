@@ -63,9 +63,15 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="base_intra_42">
-            <field name="name">Entregas Intracomunitarias</field>
+            <field name="name">Entregas Intracomunitarias (Bienes)</field>
             <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">EI</field>
+            <field name="code">EI.B</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="base_intra_serv_42">
+            <field name="name">Entregas Intracomunitarias (Servicios)</field>
+            <field name="parent" ref="vat_code_chart_root"/>
+            <field name="code">EI.S</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="base_extra_43">
@@ -1726,7 +1732,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_4750_child"/>
             <field name="credit_note_account" ref="pgc_4750_child"/>
             <field name="sequence" eval="1200"/>
-            <field name="report_description">Factura exenta en virtud del artículo 25 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
+            <field name="report_description">Factura exenta en virtud del artículo 21 de la ley 37/1992 del impuesto Sobre el Valor Añadido.</field>
         </record>
         <record model="account.tax.template" id="iva_ISP_compras_16">
             <field name="name">IVA 0% Inversión del sujeto pasivo</field>
@@ -1747,9 +1753,47 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1210"/>
             <field name="report_description">Operación con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
         </record>
+        <record model="account.tax.template" id="iva_ISP_reciclaje_0">
+            <field name="name">IVA 0% Inversión del sujeto pasivo (chatarra y reciclaje de cartón)</field>
+            <field name="description">IVA 0% Inversión del sujeto pasivo (chatarra y reciclaje de cartón)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_extra_44"/>
+            <field name="credit_note_base_code" ref="base_extra_44"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="sequence" eval="1210"/>
+            <field name="report_description">Operación no sujeta o con inversión del sujeto pasivo, artículo 84. Uno 2º c) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
+        </record>
+        <record model="account.tax.template" id="iva_ISP_obra_0">
+            <field name="name">IVA 0% Inversión del sujeto pasivo (ejecuciones de obra)</field>
+            <field name="description">IVA 0% Inversión del sujeto pasivo (ejecuciones de obra)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_extra_44"/>
+            <field name="credit_note_base_code" ref="base_extra_44"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="sequence" eval="1210"/>
+            <field name="report_description">Operación no sujeta o con inversión del sujeto pasivo, artículo 84. Uno 2º f) de la ley 37/1992 de 28 de Diciembre del Impuesto sobre el Valor Añadido.</field>
+        </record>
         <record model="account.tax.template" id="iva_IO">
-            <field name="name">IVA 0% Intracomunitario</field>
-            <field name="description">IVA 0% Intracomunitario</field>
+            <field name="name">IVA 0% Intracomunitario (Bienes)</field>
+            <field name="description">IVA 0% Intracomunitario (Bienes)</field>
             <field name="account" ref="pgc_0"/>
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
@@ -1762,6 +1806,24 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_4750_child"/>
             <field name="credit_note_account" ref="pgc_4750_child"/>
             <field name="sequence" eval="1220"/>
+            <field name="report_description">Operación intracomunitaria sujeta al artículo 25 de la Ley 37/1992 del Impuesto sobre el Valor Añadido.</field>
+        </record>
+        <record model="account.tax.template" id="iva_IO_serv">
+            <field name="name">IVA 0% Intracomunitario (Servicios)</field>
+            <field name="description">IVA 0% Intracomunitario (Servicios)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_intra_serv_42"/>
+            <field name="credit_note_base_code" ref="base_intra_serv_42"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1220"/>
+            <field name="report_description">Operación intracomunitaria sujeta al artículo 69 de la Ley 37/1992 del Impuesto sobre el Valor Añadido.</field>
         </record>
         <record model="account.tax.template" id="iva_IC_compras_4_bc">
             <field name="name">IVA 4% Intracomunitario. Bienes corrientes</field>
@@ -2396,6 +2458,44 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" ref="pgc_4750_child"/>
             <field name="credit_note_account" ref="pgc_4750_child"/>
             <field name="sequence" eval="1030"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
         </record>
         <record model="account.tax.template" id="iva_rep_4">
             <field name="name">IVA 4%</field>
@@ -3610,7 +3710,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="kind">both</field>
         </record>
         <record model="account.tax.rule.template" id="fp_intra">
-            <field name="name">Régimen Intracomunitario</field>
+            <field name="name">Régimen Intracomunitario (Bienes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_intra_serv">
+            <field name="name">Régimen Intracomunitario (Servicios)</field>
             <field name="account" ref="pgc_0"/>
             <field name="kind">both</field>
         </record>
@@ -3696,6 +3801,26 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <record model="account.tax.rule.template" id="fp_exento">
             <field name="name">IVA Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_exento_ter_rus">
+            <field name="name">Operaciones exentas sin derecho de deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_exento_asis">
+            <field name="name">Operaciones exentas sin derecho de deducción (servicios asistentciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_isp_reciclaje">
+            <field name="name">Inversión del sujeto pasivo (chatarra y reciclaje de cartón)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
+        <record model="account.tax.rule.template" id="fp_isp_obra">
+            <field name="name">Inversión del sujeto pasivo (ejecuciones de obra)</field>
             <field name="account" ref="pgc_0"/>
             <field name="kind">both</field>
         </record>
@@ -3809,6 +3934,60 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_IO"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_4">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_IC_compras_4_bc"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_4_inv">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_IC_compras_4_bi"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_10">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_IC_compras_10_bc"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_10_inv">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_IC_compras_10_bi"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_21">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_IC_compras_21_bc"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_21_inv">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_IC_compras_21_bi"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_ventas_4">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_IO_serv"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_ventas_10">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_IO_serv"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_intra_serv_ventas_21">
+            <field name="rule" ref="fp_intra_serv"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_IO_serv"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_reagp_iva_4">
             <field name="rule" ref="fp_reagp"/>
             <field name="origin_tax" ref="iva_sop_4"/>
@@ -3897,6 +4076,222 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_exento"/>
             <field name="origin_tax" ref="iva_rep_21"/>
             <field name="tax" ref="iva_rep_ex"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_4">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_4_inv">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_10">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_10_inv">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_21">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_21_inv">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_ventas_4">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_rep_0_ter_rus"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_ventas_10">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_rep_0_ter_rus"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_ter_rus_ventas_21">
+            <field name="rule" ref="fp_exento_ter_rus"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_rep_0_ter_rus"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_4">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_4_inv">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_10">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_10_inv">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_21">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_sop_ex"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_21_inv">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_ventas_4">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_rep_0_asis"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_ventas_10">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_rep_0_asis"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_exento_asis_ventas_21">
+            <field name="rule" ref="fp_exento_asis"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_rep_0_asis"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_4">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_4_inv">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_10">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_10_inv">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_21">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_21_inv">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_ventas_4">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_ISP_reciclaje_0"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_ventas_10">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_ISP_reciclaje_0"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_reciclaje_ventas_21">
+            <field name="rule" ref="fp_isp_reciclaje"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_ISP_reciclaje_0"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_4">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_4_inv">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_10">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_10_inv">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_21">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_21_inv">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_ISP_compras"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_ventas_4">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_ISP_obra_0"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_ventas_10">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_ISP_obra_0"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fptt_isp_obra_ventas_21">
+            <field name="rule" ref="fp_isp_obra"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_ISP_obra_0"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
     </data>
@@ -5253,6 +5648,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1530"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_1">
+            <field name="name">Retenciones a cuenta IRPF 1% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 1% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1530"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_1">
+            <field name="name">Retenciones a cuenta IRPF 1% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 1% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1530"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_1">
             <field name="name">Retenciones a cuenta IRPF 1% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5313,6 +5724,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 2% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 2% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1520"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_2">
+            <field name="name">Retenciones a cuenta IRPF 2% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 2% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1520"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_2">
+            <field name="name">Retenciones a cuenta IRPF 2% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 2% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1520"/>
@@ -5381,6 +5808,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1540"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_7">
+            <field name="name">Retenciones a cuenta IRPF 7% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 7% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1540"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_7">
+            <field name="name">Retenciones a cuenta IRPF 7% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 7% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1540"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_7">
             <field name="name">Retenciones a cuenta IRPF 7% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5441,6 +5884,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 9% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 9% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1510"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_9">
+            <field name="name">Retenciones a cuenta IRPF 9% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 9% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1510"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_9">
+            <field name="name">Retenciones a cuenta IRPF 9% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 9% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1510"/>
@@ -5509,6 +5968,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1500"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_15">
+            <field name="name">Retenciones a cuenta IRPF 15% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 15% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1500"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_15">
+            <field name="name">Retenciones a cuenta IRPF 15% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 15% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1500"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_15">
             <field name="name">Retenciones a cuenta IRPF 15% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5569,6 +6044,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 18% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 18% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_18">
+            <field name="name">Retenciones a cuenta IRPF 18% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 18% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_18">
+            <field name="name">Retenciones a cuenta IRPF 18% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 18% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1600"/>
@@ -5637,6 +6128,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1590"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19">
+            <field name="name">Retenciones a cuenta IRPF 19% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1590"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19">
+            <field name="name">Retenciones a cuenta IRPF 19% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1590"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_19">
             <field name="name">Retenciones a cuenta IRPF 19% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5697,6 +6204,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 19,5% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 19,5% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1580"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195">
+            <field name="name">Retenciones a cuenta IRPF 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1580"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195">
+            <field name="name">Retenciones a cuenta IRPF 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1580"/>
@@ -5765,6 +6288,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1570"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20">
+            <field name="name">Retenciones a cuenta IRPF 20% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 20% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1570"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20">
+            <field name="name">Retenciones a cuenta IRPF 20% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 20% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1570"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_20">
             <field name="name">Retenciones a cuenta IRPF 20% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5825,6 +6364,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 21% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 21% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1560"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_21">
+            <field name="name">Retenciones a cuenta IRPF 21% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 21% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1560"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_21">
+            <field name="name">Retenciones a cuenta IRPF 21% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 21% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1560"/>
@@ -5893,6 +6448,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1540"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_35">
+            <field name="name">Retenciones a cuenta IRPF 35% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 35% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1540"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_35">
+            <field name="name">Retenciones a cuenta IRPF 35% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 35% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1540"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_35">
             <field name="name">Retenciones a cuenta IRPF 35% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -5953,6 +6524,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF 37% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF 37% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1550"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_37">
+            <field name="name">Retenciones a cuenta IRPF 37% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 37% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1550"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_37">
+            <field name="name">Retenciones a cuenta IRPF 37% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF 37% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1550"/>
@@ -6021,6 +6608,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1610"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1610"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1610"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_195a">
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA 4%</field>
             <field name="account" ref="pgc_0"/>
@@ -6081,6 +6684,22 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA Exento</field>
             <field name="account" ref="pgc_0"/>
             <field name="description">Retenciones a cuenta IRPF Arrendamientos 20% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1620"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1620"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1620"/>
@@ -13211,6 +13830,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1530"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_1"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_1_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_1_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 1%</field>
+            <field name="description">Retenciones a cuenta IRPF 1%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.01')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_1"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_1"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473001"/>
+            <field name="credit_note_account" ref="pgc_473001"/>
+            <field name="sequence" eval="1530"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_1_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_1"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_1_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 1%</field>
+            <field name="description">Retenciones a cuenta IRPF 1%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.01')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_1"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_1"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_1"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473001"/>
+            <field name="credit_note_account" ref="pgc_473001"/>
+            <field name="sequence" eval="1530"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_1"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_1_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -13544,6 +14245,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473002"/>
             <field name="sequence" eval="1520"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_2_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_2_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 2%</field>
+            <field name="description">Retenciones a cuenta IRPF 2%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.02')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_2"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_2"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473002"/>
+            <field name="credit_note_account" ref="pgc_473002"/>
+            <field name="sequence" eval="1520"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_2_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_2"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_2_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 2%</field>
+            <field name="description">Retenciones a cuenta IRPF 2%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.02')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_2"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_2"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_2"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473002"/>
+            <field name="credit_note_account" ref="pgc_473002"/>
+            <field name="sequence" eval="1520"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_2"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_2_iva_child">
             <field name="name">IVA 4%</field>
@@ -13879,6 +14662,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1540"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_7"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_7_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_7_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 7%</field>
+            <field name="description">Retenciones a cuenta IRPF 7%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.07')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_7"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_7"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473007"/>
+            <field name="credit_note_account" ref="pgc_473007"/>
+            <field name="sequence" eval="1540"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_7_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_7"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_7_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 7%</field>
+            <field name="description">Retenciones a cuenta IRPF 7%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.07')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_7"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_7"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_7"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473007"/>
+            <field name="credit_note_account" ref="pgc_473007"/>
+            <field name="sequence" eval="1540"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_7"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_7_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -14212,6 +15077,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473009"/>
             <field name="sequence" eval="1510"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_9_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_9_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 9%</field>
+            <field name="description">Retenciones a cuenta IRPF 9%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.09')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_9"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_9"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473009"/>
+            <field name="credit_note_account" ref="pgc_473009"/>
+            <field name="sequence" eval="1510"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_9_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_9"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_9_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 9%</field>
+            <field name="description">Retenciones a cuenta IRPF 9%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.09')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_9"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_9"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_9"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473009"/>
+            <field name="credit_note_account" ref="pgc_473009"/>
+            <field name="sequence" eval="1510"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_9"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_9_iva_child">
             <field name="name">IVA 4%</field>
@@ -14547,6 +15494,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1500"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_15"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_15_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_15_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 15%</field>
+            <field name="description">Retenciones a cuenta IRPF 15%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.15')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_15"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_15"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473015"/>
+            <field name="credit_note_account" ref="pgc_473015"/>
+            <field name="sequence" eval="1500"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_15_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_15"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_15_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 15%</field>
+            <field name="description">Retenciones a cuenta IRPF 15%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.15')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_15"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_15"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_15"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473015"/>
+            <field name="credit_note_account" ref="pgc_473015"/>
+            <field name="sequence" eval="1500"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_15"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_15_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -14880,6 +15909,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473018"/>
             <field name="sequence" eval="1600"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_18_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_18_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 18%</field>
+            <field name="description">Retenciones a cuenta IRPF 18%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.18')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_18"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_18"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473018"/>
+            <field name="credit_note_account" ref="pgc_473018"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_18_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_18"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_18_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 18%</field>
+            <field name="description">Retenciones a cuenta IRPF 18%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.18')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_18"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_18"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_18"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473018"/>
+            <field name="credit_note_account" ref="pgc_473018"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_18"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_18_iva_child">
             <field name="name">IVA 4%</field>
@@ -15215,6 +16326,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1590"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_19"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19%</field>
+            <field name="description">Retenciones a cuenta IRPF 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1590"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_19"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19%</field>
+            <field name="description">Retenciones a cuenta IRPF 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1590"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_19"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_19_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -15548,6 +16741,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473095"/>
             <field name="sequence" eval="1580"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="sequence" eval="1580"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_195"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="sequence" eval="1580"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_195"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_195_iva_child">
             <field name="name">IVA 4%</field>
@@ -15883,6 +17158,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1570"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_20"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 20%</field>
+            <field name="description">Retenciones a cuenta IRPF 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="sequence" eval="1570"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_20"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 20%</field>
+            <field name="description">Retenciones a cuenta IRPF 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="sequence" eval="1570"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_20"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_20_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -16216,6 +17573,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473021"/>
             <field name="sequence" eval="1560"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_21_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_21_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 21%</field>
+            <field name="description">Retenciones a cuenta IRPF 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_21"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_21"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473021"/>
+            <field name="credit_note_account" ref="pgc_473021"/>
+            <field name="sequence" eval="1560"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_21_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_21"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_21_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 21%</field>
+            <field name="description">Retenciones a cuenta IRPF 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.21')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_21"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_21"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473021"/>
+            <field name="credit_note_account" ref="pgc_473021"/>
+            <field name="sequence" eval="1560"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_21"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_21_iva_child">
             <field name="name">IVA 4%</field>
@@ -16551,6 +17990,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1540"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_35"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_35_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_35"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_35_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 35%</field>
+            <field name="description">Retenciones a cuenta IRPF 35%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.35')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_35"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_35"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_35"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_35"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473035"/>
+            <field name="credit_note_account" ref="pgc_473035"/>
+            <field name="sequence" eval="1540"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_35"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_35_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_35"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_35_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 35%</field>
+            <field name="description">Retenciones a cuenta IRPF 35%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.35')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_35"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_35"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_35"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_35"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473035"/>
+            <field name="credit_note_account" ref="pgc_473035"/>
+            <field name="sequence" eval="1540"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_35"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_35_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -16884,6 +18405,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473037"/>
             <field name="sequence" eval="1550"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_37"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_37_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_37"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_37_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 37%</field>
+            <field name="description">Retenciones a cuenta IRPF 37%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.37')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_37"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_37"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_37"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_37"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473037"/>
+            <field name="credit_note_account" ref="pgc_473037"/>
+            <field name="sequence" eval="1550"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_37"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_37_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_37"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_37_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF 37%</field>
+            <field name="description">Retenciones a cuenta IRPF 37%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.37')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_37"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_37"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_37"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_37"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_473037"/>
+            <field name="credit_note_account" ref="pgc_473037"/>
+            <field name="sequence" eval="1550"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_37"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_37_iva_child">
             <field name="name">IVA 4%</field>
@@ -17219,6 +18822,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1610"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_195a"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_195a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="sequence" eval="1610"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_195a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_195a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19,5%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_195a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473095"/>
+            <field name="credit_note_account" ref="pgc_473095"/>
+            <field name="sequence" eval="1610"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_195a"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_195a_iva_child">
             <field name="name">IVA 4%</field>
             <field name="description">IVA 4%</field>
@@ -17552,6 +19237,88 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_account" ref="pgc_473020"/>
             <field name="sequence" eval="1620"/>
             <field name="parent" ref="iva_rep_ex+irpf_sale_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_20a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="sequence" eval="1620"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_20a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_20a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 20%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.2')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_20a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_20a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_20a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473020"/>
+            <field name="credit_note_account" ref="pgc_473020"/>
+            <field name="sequence" eval="1620"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_20a"/>
         </record>
         <record model="account.tax.template" id="iva_rep_4+irpf_sale_20a_iva_child">
             <field name="name">IVA 4%</field>
@@ -18863,6 +20630,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_1"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf1+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf1"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_1"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf1+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf1"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_1"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf1+iva_rep_4">
             <field name="rule" ref="fp_irpf1"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -18909,6 +20688,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf2"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_2"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf2+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf2"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_2"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf2+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf2"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_2"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf2+iva_rep_4">
@@ -18959,6 +20750,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_7"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf7+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf7"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_7"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf7+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf7"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_7"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf7+iva_rep_4">
             <field name="rule" ref="fp_irpf7"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19005,6 +20808,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf9"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_9"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf9+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf9"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_9"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf9+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf9"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_9"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf9+iva_rep_4">
@@ -19055,6 +20870,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_15"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf15+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf15"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_15"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf15+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf15"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_15"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf15+iva_rep_4">
             <field name="rule" ref="fp_irpf15"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19101,6 +20928,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf18"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_18"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf18+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf18"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_18"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf18+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf18"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_18"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf18+iva_rep_4">
@@ -19151,6 +20990,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_19"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf19"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_19"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf19"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_19"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf19+iva_rep_4">
             <field name="rule" ref="fp_irpf19"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19197,6 +21048,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf195"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_195"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf195"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_195"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf195"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_195"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195+iva_rep_4">
@@ -19247,6 +21110,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_20"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf20"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_20"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf20"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_20"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20+iva_rep_4">
             <field name="rule" ref="fp_irpf20"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19293,6 +21168,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf21"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_21"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf21+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf21"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_21"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf21+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf21"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_21"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf21+iva_rep_4">
@@ -19343,6 +21230,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_35"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf35+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf35"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_35"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf35+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf35"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_35"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf35+iva_rep_4">
             <field name="rule" ref="fp_irpf35"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19389,6 +21288,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf37"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_37"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf37+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf37"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_37"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf37+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf37"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_37"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf37+iva_rep_4">
@@ -19439,6 +21350,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_rep_ex+irpf_sale_195a"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf195a"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_195a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf195a"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_195a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_4">
             <field name="rule" ref="fp_irpf195a"/>
             <field name="origin_tax" ref="iva_rep_4"/>
@@ -19485,6 +21408,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf20a"/>
             <field name="origin_tax" ref="iva_rep_ex"/>
             <field name="tax" ref="iva_rep_ex+irpf_sale_20a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf20a"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_20a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf20a"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_20a"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf20a+iva_rep_4">
