@@ -12656,7 +12656,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.account.template" id="pgc_pymes_477104">
             <field name="code">4771%04</field>
             <field name="parent" ref="pgc_pymes_4771"/>
-            <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 0.5%</field>
+            <field name="name">Hacienda Pública. IVA repercutido. Recargo de Equivalencia 0.5%</field>
             <field name="kind">other</field>
             <field name="type" ref="es_balance_pymes_32590"/>
             <field name="deferral" eval="True"/>
@@ -12664,7 +12664,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.account.template" id="pgc_pymes_477110">
             <field name="code">4771%10</field>
             <field name="parent" ref="pgc_pymes_4771"/>
-            <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 1.4%</field>
+            <field name="name">Hacienda Pública. IVA repercutido. Recargo de Equivalencia 1.4%</field>
             <field name="kind">other</field>
             <field name="type" ref="es_balance_pymes_32590"/>
             <field name="deferral" eval="True"/>
@@ -12672,7 +12672,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.account.template" id="pgc_pymes_477121">
             <field name="code">4771%21</field>
             <field name="parent" ref="pgc_pymes_4771"/>
-            <field name="name">Hacienda Pública. IVA soportado. Recargo de Equivalencia 5.2%</field>
+            <field name="name">Hacienda Pública. IVA repercutido. Recargo de Equivalencia 5.2%</field>
             <field name="kind">other</field>
             <field name="type" ref="es_balance_pymes_32590"/>
             <field name="deferral" eval="True"/>
