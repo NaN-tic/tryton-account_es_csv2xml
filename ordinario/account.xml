@@ -7659,15 +7659,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="deferral" eval="True"/>
             <field name="party_required" eval="False"/>
         </record>
-        <record model="account.account.template" id="pgc_4771_child">
-            <field name="name">Organismos de la Seguridad Social, deudores</field>
-            <field name="parent" ref="pgc_471"/>
-            <field name="code">471</field>
-            <field name="kind">other</field>
-            <field name="type" ref="es_balance_normal_12360"/>
-            <field name="deferral" eval="True"/>
-            <field name="party_required" eval="False"/>
-        </record>
         <record model="account.account.template" id="pgc_4740">
             <field name="name">Activos por diferencias temporarias deducibles</field>
             <field name="parent" ref="pgc_474"/>

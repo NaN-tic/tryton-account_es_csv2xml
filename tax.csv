@@ -85,7 +85,7 @@
 "iva_ISP_compras_2","IVA Inversión del sujeto pasivo (2)","iva_ISP_compras","pgc_0","tax_group_purchase","percentage","False","Decimal('-21.0')","baser_ispc","cuotar_ispc","baser_ispc","cuotar_ispc",1,1,1,1,"pgc_4700_child","pgc_4700_child",2420,,,,,"01"
 "iva_rep_no_sujeto","No sujeto",,"pgc_0","tax_group_sale","none","False",,,,,,,,,,,,1240,,,,,
 "iva_sop_no_sujeto","No sujeto",,"pgc_0","tax_group_purchase","none","False",,,,,,,,,,,,1250,,,,,
-"iva_dev_AI","Adquisiciones Intracomunitarias (Bienes)",,"pgc_0","tax_group_sale","percentage","False","Decimal('0.0')","iva_dev_19",,"iva_dev_rect_19",,,,1,1,"pgc_4771_child","pgc_4771_child",1220,,,,,"01"
-"iva_dev_AI_serv","Adquisiciones Intracomunitarias (Servicios)",,"pgc_0","tax_group_sale","percentage","False","Decimal('0.0')","iva_dev_serv_19",,"iva_dev_rect_serv_19",,,,1,1,"pgc_4771_child","pgc_4771_child",1220,,,,,"01"
-"iva_ded_AI","Adquisiciones Intracomunitarias (Bienes)",,"pgc_0","tax_group_purchase","percentage","False","Decimal('0.0')","iva_ded_19",,"iva_ded_rect_19",,,,1,1,"pgc_4771_child","pgc_4771_child",1220,,,,,"01"
-"iva_ded_AI_serv","Adquisiciones Intracomunitarias (Servicios)",,"pgc_0","tax_group_purchase","percentage","False","Decimal('0.0')","iva_ded_serv_19",,"iva_ded_rect_serv_19",,,,1,1,"pgc_4771_child","pgc_4771_child",1220,,,,,"01"
+"iva_dev_AI","Adquisiciones Intracomunitarias (Bienes)",,"pgc_0","tax_group_sale","percentage","False","Decimal('0.0')","iva_dev_19",,"iva_dev_rect_19",,,,1,1,"pgc_4771","pgc_4771",1220,,,,,"01"
+"iva_dev_AI_serv","Adquisiciones Intracomunitarias (Servicios)",,"pgc_0","tax_group_sale","percentage","False","Decimal('0.0')","iva_dev_serv_19",,"iva_dev_rect_serv_19",,,,1,1,"pgc_4771","pgc_4771",1220,,,,,"01"
+"iva_ded_AI","Adquisiciones Intracomunitarias (Bienes)",,"pgc_0","tax_group_purchase","percentage","False","Decimal('0.0')","iva_ded_19",,"iva_ded_rect_19",,,,1,1,"pgc_4771","pgc_4771",1220,,,,,"01"
+"iva_ded_AI_serv","Adquisiciones Intracomunitarias (Servicios)",,"pgc_0","tax_group_purchase","percentage","False","Decimal('0.0')","iva_ded_serv_19",,"iva_ded_rect_serv_19",,,,1,1,"pgc_4771","pgc_4771",1220,,,,,"01"

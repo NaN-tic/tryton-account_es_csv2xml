@@ -2363,8 +2363,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="iva_dev_rect_19"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771_child"/>
-            <field name="credit_note_account" ref="pgc_4771_child"/>
+            <field name="invoice_account" ref="pgc_4771"/>
+            <field name="credit_note_account" ref="pgc_4771"/>
             <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_dev_AI_serv">
@@ -2379,8 +2379,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="iva_dev_rect_serv_19"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771_child"/>
-            <field name="credit_note_account" ref="pgc_4771_child"/>
+            <field name="invoice_account" ref="pgc_4771"/>
+            <field name="credit_note_account" ref="pgc_4771"/>
             <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_ded_AI">
@@ -2395,8 +2395,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="iva_ded_rect_19"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771_child"/>
-            <field name="credit_note_account" ref="pgc_4771_child"/>
+            <field name="invoice_account" ref="pgc_4771"/>
+            <field name="credit_note_account" ref="pgc_4771"/>
             <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_ded_AI_serv">
@@ -2411,8 +2411,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="iva_ded_rect_serv_19"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771_child"/>
-            <field name="credit_note_account" ref="pgc_4771_child"/>
+            <field name="invoice_account" ref="pgc_4771"/>
+            <field name="credit_note_account" ref="pgc_4771"/>
             <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex">
