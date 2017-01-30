@@ -290,6 +290,7 @@ def create_tax_accounts(account_xml, file_names):
     map_2_type = {
         'pgc_4700': 'es_balance_normal_12360',
         'pgc_4700_child': 'es_balance_normal_12360',
+        'pgc_4771_child': 'es_balance_normal_12360',
         'pgc_472': 'es_balance_normal_12360',
         'pgc_473': 'es_balance_normal_12360',
         'pgc_4750': 'es_balance_normal_32560',
