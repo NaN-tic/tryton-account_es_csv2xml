@@ -24,36 +24,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Plantilla Plan de Impuestos completo</field>
             <field name="account" ref="pgc_0"/>
         </record>
-        <record model="account.tax.code.template" id="iva_ded_19">
-            <field name="name">En adquisiciones intracomunitarias (Bienes). Base Imponible</field>
-            <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">B.EAI.B</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
-        <record model="account.tax.code.template" id="iva_ded_serv_19">
-            <field name="name">En adquisiciones intracomunitarias (Servicios). Base Imponible</field>
-            <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">B.EAI.S</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
-        <record model="account.tax.code.template" id="iva_ded_rect_19">
-            <field name="name">Rectificativas en Adquisiciones intracomunitarias (Bienes). Base Imponible</field>
-            <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">B.REAI.B</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
-        <record model="account.tax.code.template" id="iva_ded_rect_serv_19">
-            <field name="name">Rectificativas en Adquisiciones intracomunitarias (Servicios). Base Imponible</field>
-            <field name="parent" ref="iva_ded_base_total"/>
-            <field name="code">B.REAI.S</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.code.template" id="iva_dev_base">
             <field name="name">IVA Devengado Base Imponible</field>
             <field name="parent" ref="vat_code_chart_root"/>
             <field name="code">B.IVA.V</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_ded_base_total">
+            <field name="name">IVA Deducible Base Imponible</field>
+            <field name="parent" ref="vat_code_chart_root"/>
+            <field name="code">B.IVA.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="base_sop_ex">
@@ -72,12 +54,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">IVA Cuota total devengada</field>
             <field name="parent" ref="vat_code_chart_root"/>
             <field name="code">IVA.V</field>
-            <field name="account" ref="pgc_0"/>
-        </record>
-        <record model="account.tax.code.template" id="iva_ded_base_total">
-            <field name="name">IVA Deducible Base Imponible</field>
-            <field name="parent" ref="vat_code_chart_root"/>
-            <field name="code">B.IVA.C</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_ded_cuota_total">
@@ -260,6 +236,30 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Rectificativas de Adquisiciones intracomunitarias (Servicios). Base Imponible</field>
             <field name="parent" ref="iva_dev_base"/>
             <field name="code">B.RAI.S</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_ded_19">
+            <field name="name">En adquisiciones intracomunitarias (Bienes). Base Imponible</field>
+            <field name="parent" ref="iva_ded_base_total"/>
+            <field name="code">B.EAI.B</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_ded_serv_19">
+            <field name="name">En adquisiciones intracomunitarias (Servicios). Base Imponible</field>
+            <field name="parent" ref="iva_ded_base_total"/>
+            <field name="code">B.EAI.S</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_ded_rect_19">
+            <field name="name">Rectificativas en Adquisiciones intracomunitarias (Bienes). Base Imponible</field>
+            <field name="parent" ref="iva_ded_base_total"/>
+            <field name="code">B.REAI.B</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_ded_rect_serv_19">
+            <field name="name">Rectificativas en Adquisiciones intracomunitarias (Servicios). Base Imponible</field>
+            <field name="parent" ref="iva_ded_base_total"/>
+            <field name="code">B.REAI.S</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="iva_dev_03">
