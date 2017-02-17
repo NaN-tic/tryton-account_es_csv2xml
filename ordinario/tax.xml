@@ -1873,6 +1873,70 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1220"/>
             <field name="report_description">Operación intracomunitaria sujeta al artículo 69 de la Ley 37/1992 del Impuesto sobre el Valor Añadido.</field>
         </record>
+        <record model="account.tax.template" id="iva_dev_AI">
+            <field name="name">Adquisiciones Intracomunitarias (Bienes)</field>
+            <field name="description">Adquisiciones Intracomunitarias (Bienes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="iva_dev_19"/>
+            <field name="credit_note_base_code" ref="iva_dev_rect_19"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1220"/>
+        </record>
+        <record model="account.tax.template" id="iva_dev_AI_serv">
+            <field name="name">Adquisiciones Intracomunitarias (Servicios)</field>
+            <field name="description">Adquisiciones Intracomunitarias (Servicios)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="iva_dev_serv_19"/>
+            <field name="credit_note_base_code" ref="iva_dev_rect_serv_19"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1220"/>
+        </record>
+        <record model="account.tax.template" id="iva_ded_AI">
+            <field name="name">Adquisiciones Intracomunitarias (Bienes)</field>
+            <field name="description">Adquisiciones Intracomunitarias (Bienes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="iva_ded_19"/>
+            <field name="credit_note_base_code" ref="iva_ded_rect_19"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1220"/>
+        </record>
+        <record model="account.tax.template" id="iva_ded_AI_serv">
+            <field name="name">Adquisiciones Intracomunitarias (Servicios)</field>
+            <field name="description">Adquisiciones Intracomunitarias (Servicios)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="iva_ded_serv_19"/>
+            <field name="credit_note_base_code" ref="iva_ded_rect_serv_19"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1220"/>
+        </record>
         <record model="account.tax.template" id="iva_IC_compras_4_bc">
             <field name="name">IVA 4% Intracomunitario. Bienes corrientes</field>
             <field name="description">IVA 4% Intracomunitario. Bienes corrientes</field>
@@ -2350,70 +2414,6 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_account" eval="None"/>
             <field name="credit_note_account" eval="None"/>
             <field name="sequence" eval="1250"/>
-        </record>
-        <record model="account.tax.template" id="iva_dev_AI">
-            <field name="name">Adquisiciones Intracomunitarias (Bienes)</field>
-            <field name="description">Adquisiciones Intracomunitarias (Bienes)</field>
-            <field name="account" ref="pgc_0"/>
-            <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="iva_dev_19"/>
-            <field name="credit_note_base_code" ref="iva_dev_rect_19"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771"/>
-            <field name="credit_note_account" ref="pgc_4771"/>
-            <field name="sequence" eval="1220"/>
-        </record>
-        <record model="account.tax.template" id="iva_dev_AI_serv">
-            <field name="name">Adquisiciones Intracomunitarias (Servicios)</field>
-            <field name="description">Adquisiciones Intracomunitarias (Servicios)</field>
-            <field name="account" ref="pgc_0"/>
-            <field name="group" ref="tax_group_sale"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="iva_dev_serv_19"/>
-            <field name="credit_note_base_code" ref="iva_dev_rect_serv_19"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771"/>
-            <field name="credit_note_account" ref="pgc_4771"/>
-            <field name="sequence" eval="1220"/>
-        </record>
-        <record model="account.tax.template" id="iva_ded_AI">
-            <field name="name">Adquisiciones Intracomunitarias (Bienes)</field>
-            <field name="description">Adquisiciones Intracomunitarias (Bienes)</field>
-            <field name="account" ref="pgc_0"/>
-            <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="iva_ded_19"/>
-            <field name="credit_note_base_code" ref="iva_ded_rect_19"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771"/>
-            <field name="credit_note_account" ref="pgc_4771"/>
-            <field name="sequence" eval="1220"/>
-        </record>
-        <record model="account.tax.template" id="iva_ded_AI_serv">
-            <field name="name">Adquisiciones Intracomunitarias (Servicios)</field>
-            <field name="description">Adquisiciones Intracomunitarias (Servicios)</field>
-            <field name="account" ref="pgc_0"/>
-            <field name="group" ref="tax_group_purchase"/>
-            <field name="type">percentage</field>
-            <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('0.0')"/>
-            <field name="invoice_base_code" ref="iva_ded_serv_19"/>
-            <field name="credit_note_base_code" ref="iva_ded_rect_serv_19"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4771"/>
-            <field name="credit_note_account" ref="pgc_4771"/>
-            <field name="sequence" eval="1220"/>
         </record>
         <record model="account.tax.template" id="iva_sop_ex">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
