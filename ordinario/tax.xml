@@ -484,6 +484,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">B.IRPF37.P</field>
             <field name="account" ref="pgc_0"/>
         </record>
+        <record model="account.tax.code.template" id="irpf_base_19a">
+            <field name="name">IRPF Retenciones practicadas Arrendamientos Base Imponible 19%</field>
+            <field name="parent" ref="irpf_base"/>
+            <field name="code">B.IRPF19.PA</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
         <record model="account.tax.code.template" id="irpf_base_195a">
             <field name="name">IRPF Retenciones practicadas Arrendamientos Base Imponible 19,5%</field>
             <field name="parent" ref="irpf_base"/>
@@ -566,6 +572,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">IRPF Retenciones practicadas Cuota 37%</field>
             <field name="parent" ref="irpf_cuota_total"/>
             <field name="code">IRPF37.P</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="irpf_cuota_19a">
+            <field name="name">IRPF Retenciones practicadas Arrendamientos Cuota 19%</field>
+            <field name="parent" ref="irpf_cuota_total"/>
+            <field name="code">IRPF19.PA</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="irpf_cuota_195a">
@@ -652,6 +664,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">B.IRPF37.AC</field>
             <field name="account" ref="pgc_0"/>
         </record>
+        <record model="account.tax.code.template" id="irpf_base_sale_19a">
+            <field name="name">IRPF Retenciones a cuenta Arrendamientos Base Imponible 19%</field>
+            <field name="parent" ref="irpf_base_sale"/>
+            <field name="code">B.IRPF19.ACA</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
         <record model="account.tax.code.template" id="irpf_base_sale_195a">
             <field name="name">IRPF Retenciones a cuenta Arrendamientos Base Imponible 19,5%</field>
             <field name="parent" ref="irpf_base_sale"/>
@@ -734,6 +752,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">IRPF Retenciones a cuenta Cuota 37%</field>
             <field name="parent" ref="irpf_cuota_sale_total"/>
             <field name="code">IRPF37.AC</field>
+            <field name="account" ref="pgc_0"/>
+        </record>
+        <record model="account.tax.code.template" id="irpf_cuota_sale_19a">
+            <field name="name">IRPF Retenciones a cuenta Arrendamientos Cuota 19%</field>
+            <field name="parent" ref="irpf_cuota_sale_total"/>
+            <field name="code">IRPF19.ACA</field>
             <field name="account" ref="pgc_0"/>
         </record>
         <record model="account.tax.code.template" id="irpf_cuota_sale_195a">
@@ -3971,6 +3995,11 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="pgc_0"/>
             <field name="kind">both</field>
         </record>
+        <record model="account.tax.rule.template" id="fp_irpf19a">
+            <field name="name">Retención IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="kind">both</field>
+        </record>
         <record model="account.tax.rule.template" id="fp_irpf18">
             <field name="name">Retención IRPF 18%</field>
             <field name="account" ref="pgc_0"/>
@@ -5660,6 +5689,102 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="sequence" eval="2550"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_ex+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + IVA Soportado exento (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + IVA Soportado exento (operaciones corrientes)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado (operaciones corrientes)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado (operaciones corrientes)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado (operaciones corrientes)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_ex_inv+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + IVA Soportado exento (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + IVA Soportado exento (bienes de inversión)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_inv+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado (bienes de inversión)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_inv+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado (bienes de inversión)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_inv+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado (bienes de inversión)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_recc+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 4% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_recc+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 10% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_recc+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + 21% IVA Soportado criterio de caja</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19a">
+            <field name="name">Retenciones IRPF Arrendamientos 19% + IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones IRPF Arrendamientos 19% + IVA Soportado alquiler vivienda exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="sequence" eval="2600"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_195a">
             <field name="name">Retenciones IRPF Arrendamientos 19,5% + IVA Soportado exento (operaciones corrientes)</field>
             <field name="account" ref="pgc_0"/>
@@ -6811,6 +6936,86 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">none</field>
             <field name="group" ref="tax_group_sale"/>
             <field name="sequence" eval="1550"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_ex+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 4%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 4%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 10%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 10%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4_recc+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 4%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 4%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10_recc+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 10%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 10%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21_recc+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA Criterio Caja 21%</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19a">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19% + IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19% + IVA alquiler vivienda Exento</field>
+            <field name="type">none</field>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="sequence" eval="1600"/>
         </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_195a">
             <field name="name">Retenciones a cuenta IRPF Arrendamientos 19,5% + IVA Exento</field>
@@ -12998,6 +13203,508 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="2550"/>
             <field name="parent" ref="iva_sop_alq_ex+irpf_37"/>
         </record>
+        <record model="account.tax.template" id="iva_sop_ex+irpf_19a_iva_child">
+            <field name="name">IVA Soportado exento (operaciones corrientes)</field>
+            <field name="description">IVA Soportado exento (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="sequence" eval="2030"/>
+            <field name="parent" ref="iva_sop_ex+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_ex+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_ex+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4+irpf_19a_iva_child">
+            <field name="name">4% IVA Soportado (operaciones corrientes)</field>
+            <field name="description">4% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.04')"/>
+            <field name="invoice_base_code" ref="iva_ded_22_4"/>
+            <field name="invoice_tax_code" ref="iva_ded_23_4"/>
+            <field name="credit_note_base_code" ref="iva_ded_22_4"/>
+            <field name="credit_note_tax_code" ref="iva_ded_23_4"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472004"/>
+            <field name="credit_note_account" ref="pgc_472004"/>
+            <field name="sequence" eval="2020"/>
+            <field name="parent" ref="iva_sop_4+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_4+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10+irpf_19a_iva_child">
+            <field name="name">10% IVA Soportado (operaciones corrientes)</field>
+            <field name="description">10% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.1')"/>
+            <field name="invoice_base_code" ref="iva_ded_22_10"/>
+            <field name="invoice_tax_code" ref="iva_ded_23_10"/>
+            <field name="credit_note_base_code" ref="iva_ded_22_10"/>
+            <field name="credit_note_tax_code" ref="iva_ded_23_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472010"/>
+            <field name="credit_note_account" ref="pgc_472010"/>
+            <field name="sequence" eval="2010"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_sop_10+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_10+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21+irpf_19a_iva_child">
+            <field name="name">21% IVA Soportado (operaciones corrientes)</field>
+            <field name="description">21% IVA Soportado (operaciones corrientes)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="iva_ded_22_21"/>
+            <field name="invoice_tax_code" ref="iva_ded_23_21"/>
+            <field name="credit_note_base_code" ref="iva_ded_22_21"/>
+            <field name="credit_note_tax_code" ref="iva_ded_23_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472021"/>
+            <field name="credit_note_account" ref="pgc_472021"/>
+            <field name="sequence" eval="2000"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_sop_21+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_21+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_ex_inv+irpf_19a_iva_child">
+            <field name="name">IVA Soportado exento (bienes de inversión)</field>
+            <field name="description">IVA Soportado exento (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="sequence" eval="2070"/>
+            <field name="parent" ref="iva_sop_ex_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_ex_inv+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_ex_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_inv+irpf_19a_iva_child">
+            <field name="name">4% IVA Soportado (bienes de inversión)</field>
+            <field name="description">4% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.04')"/>
+            <field name="invoice_base_code" ref="iva_ded_24_4"/>
+            <field name="invoice_tax_code" ref="iva_ded_25_4"/>
+            <field name="credit_note_base_code" ref="iva_ded_24_4"/>
+            <field name="credit_note_tax_code" ref="iva_ded_25_4"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472004"/>
+            <field name="credit_note_account" ref="pgc_472004"/>
+            <field name="sequence" eval="2060"/>
+            <field name="parent" ref="iva_sop_4_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_inv+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_4_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_inv+irpf_19a_iva_child">
+            <field name="name">10% IVA Soportado (bienes de inversión)</field>
+            <field name="description">10% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.1')"/>
+            <field name="invoice_base_code" ref="iva_ded_24_10"/>
+            <field name="invoice_tax_code" ref="iva_ded_25_10"/>
+            <field name="credit_note_base_code" ref="iva_ded_24_10"/>
+            <field name="credit_note_tax_code" ref="iva_ded_25_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472010"/>
+            <field name="credit_note_account" ref="pgc_472010"/>
+            <field name="sequence" eval="2050"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_sop_10_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_inv+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_10_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_inv+irpf_19a_iva_child">
+            <field name="name">21% IVA Soportado (bienes de inversión)</field>
+            <field name="description">21% IVA Soportado (bienes de inversión)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="iva_ded_24_21"/>
+            <field name="invoice_tax_code" ref="iva_ded_25_21"/>
+            <field name="credit_note_base_code" ref="iva_ded_24_21"/>
+            <field name="credit_note_tax_code" ref="iva_ded_25_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472021"/>
+            <field name="credit_note_account" ref="pgc_472021"/>
+            <field name="sequence" eval="2040"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_sop_21_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_inv+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_21_inv+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_recc+irpf_19a_iva_child">
+            <field name="name">4% IVA Soportado criterio de caja</field>
+            <field name="description">4% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.04')"/>
+            <field name="invoice_base_code" ref="recc_base_ded_04"/>
+            <field name="invoice_tax_code" ref="recc_ded_04"/>
+            <field name="credit_note_base_code" ref="recc_base_ded_04"/>
+            <field name="credit_note_tax_code" ref="recc_ded_04"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472904"/>
+            <field name="credit_note_account" ref="pgc_472904"/>
+            <field name="sequence" eval="2100"/>
+            <field name="parent" ref="iva_sop_4_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_4_recc+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_4_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_recc+irpf_19a_iva_child">
+            <field name="name">10% IVA Soportado criterio de caja</field>
+            <field name="description">10% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.1')"/>
+            <field name="invoice_base_code" ref="recc_base_ded_10"/>
+            <field name="invoice_tax_code" ref="recc_ded_10"/>
+            <field name="credit_note_base_code" ref="recc_base_ded_10"/>
+            <field name="credit_note_tax_code" ref="recc_ded_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472910"/>
+            <field name="credit_note_account" ref="pgc_472910"/>
+            <field name="sequence" eval="2090"/>
+            <field name="parent" ref="iva_sop_10_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_10_recc+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_10_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_recc+irpf_19a_iva_child">
+            <field name="name">21% IVA Soportado criterio de caja</field>
+            <field name="description">21% IVA Soportado criterio de caja</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="recc_base_ded_21"/>
+            <field name="invoice_tax_code" ref="recc_ded_21"/>
+            <field name="credit_note_base_code" ref="recc_base_ded_21"/>
+            <field name="credit_note_tax_code" ref="recc_ded_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_472921"/>
+            <field name="credit_note_account" ref="pgc_472921"/>
+            <field name="sequence" eval="2080"/>
+            <field name="parent" ref="iva_sop_21_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_21_recc+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_21_recc+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19a_iva_child">
+            <field name="name">IVA Soportado alquiler vivienda exento</field>
+            <field name="description">IVA Soportado alquiler vivienda exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_sop_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_sop_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4700_child"/>
+            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="sequence" eval="2110"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_sop_alq_ex+irpf_19a_irpf_child">
+            <field name="name">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_purchase"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_475119"/>
+            <field name="credit_note_account" ref="pgc_475119"/>
+            <field name="sequence" eval="2600"/>
+            <field name="parent" ref="iva_sop_alq_ex+irpf_19a"/>
+        </record>
         <record model="account.tax.template" id="iva_sop_ex+irpf_195a_iva_child">
             <field name="name">IVA Soportado exento (operaciones corrientes)</field>
             <field name="description">IVA Soportado exento (operaciones corrientes)</field>
@@ -13024,7 +13731,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13066,7 +13773,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13109,7 +13816,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13152,7 +13859,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13192,7 +13899,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13234,7 +13941,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13277,7 +13984,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13320,7 +14027,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13362,7 +14069,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13404,7 +14111,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13446,7 +14153,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -13486,7 +14193,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_purchase"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_195a"/>
@@ -18994,6 +19701,422 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sequence" eval="1550"/>
             <field name="parent" ref="iva_rep_alq_ex+irpf_sale_37"/>
         </record>
+        <record model="account.tax.template" id="iva_rep_ex+irpf_sale_19a_iva_child">
+            <field name="name">IVA Exento</field>
+            <field name="description">IVA Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="parent" ref="iva_rep_ex+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_ex+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_ex+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (servicios asistenciales)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 8º de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_asis+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_0_asis+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19a_iva_child">
+            <field name="name">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="description">IVA 0% Operaciones exentas sin derecho a deducción (arrendamiento terrenos rústicos)</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1030"/>
+            <field name="report_description">Operación exenta por el artículo 20, apartado 1, número 23º a) de la Ley 37/1992 del Impuesto del Valor Añadido</field>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_0_ter_rus+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_0_ter_rus+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4+irpf_sale_19a_iva_child">
+            <field name="name">IVA 4%</field>
+            <field name="description">IVA 4%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.04')"/>
+            <field name="invoice_base_code" ref="iva_dev_01"/>
+            <field name="invoice_tax_code" ref="iva_dev_03"/>
+            <field name="credit_note_base_code" ref="iva_dev_01"/>
+            <field name="credit_note_tax_code" ref="iva_dev_03"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477004"/>
+            <field name="credit_note_account" ref="pgc_477004"/>
+            <field name="sequence" eval="1020"/>
+            <field name="parent" ref="iva_rep_4+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_4+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10+irpf_sale_19a_iva_child">
+            <field name="name">IVA 10%</field>
+            <field name="description">IVA 10%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.1')"/>
+            <field name="invoice_base_code" ref="iva_dev_04_10"/>
+            <field name="invoice_tax_code" ref="iva_dev_06_10"/>
+            <field name="credit_note_base_code" ref="iva_dev_04_10"/>
+            <field name="credit_note_tax_code" ref="iva_dev_06_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477010"/>
+            <field name="credit_note_account" ref="pgc_477010"/>
+            <field name="sequence" eval="1010"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_rep_10+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_10+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21+irpf_sale_19a_iva_child">
+            <field name="name">IVA 21%</field>
+            <field name="description">IVA 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="iva_dev_07_21"/>
+            <field name="invoice_tax_code" ref="iva_dev_09_21"/>
+            <field name="credit_note_base_code" ref="iva_dev_07_21"/>
+            <field name="credit_note_tax_code" ref="iva_dev_09_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477021"/>
+            <field name="credit_note_account" ref="pgc_477021"/>
+            <field name="sequence" eval="1000"/>
+            <field name="start_date">2012-09-01</field>
+            <field name="parent" ref="iva_rep_21+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_21+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4_recc+irpf_sale_19a_iva_child">
+            <field name="name">IVA Criterio Caja 4%</field>
+            <field name="description">IVA Criterio Caja 4%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.04')"/>
+            <field name="invoice_base_code" ref="recc_base_dev_04"/>
+            <field name="invoice_tax_code" ref="recc_dev_04"/>
+            <field name="credit_note_base_code" ref="recc_base_dev_04"/>
+            <field name="credit_note_tax_code" ref="recc_dev_04"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477904"/>
+            <field name="credit_note_account" ref="pgc_477904"/>
+            <field name="sequence" eval="1060"/>
+            <field name="parent" ref="iva_rep_4_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_4_recc+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_4_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10_recc+irpf_sale_19a_iva_child">
+            <field name="name">IVA Criterio Caja 10%</field>
+            <field name="description">IVA Criterio Caja 10%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.1')"/>
+            <field name="invoice_base_code" ref="recc_base_dev_10"/>
+            <field name="invoice_tax_code" ref="recc_dev_10"/>
+            <field name="credit_note_base_code" ref="recc_base_dev_10"/>
+            <field name="credit_note_tax_code" ref="recc_dev_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477910"/>
+            <field name="credit_note_account" ref="pgc_477910"/>
+            <field name="sequence" eval="1050"/>
+            <field name="parent" ref="iva_rep_10_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_10_recc+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_10_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21_recc+irpf_sale_19a_iva_child">
+            <field name="name">IVA Criterio Caja 21%</field>
+            <field name="description">IVA Criterio Caja 21%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.21')"/>
+            <field name="invoice_base_code" ref="recc_base_dev_21"/>
+            <field name="invoice_tax_code" ref="recc_dev_21"/>
+            <field name="credit_note_base_code" ref="recc_base_dev_21"/>
+            <field name="credit_note_tax_code" ref="recc_dev_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_477921"/>
+            <field name="credit_note_account" ref="pgc_477921"/>
+            <field name="sequence" eval="1040"/>
+            <field name="parent" ref="iva_rep_21_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_21_recc+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_21_recc+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19a_iva_child">
+            <field name="name">IVA alquiler vivienda Exento</field>
+            <field name="description">IVA alquiler vivienda Exento</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('0.0')"/>
+            <field name="invoice_base_code" ref="base_rep_alq_ex"/>
+            <field name="credit_note_base_code" ref="base_rep_alq_ex"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="invoice_account" ref="pgc_4750_child"/>
+            <field name="credit_note_account" ref="pgc_4750_child"/>
+            <field name="sequence" eval="1070"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_19a"/>
+        </record>
+        <record model="account.tax.template" id="iva_rep_alq_ex+irpf_sale_19a_irpf_child">
+            <field name="name">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="description">Retenciones a cuenta IRPF Arrendamientos 19%</field>
+            <field name="account" ref="pgc_0"/>
+            <field name="group" ref="tax_group_sale"/>
+            <field name="type">percentage</field>
+            <field name="recargo_equivalencia" eval="False"/>
+            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="invoice_base_code" ref="irpf_base_sale_19a"/>
+            <field name="invoice_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="credit_note_base_code" ref="irpf_base_sale_19a"/>
+            <field name="credit_note_tax_code" ref="irpf_cuota_sale_19a"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
+            <field name="invoice_account" ref="pgc_473019"/>
+            <field name="credit_note_account" ref="pgc_473019"/>
+            <field name="sequence" eval="1600"/>
+            <field name="parent" ref="iva_rep_alq_ex+irpf_sale_19a"/>
+        </record>
         <record model="account.tax.template" id="iva_rep_ex+irpf_sale_195a_iva_child">
             <field name="name">IVA Exento</field>
             <field name="description">IVA Exento</field>
@@ -19020,7 +20143,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19061,7 +20184,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19102,7 +20225,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19144,7 +20267,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19187,7 +20310,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19230,7 +20353,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19272,7 +20395,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19314,7 +20437,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19356,7 +20479,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -19396,7 +20519,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="group" ref="tax_group_sale"/>
             <field name="type">percentage</field>
             <field name="recargo_equivalencia" eval="False"/>
-            <field name="rate" eval="Decimal('-0.19')"/>
+            <field name="rate" eval="Decimal('-0.195')"/>
             <field name="invoice_base_code" ref="irpf_base_sale_195a"/>
             <field name="invoice_tax_code" ref="irpf_cuota_sale_195a"/>
             <field name="credit_note_base_code" ref="irpf_base_sale_195a"/>
@@ -20692,6 +21815,78 @@ this repository contains the full copyright notices and license terms. -->
             <field name="tax" ref="iva_sop_alq_ex+irpf_37"/>
             <field name="group" ref="tax_group_purchase"/>
         </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_ex">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_ex"/>
+            <field name="tax" ref="iva_sop_ex+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_4">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_4"/>
+            <field name="tax" ref="iva_sop_4+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_10">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_10"/>
+            <field name="tax" ref="iva_sop_10+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_21">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_21"/>
+            <field name="tax" ref="iva_sop_21+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_ex_inv">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_ex_inv"/>
+            <field name="tax" ref="iva_sop_ex_inv+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_4_inv">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_4_inv"/>
+            <field name="tax" ref="iva_sop_4_inv+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_10_inv">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_10_inv"/>
+            <field name="tax" ref="iva_sop_10_inv+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_21_inv">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_21_inv"/>
+            <field name="tax" ref="iva_sop_21_inv+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_4_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_4_recc"/>
+            <field name="tax" ref="iva_sop_4_recc+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_10_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_10_recc"/>
+            <field name="tax" ref="iva_sop_10_recc+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_21_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_21_recc"/>
+            <field name="tax" ref="iva_sop_21_recc+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_sop_alq_ex">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_sop_alq_ex"/>
+            <field name="tax" ref="iva_sop_alq_ex+irpf_19a"/>
+            <field name="group" ref="tax_group_purchase"/>
+        </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_sop_ex">
             <field name="rule" ref="fp_irpf195a"/>
             <field name="origin_tax" ref="iva_sop_ex"/>
@@ -21554,6 +22749,66 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="fp_irpf37"/>
             <field name="origin_tax" ref="iva_rep_alq_ex"/>
             <field name="tax" ref="iva_rep_alq_ex+irpf_sale_37"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_ex">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_ex"/>
+            <field name="tax" ref="iva_rep_ex+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_0_asis">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_0_asis"/>
+            <field name="tax" ref="iva_rep_0_asis+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_0_ter_rus">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_0_ter_rus"/>
+            <field name="tax" ref="iva_rep_0_ter_rus+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_4">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_4"/>
+            <field name="tax" ref="iva_rep_4+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_10">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_10"/>
+            <field name="tax" ref="iva_rep_10+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_21">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_21"/>
+            <field name="tax" ref="iva_rep_21+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_4_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_4_recc"/>
+            <field name="tax" ref="iva_rep_4_recc+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_10_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_10_recc"/>
+            <field name="tax" ref="iva_rep_10_recc+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_21_recc">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_21_recc"/>
+            <field name="tax" ref="iva_rep_21_recc+irpf_sale_19a"/>
+            <field name="group" ref="tax_group_sale"/>
+        </record>
+        <record model="account.tax.rule.line.template" id="fp_irpf19a+iva_rep_alq_ex">
+            <field name="rule" ref="fp_irpf19a"/>
+            <field name="origin_tax" ref="iva_rep_alq_ex"/>
+            <field name="tax" ref="iva_rep_alq_ex+irpf_sale_19a"/>
             <field name="group" ref="tax_group_sale"/>
         </record>
         <record model="account.tax.rule.line.template" id="fp_irpf195a+iva_rep_ex">
