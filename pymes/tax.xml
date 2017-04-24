@@ -170,6 +170,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="code">B.RAVE</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_base_ingres">
+            <field name="name">Base importaciones liquidadas por la Aduana pendientes de ingreso</field>
+            <field name="parent" ref="vat_code_chart_pymes_root"/>
+            <field name="code">B.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_cuota_ingres">
+            <field name="name">Cuotas devengadas importaciones liquidadas por la Aduana pendientes de ingreso</field>
+            <field name="parent" ref="vat_code_chart_pymes_root"/>
+            <field name="code">IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
     </data>
     <data grouped="1">
         <record model="account.tax.code.template" id="iva_pymes_dev_01">
@@ -920,6 +932,42 @@ this repository contains the full copyright notices and license terms. -->
             <field name="name">Cuota repercutida Inversión del sujeto pasivo compras</field>
             <field name="parent" ref="ispc_pymes"/>
             <field name="code">BR.ISP.C</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_base_ingres_4">
+            <field name="name">Base a la importación liquidado por la Aduana pendiente de ingreso (4%)</field>
+            <field name="parent" ref="iva_pymes_aduana_base_ingres"/>
+            <field name="code">IVA4.B.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_base_ingres_10">
+            <field name="name">Base a la importación liquidado por la Aduana pendiente de ingreso (10%)</field>
+            <field name="parent" ref="iva_pymes_aduana_base_ingres"/>
+            <field name="code">IVA10.B.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_base_ingres_21">
+            <field name="name">Base a la importación liquidado por la Aduana pendiente de ingreso (21%)</field>
+            <field name="parent" ref="iva_pymes_aduana_base_ingres"/>
+            <field name="code">IVA21.B.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_cuota_ingres_4">
+            <field name="name">Cuota a la importación liquidado por la Aduana pendiente de ingreso (4%)</field>
+            <field name="parent" ref="iva_pymes_aduana_cuota_ingres"/>
+            <field name="code">IVA4.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_cuota_ingres_10">
+            <field name="name">Cuota a la importación liquidado por la Aduana pendiente de ingreso (10%)</field>
+            <field name="parent" ref="iva_pymes_aduana_cuota_ingres"/>
+            <field name="code">IVA10.IVA.ILAP</field>
+            <field name="account" ref="pgc_pymes_0"/>
+        </record>
+        <record model="account.tax.code.template" id="iva_pymes_aduana_cuota_ingres_21">
+            <field name="name">Cuota a la importación liquidado por la Aduana pendiente de ingreso (21%)</field>
+            <field name="parent" ref="iva_pymes_aduana_cuota_ingres"/>
+            <field name="code">IVA21.IVA.ILAP</field>
             <field name="account" ref="pgc_pymes_0"/>
         </record>
     </data>
