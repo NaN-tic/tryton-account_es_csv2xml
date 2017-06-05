@@ -62,6 +62,71 @@ def create_349(xml, files):
                 })
         set_records(xml_data, records)
 
+def create_sii(xml, files):
+    """ Creates xml data for 340 model """
+    records = []
+    # BOOK KEYS
+    keys = ['E', 'I', 'R', 'U', 'F', 'J', 'S']
+    for key in keys:
+        records.append({
+            'model': 'aeat.sii.type',
+            'id': 'aeat_sii_key_%s' % key,
+            'fields': [
+                {'name': 'book_key', 'text': key},
+            ],
+        })
+    xml_data = set_subelement(xml, 'data', {
+            'grouped': '1'
+            })
+    set_records(xml_data, records)
+
+    records = []
+    # SPECIAL KEYS
+    for key in range(1,16):
+        k = str(key).zfill(2)
+        print "K:", k
+        records.append({
+            'model': 'aeat.sii.special_key',
+            'id': 'aeat_sii_special_key_%s' % k ,
+            'fields': [
+                {'name': 'special_key', 'text': k},
+            ],
+        })
+    xml_data = set_subelement(xml, 'data', {
+            'grouped': '1'
+            })
+    set_records(xml_data, records)
+
+
+    # Read account_csv files
+    for file in files:
+        records = []
+        reader = get_csv_reader(file)
+        module = 'account_es' if 'pyme' not in file else 'account_es_pyme'
+        for row in reader:
+            if reader.line_num == 1:
+                continue
+
+            key = keys[0]
+            # key = row[24]
+            aeat_key = 'aeat_sii_key_%s' % key
+            records.append({
+                'model': 'account.tax.template',
+                'id': module + "."+ row[0],
+                'fields': [
+                    {'name': 'sii_book_key', 'ref': 'aeat_sii_key_' +
+                        str(row[24])},
+                    {'name': 'sii_special_key', 'ref': 'aeat_sii_special_key_' +
+                        str(row[25]).zfill(2)},
+                ],
+            })
+
+        xml_data = set_subelement(xml, 'data', {
+                'grouped': '1',
+                'depends': module,
+                })
+        set_records(xml_data, records)
+
 
 def create_340(xml, files):
     """ Creates xml data for 340 model """
@@ -261,9 +326,16 @@ if __name__ == '__main__':
     create_irpf_child_tax_340(xml, 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
     write_xml_file(xml, 'aeat/340.xml')
 
+    xml = init_xml()
+    files = ['tax.csv']
+    create_sii(xml, files)
+    write_xml_file(xml, 'aeat/sii.xml')
+
+
     archives = (
         'aeat/349.xml',
         'aeat/340.xml',
+        'aeat/sii.xml'
         )
     for archive in archives:
         data = normalize_xml(archive)
