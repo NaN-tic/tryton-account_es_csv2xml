@@ -64,40 +64,6 @@ def create_349(xml, files):
 
 def create_sii(xml, files):
     """ Creates xml data for 340 model """
-    records = []
-    # BOOK KEYS
-    keys = ['E', 'I', 'R', 'U', 'F', 'J', 'S']
-    for key in keys:
-        records.append({
-            'model': 'aeat.sii.type',
-            'id': 'aeat_sii_key_%s' % key,
-            'fields': [
-                {'name': 'book_key', 'text': key},
-            ],
-        })
-    xml_data = set_subelement(xml, 'data', {
-            'grouped': '1'
-            })
-    set_records(xml_data, records)
-
-    records = []
-    # SPECIAL KEYS
-    for key in range(1,16):
-        k = str(key).zfill(2)
-        print "K:", k
-        records.append({
-            'model': 'aeat.sii.special_key',
-            'id': 'aeat_sii_special_key_%s' % k ,
-            'fields': [
-                {'name': 'special_key', 'text': k},
-            ],
-        })
-    xml_data = set_subelement(xml, 'data', {
-            'grouped': '1'
-            })
-    set_records(xml_data, records)
-
-
     # Read account_csv files
     for file in files:
         records = []
@@ -107,25 +73,75 @@ def create_sii(xml, files):
             if reader.line_num == 1:
                 continue
 
-            key = keys[0]
-            # key = row[24]
-            aeat_key = 'aeat_sii_key_%s' % key
-            records.append({
+            value = {
                 'model': 'account.tax.template',
-                'id': module + "."+ row[0],
+                'id': module + "." + row[0],
                 'fields': [
-                    {'name': 'sii_book_key', 'ref': 'aeat_sii_key_' +
-                        str(row[24])},
-                    {'name': 'sii_special_key', 'ref': 'aeat_sii_special_key_' +
-                        str(row[25]).zfill(2)},
-                ],
-            })
+                    {'name': 'sii_book_key', 'text': str(row[24])},
+                    {'name': 'sii_issued_key', 'text': row[25] and
+                        str(row[25]).zfill(2) or ''},
+                    {'name': 'sii_received_key', 'text': row[26] and
+                        str(row[26]).zfill(2) or ''},
+                    {'name': 'sii_intracomunity_key', 'text': row[27] and
+                        str(row[27]).zfill(2) or ''},
+                    {'name': 'sii_excemption_key',
+                        'text': str(row[29])},
+                    {'name': 'sii_subjected_key', 'text': str(row[28])},
+
+                    ],
+                }
+            records.append(value)
 
         xml_data = set_subelement(xml, 'data', {
                 'grouped': '1',
                 'depends': module,
                 })
         set_records(xml_data, records)
+
+
+def create_irpf_child_tax_sii(xml, iva_file, irpf_file):
+    """ Creates xml data for SII model for child IRPF IVA taxes"""
+    records = []
+    iva_reader = get_csv_reader(iva_file)
+    module = ('account_es' if 'pyme' not in iva_file
+        else 'account_es_pyme')
+
+    records = []
+    for row in iva_reader:
+        if iva_reader.line_num == 1:
+            continue
+        irpf_reader = get_csv_reader(irpf_file)
+        for irpf_row in irpf_reader:
+            if irpf_reader.line_num == 1:
+                continue
+            if row[4] != irpf_row[4]:
+                # differnt groups
+                continue
+
+            tax_record_id = row[0] + '+' + irpf_row[0] + '_iva_child'
+            value = {
+                'model': 'account.tax.template',
+                'id': '%s.%s' % (module, tax_record_id),
+                'fields': [
+                    {'name': 'sii_book_key', 'text': str(row[24])},
+                    {'name': 'sii_issued_key', 'text': row[25] and
+                        str(row[25]).zfill(2) or ''},
+                    {'name': 'sii_received_key', 'text': row[26] and
+                        str(row[26]).zfill(2) or ''},
+                    {'name': 'sii_intracomunity_key', 'text': row[27] and
+                        str(row[27]).zfill(2) or ''},
+                    {'name': 'sii_excemption_key',
+                        'text': str(row[29])},
+                    {'name': 'sii_subjected_key', 'text': str(row[28])},
+                    ],
+                }
+            records.append(value)
+
+    xml_data = set_subelement(xml, 'data', {
+            'grouped': '1',
+            'depends': module,
+            })
+    set_records(xml_data, records)
 
 
 def create_340(xml, files):
@@ -189,6 +205,7 @@ def create_340(xml, files):
                 'depends': module,
                 })
         set_records(xml_data, records)
+
 
 
 def create_re_child_tax_340(xml, rule_line_file):
@@ -327,8 +344,9 @@ if __name__ == '__main__':
     write_xml_file(xml, 'aeat/340.xml')
 
     xml = init_xml()
-    files = ['tax.csv']
+    files = ['tax.csv', 'tax_iva.csv']
     create_sii(xml, files)
+    create_irpf_child_tax_sii(xml, 'tax_iva.csv', 'tax_irpf.csv')
     write_xml_file(xml, 'aeat/sii.xml')
 
 

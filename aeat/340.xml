@@ -103,6 +103,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_ISP_compras_16">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_ISP_reciclaje_0_E">
+            <field name="tax" ref="account_es.iva_ISP_reciclaje_0"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ISP_reciclaje_0">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_ISP_obra_0_E">
+            <field name="tax" ref="account_es.iva_ISP_obra_0"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ISP_obra_0">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IO_E">
             <field name="tax" ref="account_es.iva_IO"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -113,6 +127,45 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <record model="account.tax.template" id="account_es.iva_IO">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IO_serv_E">
+            <field name="tax" ref="account_es.iva_IO_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IO_serv_U">
+            <field name="tax" ref="account_es.iva_IO_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IO_serv">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_dev_AI_E">
+            <field name="tax" ref="account_es.iva_dev_AI"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_dev_AI">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_dev_AI_serv_E">
+            <field name="tax" ref="account_es.iva_dev_AI_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_dev_AI_serv">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_ded_AI_R">
+            <field name="tax" ref="account_es.iva_ded_AI"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ded_AI">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_ded_AI_serv_R">
+            <field name="tax" ref="account_es.iva_ded_AI_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ded_AI_serv">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_bc_R">
             <field name="tax" ref="account_es.iva_IC_compras_4_bc"/>
@@ -192,6 +245,39 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi_2">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_R">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_U">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_1_R">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios_1"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_1_U">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios_1"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_1">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_2_R">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios_2"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_4_servicios_2_U">
+            <field name="tax" ref="account_es.iva_IC_compras_4_servicios_2"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_2">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_bc_R">
             <field name="tax" ref="account_es.iva_IC_compras_10_bc"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -268,6 +354,39 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_U"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi_2">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_R">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_U">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_1_R">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios_1"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_1_U">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios_1"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_1">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_2_R">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios_2"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_10_servicios_2_U">
+            <field name="tax" ref="account_es.iva_IC_compras_10_servicios_2"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_2">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_IC_compras_21_bc_R">
@@ -945,6 +1064,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_ex">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4_E">
             <field name="tax" ref="account_es.iva_rep_4"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -1110,6 +1243,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_compras_16">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_ISP_reciclaje_0_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_ISP_reciclaje_0"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_reciclaje_0">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_ISP_obra_0_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_ISP_obra_0"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_obra_0">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_IO_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_IO"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -1119,6 +1266,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_U"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_IO">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_IO_serv_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_IO_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_IO_serv_U">
+            <field name="tax" ref="account_es_pyme.iva_pymes_IO_serv"/>
+            <field name="aeat_340_type" ref="aeat_340_key_U"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IO_serv">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_IC_compras_4_bc_R">
@@ -1952,6 +2110,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_ex">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_rep_4"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -2245,6 +2417,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_ex+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_ex+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_ex+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_ex+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_ex+irpf_195a_iva_child_R">
             <field name="tax" ref="account_es.iva_sop_ex+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -2341,6 +2520,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_4+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_4+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_4+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4+irpf_195a_iva_child_R">
@@ -2441,6 +2627,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_10+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_10+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_10+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10+irpf_195a_iva_child_R">
             <field name="tax" ref="account_es.iva_sop_10+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -2537,6 +2730,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_21+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_21+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_21+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21+irpf_195a_iva_child_R">
@@ -2683,6 +2883,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_ex_inv+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_ex_inv+irpf_19a_iva_child_I">
+            <field name="tax" ref="account_es.iva_sop_ex_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_ex_inv+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_ex_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_ex_inv+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_ex_inv+irpf_195a_iva_child_I">
@@ -2839,6 +3050,17 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_4_inv+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4_inv+irpf_19a_iva_child_I">
+            <field name="tax" ref="account_es.iva_sop_4_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4_inv+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_4_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_4_inv+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4_inv+irpf_195a_iva_child_I">
             <field name="tax" ref="account_es.iva_sop_4_inv+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_I"/>
@@ -2991,6 +3213,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_10_inv+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10_inv+irpf_19a_iva_child_I">
+            <field name="tax" ref="account_es.iva_sop_10_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10_inv+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_10_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_10_inv+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10_inv+irpf_195a_iva_child_I">
@@ -3147,6 +3380,17 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_21_inv+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21_inv+irpf_19a_iva_child_I">
+            <field name="tax" ref="account_es.iva_sop_21_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21_inv+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_21_inv+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_21_inv+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21_inv+irpf_195a_iva_child_I">
             <field name="tax" ref="account_es.iva_sop_21_inv+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_I"/>
@@ -3253,6 +3497,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_ex+irpf_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_ex+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_ex+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_ex+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_ex+irpf_sale_195a_iva_child_E">
             <field name="tax" ref="account_es.iva_rep_ex+irpf_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -3265,6 +3516,216 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_ex+irpf_sale_20a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_1_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_1_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_1_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_2_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_2_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_2_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_7_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_7_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_7_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_9_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_9_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_9_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_15_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_15_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_15_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_18_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_18_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_18_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_19_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_19_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_19_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_195_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_195_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_195_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_20_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_20_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_20_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_21_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_21_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_21_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_35_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_35_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_35_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_37_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_37_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_195a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_195a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_195a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_asis+irpf_sale_20a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_asis+irpf_sale_20a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_asis+irpf_sale_20a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_1_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_1_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_1_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_2_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_2_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_2_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_7_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_7_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_7_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_9_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_9_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_9_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_15_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_15_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_15_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_18_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_18_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_18_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_19_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_19_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_19_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_195_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_195_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_195_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_20_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_20_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_20_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_21_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_21_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_21_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_35_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_35_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_35_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_37_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_37_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_195a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_195a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_195a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_0_ter_rus+irpf_sale_20a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_0_ter_rus+irpf_sale_20a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus+irpf_sale_20a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4+irpf_sale_1_iva_child_E">
@@ -3349,6 +3810,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_4+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_4+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_4+irpf_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4+irpf_sale_195a_iva_child_E">
@@ -3449,6 +3917,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_10+irpf_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_10+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_10+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_10+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_10+irpf_sale_195a_iva_child_E">
             <field name="tax" ref="account_es.iva_rep_10+irpf_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -3545,6 +4020,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_21+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_21+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_21+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_21+irpf_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_21+irpf_sale_195a_iva_child_E">
@@ -3645,6 +4127,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_4_recc+irpf_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4_recc+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_4_recc+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_4_recc+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_4_recc+irpf_sale_195a_iva_child_E">
             <field name="tax" ref="account_es.iva_rep_4_recc+irpf_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -3741,6 +4230,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_10_recc+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_10_recc+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_10_recc+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_10_recc+irpf_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_10_recc+irpf_sale_195a_iva_child_E">
@@ -3841,6 +4337,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_21_recc+irpf_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_21_recc+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_21_recc+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_21_recc+irpf_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_21_recc+irpf_sale_195a_iva_child_E">
             <field name="tax" ref="account_es.iva_rep_21_recc+irpf_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -3937,6 +4440,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_4_recc+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4_recc+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_4_recc+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_4_recc+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_4_recc+irpf_195a_iva_child_R">
@@ -4037,6 +4547,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_10_recc+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10_recc+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_10_recc+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_10_recc+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_10_recc+irpf_195a_iva_child_R">
             <field name="tax" ref="account_es.iva_sop_10_recc+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -4133,6 +4650,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_21_recc+irpf_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21_recc+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_21_recc+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_21_recc+irpf_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_21_recc+irpf_195a_iva_child_R">
@@ -4233,6 +4757,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_sop_alq_ex+irpf_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_alq_ex+irpf_19a_iva_child_R">
+            <field name="tax" ref="account_es.iva_sop_alq_ex+irpf_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_sop_alq_ex+irpf_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_sop_alq_ex+irpf_195a_iva_child_R">
             <field name="tax" ref="account_es.iva_sop_alq_ex+irpf_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -4329,6 +4860,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_alq_ex+irpf_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_alq_ex+irpf_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es.iva_rep_alq_ex+irpf_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_rep_alq_ex+irpf_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_rep_alq_ex+irpf_sale_195a_iva_child_E">
@@ -4431,6 +4969,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_ex+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_ex+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_ex+irpf_pymes_195a_iva_child_R">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_ex+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -4527,6 +5072,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_4+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4+irpf_pymes_195a_iva_child_R">
@@ -4627,6 +5179,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_10+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10+irpf_pymes_195a_iva_child_R">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_10+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -4723,6 +5282,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_21+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21+irpf_pymes_195a_iva_child_R">
@@ -4869,6 +5435,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex_inv+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_ex_inv+irpf_pymes_19a_iva_child_I">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_ex_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_ex_inv+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_ex_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex_inv+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_ex_inv+irpf_pymes_195a_iva_child_I">
@@ -5025,6 +5602,17 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_inv+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4_inv+irpf_pymes_19a_iva_child_I">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_4_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4_inv+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_4_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_inv+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4_inv+irpf_pymes_195a_iva_child_I">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_4_inv+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_I"/>
@@ -5177,6 +5765,17 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_inv+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10_inv+irpf_pymes_19a_iva_child_I">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_10_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10_inv+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_10_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_inv+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10_inv+irpf_pymes_195a_iva_child_I">
@@ -5333,6 +5932,17 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_inv+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21_inv+irpf_pymes_19a_iva_child_I">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_21_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_I"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21_inv+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_21_inv+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_inv+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_I"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21_inv+irpf_pymes_195a_iva_child_I">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_21_inv+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_I"/>
@@ -5439,6 +6049,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_ex+irpf_pymes_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_ex+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_ex+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_ex+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_ex+irpf_pymes_sale_195a_iva_child_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_rep_ex+irpf_pymes_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -5451,6 +6068,216 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_ex+irpf_pymes_sale_20a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_1_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_1_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_1_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_2_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_2_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_2_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_7_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_7_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_7_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_9_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_9_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_9_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_15_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_15_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_15_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_18_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_18_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_18_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_19_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_19_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_19_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_195_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_195_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_195_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_20_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_20_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_20_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_21_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_21_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_21_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_35_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_35_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_35_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_37_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_37_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_195a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_195a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_195a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_asis+irpf_pymes_sale_20a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_20a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis+irpf_pymes_sale_20a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_1_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_1_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_1_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_2_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_2_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_2_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_7_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_7_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_7_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_9_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_9_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_9_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_15_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_15_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_15_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_18_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_18_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_18_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_21_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_21_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_21_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_35_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_35_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_35_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_37_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_37_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_195a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus+irpf_pymes_sale_20a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4+irpf_pymes_sale_1_iva_child_E">
@@ -5535,6 +6362,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_4+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4+irpf_pymes_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4+irpf_pymes_sale_195a_iva_child_E">
@@ -5635,6 +6469,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10+irpf_pymes_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_10+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_10+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_10+irpf_pymes_sale_195a_iva_child_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_rep_10+irpf_pymes_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -5731,6 +6572,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_21+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_21+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21+irpf_pymes_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_21+irpf_pymes_sale_195a_iva_child_E">
@@ -5831,6 +6679,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4_recc+irpf_pymes_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4_recc+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_4_recc+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4_recc+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_4_recc+irpf_pymes_sale_195a_iva_child_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_rep_4_recc+irpf_pymes_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -5927,6 +6782,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10_recc+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_10_recc+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_10_recc+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10_recc+irpf_pymes_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_10_recc+irpf_pymes_sale_195a_iva_child_E">
@@ -6027,6 +6889,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21_recc+irpf_pymes_sale_37_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_21_recc+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_21_recc+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21_recc+irpf_pymes_sale_19a_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_21_recc+irpf_pymes_sale_195a_iva_child_E">
             <field name="tax" ref="account_es_pyme.iva_pymes_rep_21_recc+irpf_pymes_sale_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
@@ -6123,6 +6992,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_recc+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4_recc+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_4_recc+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_recc+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_4_recc+irpf_pymes_195a_iva_child_R">
@@ -6223,6 +7099,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_recc+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10_recc+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_10_recc+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_recc+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_10_recc+irpf_pymes_195a_iva_child_R">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_10_recc+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -6319,6 +7202,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_recc+irpf_pymes_37_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21_recc+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_21_recc+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_recc+irpf_pymes_19a_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_21_recc+irpf_pymes_195a_iva_child_R">
@@ -6419,6 +7309,13 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_alq_ex+irpf_pymes_37_iva_child">
             <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
         </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_alq_ex+irpf_pymes_19a_iva_child_R">
+            <field name="tax" ref="account_es_pyme.iva_pymes_sop_alq_ex+irpf_pymes_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_R"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_alq_ex+irpf_pymes_19a_iva_child">
+            <field name="aeat340_default_in_book_key" ref="aeat_340_key_R"/>
+        </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_sop_alq_ex+irpf_pymes_195a_iva_child_R">
             <field name="tax" ref="account_es_pyme.iva_pymes_sop_alq_ex+irpf_pymes_195a_iva_child"/>
             <field name="aeat_340_type" ref="aeat_340_key_R"/>
@@ -6515,6 +7412,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="aeat_340_type" ref="aeat_340_key_E"/>
         </record>
         <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_alq_ex+irpf_pymes_sale_37_iva_child">
+            <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
+        </record>
+        <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_alq_ex+irpf_pymes_sale_19a_iva_child_E">
+            <field name="tax" ref="account_es_pyme.iva_pymes_rep_alq_ex+irpf_pymes_sale_19a_iva_child"/>
+            <field name="aeat_340_type" ref="aeat_340_key_E"/>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_alq_ex+irpf_pymes_sale_19a_iva_child">
             <field name="aeat340_default_out_book_key" ref="aeat_340_key_E"/>
         </record>
         <record model="aeat.340.type-account.tax.template" id="aeat_340_template_type_iva_pymes_rep_alq_ex+irpf_pymes_sale_195a_iva_child_E">
