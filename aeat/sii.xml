@@ -562,6 +562,577 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sii_issued_key">01</field>
             <field name="sii_excemption_key">E6</field>
         </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+    </data>
+    <data depends="account_es_pyme" grouped="1">
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X0_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X0_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X4_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X4_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X10_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X10_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X21_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X21_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">13</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_X0">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">02</field>
+            <field name="sii_excemption_key">E2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_compras_16">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_reciclaje_0">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_obra_0">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IO">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E5</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IO_serv">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_servicios">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_servicios_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_4_servicios_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_servicios">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_servicios_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_10_servicios_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_ser">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_ser_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_IC_compras_21_ser_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">09</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.suplido_pymes_compras">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.suplido_pymes_ventas">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">10</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X0_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_excemption_key">E5</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X0_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_excemption_key">E5</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X3_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X3_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X7_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X7_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X9_5_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X9_5_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X13_5_compras_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_X13_5_compras_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IO">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">08</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_3_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_7_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_9_5_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bc_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bc_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bi">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bi_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.igic_pymes_IC_compras_13_5_bi_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">08</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_reagp_compras_12">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">02</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_reagp_compras_12_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">02</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_reagp_compras_12_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">02</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_compras">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_compras_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_ISP_compras_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S2</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_no_sujeto">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_no_sujeto">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+    </data>
+    <data depends="account_es_pyme" grouped="1">
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_ex_inv">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_inv">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_inv">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_inv">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_ex">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_asis">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_0_ter_rus">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_4_recc">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_10_recc">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_21_recc">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_4_recc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_10_recc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_21_recc">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">07</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_sop_alq_ex">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_pymes_rep_alq_ex">
+            <field name="sii_book_key">E</field>
+            <field name="sii_issued_key">01</field>
+            <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_no_ded_4">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_no_ded_10">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es_pyme.iva_no_ded_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
     </data>
     <data depends="account_es" grouped="1">
         <record model="account.tax.template" id="account_es.iva_rep_4+re_05">
@@ -4000,6 +4571,456 @@ this repository contains the full copyright notices and license terms. -->
             <field name="sii_book_key">E</field>
             <field name="sii_issued_key">01</field>
             <field name="sii_excemption_key">E6</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_1_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_2_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_7">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_7_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_9">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_9_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_15">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_15_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_18">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_18_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_19">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_19_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_195">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_195_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_20">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_20_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_21_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_35">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_35_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_37">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_37_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_19a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_19a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_195a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_195a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_20a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_4+irpf_20a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_1_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_2_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_7">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_7_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_9">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_9_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_15">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_15_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_18">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_18_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_19">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_19_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_195">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_195_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_20">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_20_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_21_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_35">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_35_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_37">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_37_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_19a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_19a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_195a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_195a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_20a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_10+irpf_20a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_1">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_1_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_2">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_2_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_7">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_7_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_9">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_9_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_15">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_15_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_18">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_18_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_19">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_19_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_195">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_195_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_20">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_20_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_21">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_21_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_35">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_35_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_37">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_37_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_19a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_19a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_195a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_195a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_20a">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_no_ded_21+irpf_20a_iva_child">
+            <field name="sii_book_key">R</field>
+            <field name="sii_received_key">01</field>
+            <field name="sii_subjected_key">S1</field>
         </record>
     </data>
 </tryton>

@@ -271,11 +271,12 @@ def read_tax_file(file_name):
                 {'name': 'start_date', 'text': row[19]},
                 {'name': 'end_date', 'text': row[20]},
                 {'name': 'account_name', 'text': row[21]},
+                {'name': 'deducible', 'text': row[22]},
             ],
         }
-        if len(row) >= 23:
+        if len(row) >= 24:
             tax_record['fields'].append({
-                    'name': 'report_description', 'text': row[22]})
+                    'name': 'report_description', 'text': row[23]})
         records.append(tax_record)
     return records
 

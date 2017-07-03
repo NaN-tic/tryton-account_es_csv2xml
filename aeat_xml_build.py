@@ -77,16 +77,16 @@ def create_sii(xml, files):
                 'model': 'account.tax.template',
                 'id': module + "." + row[0],
                 'fields': [
-                    {'name': 'sii_book_key', 'text': str(row[24])},
-                    {'name': 'sii_issued_key', 'text': row[25] and
-                        str(row[25]).zfill(2) or ''},
-                    {'name': 'sii_received_key', 'text': row[26] and
+                    {'name': 'sii_book_key', 'text': str(row[25])},
+                    {'name': 'sii_issued_key', 'text': row[26] and
                         str(row[26]).zfill(2) or ''},
-                    {'name': 'sii_intracomunity_key', 'text': row[27] and
+                    {'name': 'sii_received_key', 'text': row[27] and
                         str(row[27]).zfill(2) or ''},
+                    {'name': 'sii_intracomunity_key', 'text': row[28] and
+                        str(row[28]).zfill(2) or ''},
                     {'name': 'sii_excemption_key',
-                        'text': str(row[29])},
-                    {'name': 'sii_subjected_key', 'text': str(row[28])},
+                        'text': str(row[30])},
+                    {'name': 'sii_subjected_key', 'text': str(row[29])},
 
                     ],
                 }
@@ -171,16 +171,16 @@ def create_irpf_child_tax_sii(xml, iva_file, irpf_file):
                 continue
 
             fields = [
-                {'name': 'sii_book_key', 'text': str(row[24])},
-                {'name': 'sii_issued_key', 'text': row[25] and
-                    str(row[25]).zfill(2) or ''},
-                {'name': 'sii_received_key', 'text': row[26] and
+                {'name': 'sii_book_key', 'text': str(row[25])},
+                {'name': 'sii_issued_key', 'text': row[26] and
                     str(row[26]).zfill(2) or ''},
-                {'name': 'sii_intracomunity_key', 'text': row[27] and
+                {'name': 'sii_received_key', 'text': row[27] and
                     str(row[27]).zfill(2) or ''},
+                {'name': 'sii_intracomunity_key', 'text': row[28] and
+                    str(row[28]).zfill(2) or ''},
                 {'name': 'sii_excemption_key',
-                    'text': str(row[29])},
-                {'name': 'sii_subjected_key', 'text': str(row[28])},
+                    'text': str(row[30])},
+                {'name': 'sii_subjected_key', 'text': str(row[29])},
                 ]
 
             tax_record_id = row[0] + '+' + irpf_row[0]
@@ -407,7 +407,7 @@ if __name__ == '__main__':
     write_xml_file(xml, 'aeat/340.xml')
 
     xml = init_xml()
-    files = ['tax.csv', 'tax_iva.csv']
+    files = ['tax.csv', 'tax_iva.csv', 'tax_pymes.csv', 'tax_iva_pymes.csv']
     create_sii(xml, files)
     create_re_child_tax_sii(xml, 'tax_rule_line.csv')
     create_irpf_child_tax_sii(xml, 'tax_iva.csv', 'tax_irpf.csv')
