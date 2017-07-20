@@ -25,13 +25,13 @@ def create_facturae_taxes(xml, iva_file, irpf_file, rule_lines_file,
                 iva_rows.append(row)
             assert len(row) >= 24, (
                 "Expected row with at least 24 elements: %s" % len(row))
-            if not row[23]:
+            if not row[27]:
                 continue  # tax without report_type
             records.append({
                     'model': 'account.tax.template',
                     'id': module + '.' + row[0],
                     'fields': [
-                        {'name': 'report_type', 'text': row[23]},
+                        {'name': 'report_type', 'text': row[27]},
                         ],
                     })
         set_records(xml_data, records)
@@ -49,20 +49,20 @@ def create_facturae_taxes(xml, iva_file, irpf_file, rule_lines_file,
             assert len(iva_row) >= 24, (
                 "Expected row with at least 24 elements: %s" % len(iva_row))
             record_id = iva_row[0] + '+' + irpf_row[0]
-            if iva_row[23]:
+            if iva_row[27]:
                 irpf_records.append({
                         'model': 'account.tax.template',
                         'id': module + '.' + record_id + '_iva_child',
                         'fields': [
-                            {'name': 'report_type', 'text': iva_row[23]},
+                            {'name': 'report_type', 'text': iva_row[27]},
                             ],
                         })
-            if irpf_row[23]:
+            if irpf_row[27]:
                 irpf_records.append({
                         'model': 'account.tax.template',
                         'id': module + '.' + record_id + '_irpf_child',
                         'fields': [
-                            {'name': 'report_type', 'text': irpf_row[23]},
+                            {'name': 'report_type', 'text': irpf_row[27]},
                             ],
                         })
     set_records(xml_data, irpf_records)
@@ -92,13 +92,13 @@ def create_facturae_taxes(xml, iva_file, irpf_file, rule_lines_file,
                 continue
             assert len(iva_row) >= 24, (
                 "Expected row with at least 24 elements: %s" % len(iva_row))
-            if iva_row[23]:
+            if iva_row[27]:
                 re_records.append({
                         'model': 'account.tax.template',
                         'id': '%s.%s+%s%s' % (
                             module, iva_id, re_id, '_iva_child'),
                         'fields': [
-                            {'name': 'report_type', 'text': iva_row[23]},
+                            {'name': 'report_type', 'text': iva_row[27]},
                             ],
                         })
     set_records(xml_data, re_records)

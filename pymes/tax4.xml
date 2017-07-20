@@ -22569,8 +22569,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22612,8 +22612,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22655,8 +22655,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22699,8 +22699,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22744,8 +22744,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22789,8 +22789,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22833,8 +22833,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22877,8 +22877,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22921,8 +22921,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -22963,8 +22963,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_19a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473019"/>
             <field name="credit_note_account" ref="pgc_pymes_473019"/>
             <field name="sequence" eval="1600"/>
@@ -23005,8 +23005,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23048,8 +23048,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23091,8 +23091,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23135,8 +23135,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23180,8 +23180,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23225,8 +23225,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23269,8 +23269,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23313,8 +23313,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23357,8 +23357,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23399,8 +23399,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_195a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473095"/>
             <field name="credit_note_account" ref="pgc_pymes_473095"/>
             <field name="sequence" eval="1610"/>
@@ -23441,8 +23441,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23484,8 +23484,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23527,8 +23527,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23571,8 +23571,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23616,8 +23616,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23661,8 +23661,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23705,8 +23705,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23749,8 +23749,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23793,8 +23793,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>
@@ -23835,8 +23835,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_sale_20a"/>
             <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="1"/>
-            <field name="credit_note_base_sign" eval="1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_base_sign" eval="-1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_473020"/>
             <field name="credit_note_account" ref="pgc_pymes_473020"/>
             <field name="sequence" eval="1620"/>

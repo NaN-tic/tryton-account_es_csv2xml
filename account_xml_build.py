@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import re
+import sys
 
 from common import (get_csv_reader, init_xml, normalize_xml, set_record,
     set_records, set_subelement, write_xml_file)
@@ -157,12 +158,12 @@ def create_tax_codes(tax_xml, file_name):
         set_records(xml_data, levels[level])
 
 
-def create_taxes(tax_xml, file_names):
+def create_taxes(tax_xml, file_names, version='4'):
     levels = {
         0: [],
         }
     for file_name in file_names:
-        records = read_tax_file(file_name)
+        records = read_tax_file(file_name, version)
         for record in records:
             to_remove = None
             for i, field in enumerate(record['fields']):
@@ -227,10 +228,15 @@ def create_tax_rule_lines(tax_xml, file_name):
         set_record(xml_data, record)
 
 
-def read_tax_file(file_name):
+def read_tax_file(file_name, version='4'):
     # Read tax csv file
     reader = get_csv_reader(file_name)
     records = []
+
+    if version not in ('3', '4'):
+        sys.exit("ATTENTION!: The version you have try to use is not correct. "
+            "You could only use '3' for the 3.X versions and '4' for the 4.X.")
+
     for row in reader:
         if reader.line_num == 1:
             continue
@@ -243,8 +249,20 @@ def read_tax_file(file_name):
 
         # set eval that those invoice/credit note accounts ara None
         # (force update all taxes that not have invoice/credit note accounts)
-        invoice_account = 'ref' if row[16] else 'eval'
-        credit_note_account = 'ref' if row[17] else 'eval'
+        invoice_account = 'ref' if row[20] else 'eval'
+        credit_note_account = 'ref' if row[21] else 'eval'
+
+        if version == '3':
+            invoice_base_sign = row[12]
+            invoice_tax_sign = row[13]
+            credit_note_base_sign = row[14]
+            credit_note_tax_sign = row[15]
+        elif version == '4':
+            invoice_base_sign = row[16]
+            invoice_tax_sign = row[17]
+            credit_note_base_sign = row[18]
+            credit_note_tax_sign = row[19]
+
         tax_record = {
             'model': 'account.tax.template',
             'id': row[0],
@@ -261,30 +279,33 @@ def read_tax_file(file_name):
                 {'name': 'invoice_tax_code', 'ref': row[9]},
                 {'name': 'credit_note_base_code', 'ref': row[10]},
                 {'name': 'credit_note_tax_code', 'ref': row[11]},
-                {'name': 'invoice_base_sign', 'eval': row[12]},
-                {'name': 'invoice_tax_sign', 'eval': row[13]},
-                {'name': 'credit_note_base_sign', 'eval': row[14]},
-                {'name': 'credit_note_tax_sign', 'eval': row[15]},
-                {'name': 'invoice_account', invoice_account: row[16] or 'None'},
-                {'name': 'credit_note_account', credit_note_account: row[17] or 'None'},
-                {'name': 'sequence', 'eval': row[18]},
-                {'name': 'start_date', 'text': row[19]},
-                {'name': 'end_date', 'text': row[20]},
-                {'name': 'account_name', 'text': row[21]},
-                {'name': 'deducible', 'text': row[22]},
+                {'name': 'invoice_base_sign', 'eval': invoice_base_sign},
+                {'name': 'invoice_tax_sign', 'eval': invoice_tax_sign},
+                {'name': 'credit_note_base_sign', 'eval':
+                    credit_note_base_sign},
+                {'name': 'credit_note_tax_sign', 'eval': credit_note_tax_sign},
+                {'name': 'invoice_account', invoice_account: row[20] or
+                    'None'},
+                {'name': 'credit_note_account', credit_note_account: row[21] or
+                    'None'},
+                {'name': 'sequence', 'eval': row[22]},
+                {'name': 'start_date', 'text': row[23]},
+                {'name': 'end_date', 'text': row[24]},
+                {'name': 'account_name', 'text': row[25]},
+                {'name': 'deducible', 'text': row[26]},
             ],
         }
         if len(row) >= 24:
             tax_record['fields'].append({
-                    'name': 'report_description', 'text': row[23]})
+                    'name': 'report_description', 'text': row[27]})
         records.append(tax_record)
     return records
 
 
-def create_tax_accounts(account_xml, file_names):
+def create_tax_accounts(account_xml, file_names, version='4'):
     records = []
     for file_name in file_names:
-        records.extend(read_tax_file(file_name))
+        records.extend(read_tax_file(file_name, version))
     # Maybe this mapping dictionary must go in the tax_....csv files in order
     # to reduce the code hard coded.
     map_2_type = {
@@ -361,7 +382,7 @@ def create_tax_accounts(account_xml, file_names):
 
 
 def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
-                          irpf_file):
+                          irpf_file, version='4'):
 
     def create_substitution_tax(group, record_id, name, ref):
         record = {
@@ -415,8 +436,8 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
         0: [],
         }
     account_tax_rule_line_records = []
-    iva_records = read_tax_file(iva_file)
-    irpf_records = read_tax_file(irpf_file)
+    iva_records = read_tax_file(iva_file, version)
+    irpf_records = read_tax_file(irpf_file, version)
 
     for irpf_record in irpf_records:
         c = 0
@@ -484,7 +505,7 @@ def create_irpf_tax_rules(tax_xml, account_xml_data, rule_file, iva_file,
 
 
 def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
-                        rule_line_file):
+                        rule_line_file, version='4'):
 
     def create_substitution_tax(iva_id, re_id, iva_fields, re_fields):
         record = {
@@ -546,8 +567,8 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
         0: [],
         }
     account_tax_rule_line_records = []
-    iva_records = read_tax_file(iva_file)
-    re_records = read_tax_file(re_file)
+    iva_records = read_tax_file(iva_file, version)
+    re_records = read_tax_file(re_file, version)
     re_reader = get_csv_reader(rule_line_file)
 
     old_source_tax = ''
@@ -632,6 +653,10 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
 
 
 if __name__ == '__main__':
+    version = sys.argv and len(sys.argv) > 1 and sys.argv[1] or '4'
+    if version not in ('3', '4'):
+        sys.exit("ATTENTION!: The version you have try to use is not correct. "
+            "You could only use '3' for the 3.X versions and '4' for the 4.X.")
     # Create xml standard files
     # Initialize xml etree.Elements for each file
     account_xml = init_xml()
@@ -642,7 +667,7 @@ if __name__ == '__main__':
     create_account_types(account_xml, 'account_type.csv')
     create_accounts(account_xml, 'account.csv')
     create_tax_accounts(account_xml, ['tax_re.csv', 'tax_iva.csv',
-            'tax_igic.csv', 'tax_irpf.csv', 'tax.csv'])
+            'tax_igic.csv', 'tax_irpf.csv', 'tax.csv'], version)
     # And then to tax_xml etree.Element
     create_tax_groups(tax_xml, 'tax_group.csv')
     create_tax_codes(tax_xml, 'tax_code.csv')
@@ -650,17 +675,17 @@ if __name__ == '__main__':
         'tax.csv',
         'tax_iva.csv',
         'tax_igic.csv',
-    ])
+    ], version)
     create_tax_rules(tax_xml, 'tax_rule.csv')
     create_tax_rule_lines(tax_xml, 'tax_rule_line.csv')
     create_irpf_tax_rules(tax_xml, account_xml, 'tax_rule.csv',
-            'tax_iva.csv', 'tax_irpf.csv')
+            'tax_iva.csv', 'tax_irpf.csv', version)
 
     create_re_tax_rules(tax_xml, account_xml, 'tax_iva.csv',
-            'tax_re.csv', 'tax_rule_line.csv')
+            'tax_re.csv', 'tax_rule_line.csv', version)
     # Finally save each xml etree.Element to a file
     write_xml_file(account_xml, 'ordinario/account.xml')
-    write_xml_file(tax_xml, 'ordinario/tax.xml')
+    write_xml_file(tax_xml, 'ordinario/tax%s.xml' % version)
 
     # Create xml files for PYMES
     # Initialize xml etree.Elements for each file
@@ -673,7 +698,7 @@ if __name__ == '__main__':
     create_accounts(account_xml_pymes, 'account_pymes.csv')
     create_tax_accounts(account_xml_pymes, ['tax_re_pymes.csv',
             'tax_iva_pymes.csv', 'tax_igic_pymes.csv', 'tax_irpf_pymes.csv',
-            'tax_pymes.csv'])
+            'tax_pymes.csv'], version)
     # And then to tax_xml_pymes etree.Element
     create_tax_groups(tax_xml_pymes, 'tax_group_pymes.csv')
     create_tax_codes(tax_xml_pymes, 'tax_code_pymes.csv')
@@ -681,21 +706,25 @@ if __name__ == '__main__':
             'tax_pymes.csv',
             'tax_iva_pymes.csv',
             'tax_igic_pymes.csv',
-    ])
+    ], version)
     create_tax_rules(tax_xml_pymes, 'tax_rule_pymes.csv')
     create_tax_rule_lines(tax_xml_pymes, 'tax_rule_line_pymes.csv')
     create_irpf_tax_rules(tax_xml_pymes, account_xml_pymes,
-            'tax_rule_pymes.csv', 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
+            'tax_rule_pymes.csv', 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv',
+            version)
     create_re_tax_rules(tax_xml_pymes, account_xml_pymes,
-            'tax_iva_pymes.csv', 'tax_re_pymes.csv', 'tax_rule_line_pymes.csv')
+            'tax_iva_pymes.csv', 'tax_re_pymes.csv', 'tax_rule_line_pymes.csv',
+            version)
     # Finally save each xml etree.Element to a file
     write_xml_file(account_xml_pymes, 'pymes/account.xml')
-    write_xml_file(tax_xml_pymes, 'pymes/tax.xml')
+    write_xml_file(tax_xml_pymes, 'pymes/tax%s.xml' % version)
     archives = (
         'ordinario/account.xml',
-        'ordinario/tax.xml',
+        'ordinario/tax3.xml',
+        'ordinario/tax4.xml',
         'pymes/account.xml',
-        'pymes/tax.xml',
+        'pymes/tax3.xml',
+        'pymes/tax4.xml',
         )
     for archive in archives:
         data = normalize_xml(archive)

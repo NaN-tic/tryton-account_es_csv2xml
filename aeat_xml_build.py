@@ -77,16 +77,15 @@ def create_sii(xml, files):
                 'model': 'account.tax.template',
                 'id': module + "." + row[0],
                 'fields': [
-                    {'name': 'sii_book_key', 'text': str(row[25])},
-                    {'name': 'sii_issued_key', 'text': row[26] and
-                        str(row[26]).zfill(2) or ''},
-                    {'name': 'sii_received_key', 'text': row[27] and
-                        str(row[27]).zfill(2) or ''},
-                    {'name': 'sii_intracomunity_key', 'text': row[28] and
-                        str(row[28]).zfill(2) or ''},
-                    {'name': 'sii_excemption_key',
-                        'text': str(row[30])},
-                    {'name': 'sii_subjected_key', 'text': str(row[29])},
+                    {'name': 'sii_book_key', 'text': str(row[29])},
+                    {'name': 'sii_issued_key', 'text': row[30] and
+                        str(row[30]).zfill(2) or ''},
+                    {'name': 'sii_received_key', 'text': row[31] and
+                        str(row[31]).zfill(2) or ''},
+                    {'name': 'sii_intracomunity_key', 'text': row[32] and
+                        str(row[32]).zfill(2) or ''},
+                    {'name': 'sii_subjected_key', 'text': str(row[33])},
+                    {'name': 'sii_excemption_key', 'text': str(row[34])},
 
                     ],
                 }
@@ -171,16 +170,15 @@ def create_irpf_child_tax_sii(xml, iva_file, irpf_file):
                 continue
 
             fields = [
-                {'name': 'sii_book_key', 'text': str(row[25])},
-                {'name': 'sii_issued_key', 'text': row[26] and
-                    str(row[26]).zfill(2) or ''},
-                {'name': 'sii_received_key', 'text': row[27] and
-                    str(row[27]).zfill(2) or ''},
-                {'name': 'sii_intracomunity_key', 'text': row[28] and
-                    str(row[28]).zfill(2) or ''},
-                {'name': 'sii_excemption_key',
-                    'text': str(row[30])},
-                {'name': 'sii_subjected_key', 'text': str(row[29])},
+                {'name': 'sii_book_key', 'text': str(row[29])},
+                {'name': 'sii_issued_key', 'text': row[30] and
+                    str(row[30]).zfill(2) or ''},
+                {'name': 'sii_received_key', 'text': row[31] and
+                    str(row[31]).zfill(2) or ''},
+                {'name': 'sii_intracomunity_key', 'text': row[32] and
+                    str(row[32]).zfill(2) or ''},
+                {'name': 'sii_subjected_key', 'text': str(row[33])},
+                {'name': 'sii_excemption_key', 'text': str(row[34])},
                 ]
 
             tax_record_id = row[0] + '+' + irpf_row[0]
