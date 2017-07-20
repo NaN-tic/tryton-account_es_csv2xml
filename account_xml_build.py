@@ -720,11 +720,9 @@ if __name__ == '__main__':
     write_xml_file(tax_xml_pymes, 'pymes/tax%s.xml' % version)
     archives = (
         'ordinario/account.xml',
-        'ordinario/tax3.xml',
-        'ordinario/tax4.xml',
+        'ordinario/tax%s.xml' % version,
         'pymes/account.xml',
-        'pymes/tax3.xml',
-        'pymes/tax4.xml',
+        'pymes/tax%s.xml' % version,
         )
     for archive in archives:
         data = normalize_xml(archive)
