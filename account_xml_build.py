@@ -233,9 +233,10 @@ def read_tax_file(file_name, version='4'):
     reader = get_csv_reader(file_name)
     records = []
 
-    if version not in ('3', '4'):
+    if version not in ('3', '3.8', '4'):
         sys.exit("ATTENTION!: The version you have try to use is not correct. "
-            "You could only use '3' for the 3.X versions and '4' for the 4.X.")
+            "You could only use '3' for the 3.4 versions, '3.8' for the "
+            "version 3.8 and '4' for the 4.X version.")
 
     for row in reader:
         if reader.line_num == 1:
@@ -252,7 +253,7 @@ def read_tax_file(file_name, version='4'):
         invoice_account = 'ref' if row[20] else 'eval'
         credit_note_account = 'ref' if row[21] else 'eval'
 
-        if version == '3':
+        if version in ('3', '3.8'):
             invoice_base_sign = row[12]
             invoice_tax_sign = row[13]
             credit_note_base_sign = row[14]
@@ -262,6 +263,11 @@ def read_tax_file(file_name, version='4'):
             invoice_tax_sign = row[17]
             credit_note_base_sign = row[18]
             credit_note_tax_sign = row[19]
+
+        if version == '3':
+            update_unit_price = row[35]
+        elif version in ('3.8', '4'):
+            update_unit_price = False
 
         tax_record = {
             'model': 'account.tax.template',
@@ -288,6 +294,7 @@ def read_tax_file(file_name, version='4'):
                     'None'},
                 {'name': 'credit_note_account', credit_note_account: row[21] or
                     'None'},
+                {'name': 'update_unit_price', 'eval': update_unit_price},
                 {'name': 'sequence', 'eval': row[22]},
                 {'name': 'start_date', 'text': row[23]},
                 {'name': 'end_date', 'text': row[24]},
@@ -654,9 +661,11 @@ def create_re_tax_rules(tax_xml, account_xml_data, iva_file, re_file,
 
 if __name__ == '__main__':
     version = sys.argv and len(sys.argv) > 1 and sys.argv[1] or '4'
-    if version not in ('3', '4'):
+    if version not in ('3', '3.8', '4'):
         sys.exit("ATTENTION!: The version you have try to use is not correct. "
-            "You could only use '3' for the 3.X versions and '4' for the 4.X.")
+            "You could only use '3' for the 3.4 versions, '3.8' for the "
+            "version 3.8 and '4' for the 4.X version.")
+
     # Create xml standard files
     # Initialize xml etree.Elements for each file
     account_xml = init_xml()
