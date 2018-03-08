@@ -62,6 +62,7 @@ def create_349(xml, files):
                 })
         set_records(xml_data, records)
 
+
 def create_sii(xml, files):
     """ Creates xml data for 340 model """
     # Read account_csv files
@@ -96,7 +97,6 @@ def create_sii(xml, files):
                 'depends': module,
                 })
         set_records(xml_data, records)
-
 
 
 def create_re_child_tax_sii(xml, rule_line_file):
@@ -268,7 +268,6 @@ def create_340(xml, files):
         set_records(xml_data, records)
 
 
-
 def create_re_child_tax_340(xml, rule_line_file):
     """ Creates xml data for 340 model for child IVA taxes"""
     records = []
@@ -389,6 +388,104 @@ def create_irpf_child_tax_340(xml, iva_file, irpf_file):
     set_records(xml_data, records)
 
 
+def create_347(xml, files):
+    """ Creates xml data for 347 model """
+    # Read account_csv files
+    for file in files:
+        records = []
+        reader = get_csv_reader(file)
+        module = 'account_es' if 'pyme' not in file else 'account_es_pyme'
+        for row in reader:
+            if reader.line_num == 1:
+                continue
+
+            if not row[39]:
+                include_347 = True
+            else:
+                include_347 = row[39]
+
+            value = {
+                'model': 'account.tax.template',
+                'id': module + "." + row[0],
+                'fields': [
+                    {'name': 'include_347', 'eval': include_347},
+                    ],
+                }
+            records.append(value)
+
+        xml_data = set_subelement(xml, 'data', {
+                'grouped': '1',
+                'depends': module,
+                })
+        set_records(xml_data, records)
+
+
+def create_irpf_child_tax_347(xml, iva_file, irpf_file):
+    """ Creates xml data for 347 model for child IRPF IVA taxes"""
+    records = []
+    iva_reader = get_csv_reader(iva_file)
+    module = 'account_es' if 'pyme' not in iva_file else 'account_es_pyme'
+
+    records = []
+    for row in iva_reader:
+        if iva_reader.line_num == 1:
+            continue
+        irpf_reader = get_csv_reader(irpf_file)
+        for irpf_row in irpf_reader:
+            if irpf_reader.line_num == 1:
+                continue
+            if row[4] != irpf_row[4]:
+                # differnt groups
+                continue
+
+            if not row[39]:
+                include_347 = True
+            else:
+                include_347 = row[39]
+
+            if not irpf_row[39]:
+                irpf_include_347 = True
+            else:
+                irpf_include_347 = irpf_row[39]
+
+            fields = [
+                {'name': 'include_347', 'eval': include_347},
+                ]
+
+            irpf_fields = [
+                {'name': 'include_347', 'eval': irpf_include_347},
+                ]
+
+            tax_record_id = row[0] + '+' + irpf_row[0]
+
+            value = {
+                'model': 'account.tax.template',
+                'id': '%s.%s' % (module, tax_record_id),
+                'fields': irpf_fields,
+                }
+            records.append(value)
+
+            value = {
+                'model': 'account.tax.template',
+                'id': '%s.%s' % (module, tax_record_id + '_iva_child'),
+                'fields': fields,
+                }
+            records.append(value)
+
+            value = {
+                'model': 'account.tax.template',
+                'id': '%s.%s' % (module, tax_record_id + '_irpf_child'),
+                'fields': irpf_fields,
+                }
+            records.append(value)
+
+    xml_data = set_subelement(xml, 'data', {
+            'grouped': '1',
+            'depends': module,
+            })
+    set_records(xml_data, records)
+
+
 if __name__ == '__main__':
     xml = init_xml()
     files = ['tax.csv', 'tax_pymes.csv', 'tax_igic.csv']
@@ -406,16 +503,26 @@ if __name__ == '__main__':
 
     xml = init_xml()
     files = ['tax.csv', 'tax_iva.csv', 'tax_pymes.csv', 'tax_iva_pymes.csv']
+    create_347(xml, files)
+    create_irpf_child_tax_347(xml, 'tax_iva.csv', 'tax_irpf.csv')
+    create_irpf_child_tax_347(xml, 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
+    write_xml_file(xml, 'aeat/347.xml')
+
+    xml = init_xml()
+    files = ['tax.csv', 'tax_iva.csv', 'tax_irpf.csv', 'tax_pymes.csv',
+        'tax_iva_pymes.csv', 'tax_irpf_pymes.csv']
     create_sii(xml, files)
     create_re_child_tax_sii(xml, 'tax_rule_line.csv')
+    create_re_child_tax_sii(xml, 'tax_rule_line_pymes.csv')
     create_irpf_child_tax_sii(xml, 'tax_iva.csv', 'tax_irpf.csv')
+    create_irpf_child_tax_sii(xml, 'tax_iva_pymes.csv', 'tax_irpf_pymes.csv')
     write_xml_file(xml, 'aeat/sii.xml')
-
 
     archives = (
         'aeat/349.xml',
         'aeat/340.xml',
-        'aeat/sii.xml'
+        'aeat/347.xml',
+        'aeat/sii.xml',
         )
     for archive in archives:
         data = normalize_xml(archive)

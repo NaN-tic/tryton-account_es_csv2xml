@@ -33,6 +33,8 @@ def set_subelement(parent_xml_element, label, attrib=None, text=None):
         xml_element = etree.SubElement(parent_xml_element, label)
     if text:
         xml_element.text = text.decode('utf-8')
+        if xml_element.text.strip() in ('-', '-0'):
+            xml_element.text = ''
     return xml_element
 
 

@@ -3338,6 +3338,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_4"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_4"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_4"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472004"/>
@@ -3358,6 +3360,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3379,6 +3382,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_33_4"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_32_4"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_33_4"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472004"/>
@@ -3399,6 +3404,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3420,6 +3426,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_4"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_4"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_4"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472004"/>
@@ -3440,6 +3448,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3461,6 +3470,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_10"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_10"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_477010"/>
@@ -3482,6 +3493,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3504,6 +3516,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_33_10"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_32_10"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_33_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
@@ -3525,6 +3539,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3547,6 +3562,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_10"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_10"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_10"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472010"/>
@@ -3567,6 +3584,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3588,6 +3606,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_21"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_21"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
@@ -3609,6 +3629,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3631,6 +3652,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_33_21"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_32_21"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_33_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
@@ -3652,6 +3675,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3674,6 +3698,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_ded_31_21"/>
             <field name="credit_note_base_code" ref="iva_pymes_ded_30_21"/>
             <field name="credit_note_tax_code" ref="iva_pymes_ded_31_21"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472021"/>
@@ -3695,6 +3721,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="iva_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="iva_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="iva_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3717,6 +3744,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_31_03"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_30_03"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_31_03"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472203"/>
@@ -3737,6 +3766,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3758,6 +3788,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_33_03"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_32_03"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_33_03"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472203"/>
@@ -3778,6 +3810,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3799,6 +3832,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_31_07"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_30_07"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_31_07"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472207"/>
@@ -3819,6 +3854,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3840,6 +3876,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_33_07"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_32_07"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_33_07"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472207"/>
@@ -3860,6 +3898,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3881,6 +3920,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_31_09_5"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_30_09_5"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_31_09_5"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472295"/>
@@ -3901,6 +3942,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3922,6 +3964,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_33_09_5"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_32_09_5"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_33_09_5"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472295"/>
@@ -3942,6 +3986,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -3963,6 +4008,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_31_13_5"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_30_13_5"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_31_13_5"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472213"/>
@@ -3983,6 +4030,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -4004,6 +4052,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_ded_33_13_5"/>
             <field name="credit_note_base_code" ref="igic_pymes_ded_32_13_5"/>
             <field name="credit_note_tax_code" ref="igic_pymes_ded_33_13_5"/>
+            <field name="invoice_base_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
             <field name="invoice_account" ref="pgc_pymes_472213"/>
@@ -4024,6 +4074,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_code" ref="igic_pymes_dev_20"/>
             <field name="credit_note_base_code" ref="igic_pymes_dev_19"/>
             <field name="credit_note_tax_code" ref="igic_pymes_dev_20"/>
+            <field name="invoice_base_sign" eval="1"/>
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
@@ -4069,7 +4120,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="irpf_pymes_base_2"/>
             <field name="credit_note_tax_code" ref="irpf_pymes_cuota_2"/>
             <field name="invoice_base_sign" eval="1"/>
-            <field name="invoice_tax_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_475102"/>
@@ -4114,7 +4165,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="baser_pymes_ispca"/>
             <field name="credit_note_tax_code" ref="cuotar_pymes_ispca"/>
             <field name="invoice_base_sign" eval="1"/>
-            <field name="invoice_tax_sign" eval="1"/>
+            <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_pymes_4700_child"/>
