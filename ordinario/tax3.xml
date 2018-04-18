@@ -4382,9 +4382,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="credit_note_base_code" ref="irpf_base_2"/>
             <field name="credit_note_tax_code" ref="irpf_cuota_2"/>
             <field name="invoice_base_sign" eval="1"/>
-            <field name="invoice_tax_sign" eval="-1"/>
+            <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="-1"/>
-            <field name="credit_note_tax_sign" eval="1"/>
+            <field name="credit_note_tax_sign" eval="-1"/>
             <field name="invoice_account" ref="pgc_475102"/>
             <field name="credit_note_account" ref="pgc_475102"/>
             <field name="update_unit_price" eval="False"/>
