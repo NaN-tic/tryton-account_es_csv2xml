@@ -4350,8 +4350,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" ref="pgc_472021"/>
+            <field name="credit_note_account" ref="pgc_472021"/>
             <field name="sequence" eval="2410"/>
             <field name="deducible">True</field>
         </record>
@@ -4372,8 +4372,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" ref="pgc_477021"/>
+            <field name="credit_note_account" ref="pgc_477021"/>
             <field name="sequence" eval="2420"/>
             <field name="deducible">True</field>
         </record>
@@ -4394,8 +4394,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" ref="pgc_472021"/>
+            <field name="credit_note_account" ref="pgc_472021"/>
             <field name="sequence" eval="2410"/>
             <field name="deducible">True</field>
         </record>
@@ -4416,8 +4416,8 @@ this repository contains the full copyright notices and license terms. -->
             <field name="invoice_tax_sign" eval="-1"/>
             <field name="credit_note_base_sign" eval="1"/>
             <field name="credit_note_tax_sign" eval="-1"/>
-            <field name="invoice_account" ref="pgc_4700_child"/>
-            <field name="credit_note_account" ref="pgc_4700_child"/>
+            <field name="invoice_account" ref="pgc_477021"/>
+            <field name="credit_note_account" ref="pgc_477021"/>
             <field name="sequence" eval="2420"/>
             <field name="deducible">True</field>
         </record>

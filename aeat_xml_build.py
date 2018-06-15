@@ -87,7 +87,8 @@ def create_sii(xml, files):
                         str(row[32]).zfill(2) or ''},
                     {'name': 'sii_subjected_key', 'text': str(row[33])},
                     {'name': 'sii_excemption_key', 'text': str(row[34])},
-
+                    {'name': 'tax_used', 'text': str(row[40])},
+                    {'name': 'invoice_used', 'text': str(row[41])},
                     ],
                 }
             records.append(value)
@@ -125,6 +126,8 @@ def create_re_child_tax_sii(xml, rule_line_file):
             {'name': 'sii_received_key', 'text': rule_row[7] and
                 str(rule_row[7]).zfill(2) or ''},
             {'name': 'sii_subjected_key', 'text': str(rule_row[9])},
+            {'name': 'tax_used', 'text': str(rule_row[12])},
+            {'name': 'invoice_used', 'text': str(rule_row[13])},
         ]
 
         records.append({
@@ -179,6 +182,8 @@ def create_irpf_child_tax_sii(xml, iva_file, irpf_file):
                     str(row[32]).zfill(2) or ''},
                 {'name': 'sii_subjected_key', 'text': str(row[33])},
                 {'name': 'sii_excemption_key', 'text': str(row[34])},
+                {'name': 'tax_used', 'text': str(row[40])},
+                {'name': 'invoice_used', 'text': str(row[41])},
                 ]
 
             tax_record_id = row[0] + '+' + irpf_row[0]
